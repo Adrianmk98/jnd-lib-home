@@ -74,7 +74,7 @@ $saturday = strtotime('+ 6 days',$time);
     <?php endif; ?>
     <div class="row-fluid heightfix lulContent padt30 padb30">
       <div class="span9">
-   		<h1 class="page-header2"><?php echo $LANG == 'en' ? 'Welcome to the J.N. Desmarais Library &amp; Archives':'Bienvenue à la bibliothèque et aux archives <span class="desktoponly">J. N. Desmarais</span>'; ?></h1>
+   		<h1 class="page-header2"><?php echo $LANG == 'en' ? 'J.N. Desmarais Library &amp; Archives':'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>'; ?></h1>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
           <li class="active"><a href="#catalogue" data-toggle="tab" id="librarySearchTab" class="dropdown-toggle">Catalogue&nbsp;&nbsp;&nbsp;<b class="caret"></b></a> 
           	<ul class="dropdown-menu">
@@ -93,89 +93,13 @@ $saturday = strtotime('+ 6 days',$time);
         <div id="librarySearchContent" class="tab-content border pad40">
           <div class="tab-pane fade in active" id="catalogue">
             <form action="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/results" method="get" id="concat">
-              <select id="item_type_selector" name="fi:item_type" aria-label="Select item type:" style="display:none;">
-                <option value="">All Formats</option>
-                <option value="e">Cartographic material</option>
-                <option value="m">Computer file</option>
-                <option value="o">Kit</option>
-                <option value="a">Language material</option>
-                <option value="f">Manuscript cartographic material</option>
-                <option value="t">Manuscript language material</option>
-                <option value="d">Manuscript notated music</option>
-                <option value="p">Mixed materials</option>
-                <option value="j">Musical sound recording</option>
-                <option value="i">Nonmusical sound recording</option>
-                <option value="c">Notated music</option>
-                <option value="g">Projected medium</option>
-                <option value="r">Three-dimensional artifact or naturally occurring object</option>
-                <option value="k">Two-dimensional nonprojectable graphic</option>
-              </select>
               <div class="control-group">
                 <div class="input-append">
                   <input class="searchbox" id="query" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search by keyword ...' : 'Rechercher par mot-clé ...'; ?>" name="query" />
                   <button class="btn" type="button" id="searchCatalogue"><span class="fui-search"></span></button>
                 </div>
               </div>
-              <select name="qtype" id="qtype" aria-label="Select query type:" style="display:none;">
-                <option value="keyword" selected="selected">Keyword</option>
-                <option value="title">Title</option>
-                <option value="jtitle">Journal Title</option>
-                <option value="author">Author</option>
-                <option value="subject">Subject</option>
-                <option value="series">Series</option>
-              </select>
-              <select aria-label="Select search library" name="locg" style="display:none;">
-                <option value="1" class="org_unit"> &nbsp;Conifer </option>
-                <option value="111" class="org_unit"> &nbsp;&nbsp;&nbsp;Algoma System </option>
-                <option value="124" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algoma University, Wishart Library </option>
-                <option value="134" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lest We Forget Remembrance and Military Library </option>
-                <option value="144" class="org_unit"> &nbsp;&nbsp;&nbsp;Child and Community Resources </option>
-                <option value="148" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCR - Fort Frances </option>
-                <option value="146" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCR - Sault. Ste. Marie </option>
-                <option value="145" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCR - Sudbury </option>
-                <option value="147" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCR - Thunder Bay </option>
-                <option value="135" class="org_unit"> &nbsp;&nbsp;&nbsp;Collège Boréal </option>
-                <option value="137" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Hearst </option>
-                <option value="138" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Kapuskasing </option>
-                <option value="140" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Nipissing </option>
-                <option value="136" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Sudbury </option>
-                <option value="141" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Timmins </option>
-                <option value="142" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Toronto </option>
-                <option value="139" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collège Boréal - Témiskaming </option>
-                <option value="105" selected="selected" class="org_unit"> &nbsp;&nbsp;&nbsp;Laurentian University </option>
-                <option value="130" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curriculum Resource Centre </option>
-                <option value="104" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Huntington University Library </option>
-                <option value="108" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructional Media Centre </option>
-                <option value="103" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J.N. Desmarais Library </option>
-                <option value="103:1" class="loc_grp"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4th year theses and essays </option>
-                <option value="103:2" class="loc_grp"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Graduate theses and essays </option>
-                <option value="132" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laboratoire de didactiques, E.S.E. </option>
-                <option value="131" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music Resource Centre </option>
-                <option value="150" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School of Architecture </option>
-                <option value="107" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University of Sudbury </option>
-                <option value="125" class="org_unit"> &nbsp;&nbsp;&nbsp;Northern Ontario Health Library Consortium </option>
-                <option value="115" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HSN Health Sciences Library </option>
-                <option value="149" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Bay Regional Health Centre </option>
-                <option value="110" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Northern Ontario School of Medicine (East) </option>
-                <option value="126" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Northern Ontario School of Medicine (West) </option>
-                <option value="116" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sault Area Hospital </option>
-                <option value="133" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;St. Joseph's Care Group </option>
-                <option value="102" class="org_unit"> &nbsp;&nbsp;&nbsp;Special Libraries </option>
-                <option value="112" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Art Gallery of Sudbury </option>
-                <option value="113" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Centre Franco-Ontarien de Folklore </option>
-                <option value="118" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John B. Gammon Geoscience Library </option>
-                <option value="117" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mining and the Environment Database </option>
-                <option value="123" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Northeast Mental Health Centre </option>
-                <option value="120" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vale Inco </option>
-                <option value="119" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xstrata Process Support Centre Library </option>
-                <option value="114" class="org_unit"> &nbsp;&nbsp;&nbsp;Université de Hearst </option>
-                <option value="128" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hearst Kapuskasing, Centre de Ressources </option>
-                <option value="129" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hearst Timmins, Centre de Ressources </option>
-                <option value="127" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hearst, Bibliothèque Maurice-Saulnier </option>
-                <option value="106" class="org_unit"> &nbsp;&nbsp;&nbsp;Windsor System </option>
-                <option value="109" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leddy Library </option>
-                <option value="122" class="org_unit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paul Martin Law Library </option>
-              </select>
+              <input type="hidden" name="locg" value="103" />
               <input id="detail" type="hidden" name="detail_record_view" value="1" />
             </form>
             <div class="searchoptions"> <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?locg=105"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> | <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?pane=numeric"><?php echo $LANG == 'en' ? 'Numeric Search' : 'Recherche numérique'; ?></a><!-- | <a href="https://laurentian.concat.ca/eg/opac/advanced?pane=expert"><?php echo $LANG == 'en' ? 'Expert Search' : 'Recherche experte'; ?></a> --> </div>
