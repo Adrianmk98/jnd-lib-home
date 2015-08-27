@@ -90,7 +90,7 @@ $saturday = strtotime('+ 6 days',$time);
           <li><a href="#databases" data-toggle="tab"><?php echo $LANG == 'en' ? 'Research Databases' : 'Bases de données'; ?></a></li>
           <li><a href="#researchguides" data-toggle="tab"><?php echo $LANG == 'en' ? 'Research Guides' : 'Guides de recherche'; ?></a></li>
         </ul>
-        <div id="librarySearchContent" class="tab-content border pad40">
+        <div id="librarySearchContent" class="tab-content border pad10">
           <div class="tab-pane fade in active" id="catalogue">
             <form action="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/results" method="get" id="concat">
               <div class="control-group">
@@ -175,7 +175,7 @@ $saturday = strtotime('+ 6 days',$time);
                </select>
                <button class="btn" type="button" id="searchDB"><span class="fui-search"></span></button>
            </form>
-           <div class="searchoptions padt20"> <a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a></div>
+           <div class="searchoptions padt10"> <a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a></div>
            <p class="padt20 pt13 justify" id="dbdesc"></p>
           </div>
           <div class="tab-pane fade" id="researchguides">
@@ -202,7 +202,7 @@ $saturday = strtotime('+ 6 days',$time);
                </select>
                <button class="btn" type="button" id="searchGuides"><span class="fui-search"></span></button>
            </form>
-           <div class="searchoptions padt20"> <a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a> <?php if($LANG == 'fr') echo " | <a href='http://biblio.laurentian.ca/research/fr/guides/guide-de-ressources-en-fran%C3%A7ais'>Guide des ressources en français</a>"; ?></div>
+           <div class="searchoptions padt10"> <a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a> <?php if($LANG == 'fr') echo " | <a href='http://biblio.laurentian.ca/research/fr/guides/guide-de-ressources-en-fran%C3%A7ais'>Guide des ressources en français</a>"; ?></div>
 
           
           </div>

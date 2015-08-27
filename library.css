@@ -110,6 +110,9 @@
 .lpEmtStarRating {
 	display:none;
 }
+div.input-append {
+    margin-bottom: 0;
+}
 
 /* iPad / Smaller Desktops */
 @media screen and (max-width: 1200px) { 
