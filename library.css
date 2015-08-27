@@ -65,12 +65,6 @@
 #libraryHours .today .active, .active label { font-weight: normal !important; }
 #libraryHours .today p { letter-spacing: normal !important; cursor:pointer; }
 #libraryHours .arrow:after { 	z-index: 2; position: absolute; top: 98.1%; left: 44.5%; content: ''; width: 0; height: 0; border-top: solid 15px #FFF; border-left: solid 15px transparent; border-right: solid 15px transparent; transition: all 0.2s; }
-#libraryHours .todayHours { padding: 20px 30px; color: #FFF; }
-#libraryHours .todayHours .time { background: #717ea8; font-weight: bold;  color: #FFF; }
-#libraryHours .todayHours { background: #717ea8; font-weight: normal !important; }
-#libraryHours .todayHours .half { width:100px; display:inline-block; font-size:1.429em; /* 20px; */ vertical-align:top; }
-#libraryHours .todayHours .half:last-child { text-align:right;}
-#libraryHours .todayHours span:last-child { font-size: 12px !important; }
 #libraryHours .moreHours { background: #3c476b; text-align:center; padding: 16px 30px; }
 #libraryHours .moreHours a { color: #FFF !important; transition: color 0.2s;  }
 #libraryHours .moreHours a:hover  { color: #bdc9f3 !important; }
@@ -125,7 +119,6 @@ div.input-append {
 	#libraryHours { padding:0; margin: 0 0 0 30px; width: 204px; }
 	#libraryHours .dates span { width: 28px; line-height:28px; min-height:28px; }
 	#libraryHours .today { font-size: 12px; padding: 20px; }
-	#libraryHours .todayHours .half { width: 69px; font-size:13px; line-height: 1.6em;   }
 	#libraryHours .arrow:after { 	left: 44.5%; border-top: solid 10px #FFF; border-left: solid 10px transparent; border-right: solid 10px transparent;  }
 	#libraryHours .today label { font-size:12px !important; }
 	#libraryHours .fullwidth { width: 142px !important; }

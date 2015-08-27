@@ -224,14 +224,6 @@ $saturday = strtotime('+ 6 days',$time);
             	<p class="jwt"></p>
             	<p class="uos"></p>
             </div>
-            <div class="todayHours">
-            	<div class="half">
-                	<!--<span class="time">8:00</span>am<br/><span>Friday, May 5</span>-->
-                </div>
-                <div class="half">
-                	<!--<span class="time">1:00</span>am<br/><span>Saturday, May 6</span>-->
-                </div>
-            </div>
             <div class="moreHours">
 				<a href="/<?php echo $LANG == 'en' ? 'library-hours' : 'biblio-horaire'; ?>"><?php echo $LANG == 'en' ? 'View all campus library hours' : 'Voir tous les horaires'; ?> &raquo;</a>
             </div>
@@ -564,15 +556,6 @@ function formatdateLang(today,closed)
     
             var info = jQuery.parseJSON(msg);
                 
-
-            if(closed == false) {
-				$('#libraryHours .todayHours .half:first-child').removeClass("fullwidth").html("<span class='time'>"+open[0]+"</span><br/><span>"+info.itemdate+"</span>").show();
-				$('#libraryHours .todayHours .half:last-child').html("<span class='time'>"+open[1]+"</span><br/><span>"+info.itemdateClose+"</span>").show();
-			} else {
-                $('#libraryHours .todayHours .half:first-child').html("<span class='time'>"+open[0]+"</span><br/><span>"+info.itemdate+"</span>").addClass("fullwidth");
-                $('#libraryHours .todayHours .half:last-child').html("<span class='time'></span><br/><span></span>").hide();
-            }
-
         });
 
 }
