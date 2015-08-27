@@ -1,0 +1,137 @@
+/** lulComment
+  * @author			M. Blais
+  * @description 	Stylesheet for JND Library
+*/
+
+.page-header { display:none; } /* hide page header */
+.page-header2 { margin: 0; padding: 0 0 20px; }
+
+/* SEARCH AREA */
+#librarySearchContent { overflow:hidden; }
+#librarySearchContent select { border: 2px solid #BDC3C7; }
+/*#librarySearchContent select:focus { border: 2px solid #1D2A54; } */
+#librarySearch .caret { font-size:10px; }
+
+.searchoptions { color: #96a1ac; text-align:right; }
+.searchoptions a { color: #96a1ac !important; }
+.searchoptions a:hover { color: #798592 !important; }
+.searchbox { width: 726px !important; }
+.searchbox2 { width: 735px !important; font-size:15px; margin:0; height: 41px;  }
+
+
+/* CATALOGUE SEARCH */
+.current { background: #E1E4E7 !important; color: #647483 !important; }
+.dropdown-menu li.active > a, .dropdown-menu li.selected > a, .dropdown-menu li.active > a.highlighted, .dropdown-menu li.selected > a.highlighted { background: #f3f4f5 !important; color: #647483 !important; }
+
+/* DB SEARCH */
+#dbdesc { display:none; } /* DB description */
+
+
+/* OVERRIDES */
+.main-container2 { background: #FFF; padding: 0 40px; } /* replaces .main-container, no shadow */
+.row-fluid .span25 { width: 17.95%; padding-left:25px; }
+
+/* TWITTER */
+.tweet_list { background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyNTAxRkFBNkNGMTQxMUUzOEZFM0E4NzIxNUYzMTIyOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyNTAxRkFBN0NGMTQxMUUzOEZFM0E4NzIxNUYzMTIyOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjI1MDFGQUE0Q0YxNDExRTM4RkUzQTg3MjE1RjMxMjI5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI1MDFGQUE1Q0YxNDExRTM4RkUzQTg3MjE1RjMxMjI5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ssHG8wAABFxJREFUeNrMWG1PW2UYvs7p6cuB8rJS2CRABxRZYnxZJCMm+sFPGoZxfvMH+JK4RE00RhPfvhh/gB/c4jRzJi6LbuoyEx0BjegQZWPsgy8gI84wxFFKwb6cntNzvJ6T0lRW6oHS1ru90pbnyXmu537u+7rvB6m5exAulwsexQOLrzx7k3iSUFA5myUeV7pCYcRiUSyvROD1+tYHDxEvovJ2F/GxsrtlD5oCQZhzFqIk5vOqYvBOVM/a5UQiDssyEe7sQaAxCE1LiYFUFUklFEmSoOs63Iob3XvDmP0dWI5G1hSXAg7tuImolfiSZRlS4QUsO4g56NcNvZ3E9M6OLkOW5FAiGYcgtuNGHpZlIcUTkSwJLtm1McHszBog3iKxEImlXS7F6GgL+QzDKIunbD9JMmKrUVxfnEfGzNhe20jqPWJ31mOqyUnCrYpSPiUQx9fSvAcinpeiSwVJBW46VLpXoJwmmzLcbk/hsWplWrGNy/gfWkmkROyJvcbjKayuJWFkTPvvpmmVn5SiuLhoghmTYJ2Uc4RM00QksorGRj/aWgNY4/j8QsTOWqmE1HWUYqtcrL+vlzUyjvGJabS3Be2Fl6N/4+GBfhx+YgAN9TU4P3wZc9cWMT0zj0tXrkL1ebclK8p/BySweGMFhwb70bc/jMPPHcXYD78glUrjjtv24rWXHs3NPfhgn/356hsfcly3SZXFU2KnNTVeemES9993O04cfRaffzmBM2fH0NPdetP8i1OzGP56CnV+ddvi6+j4FPZbwmMpTWcX4cbBB/psrHsyf/Grc39iaXkNnaGWbQe8o0A3jAwUN8WOAV/Ik/l27Y8b8HrcJWWgI1ItzQ349Nw4Tp35tug8EWejF36C3+8rvySI2iTTJd+N/4xEUrOloJC9f3IEv80t2PFUdlJCc5qDDfhi6BJeeOU4VigNG+38yGW8c3wIwUB9qXXT5UASLMQTKTv9n3/6ERy4mx3qrrrcuCB46vQojp0YYiwp8PncpSp6jeLES0LF569HMHlllu2GxuouI502MD27gB8vTmOGn02BOqiqd9Oj3WzDBewTR5IgZCDGMnP6szHKQhoZ1jjRE3noGaFhrbcEcmVnK3WT76lMxpj0uD0qCUrZK9brjkiJ4xByILyxxV1vPp/PDOwKHuF94IiW1nj03twzqta6sPVmGVL9Pd377EuLILZexAUpbzVICQKarqkkht7wPvAIqXPJHCm9Wt5iVP0lbjWqWst7563w19bZRyhIPUNoVeD0FXFSeCylJUmsBj1dvfaFRQT6u8Q3RFeWnFX0Hgk0EIPiHxEOFv6eeJlI58Wvkv09mn+7YRbCtMx/dQkzWTi1s8QQcYyoLzJvhBjeqm6Vkn0fEQeIiSJzait+caD9StyTDYFNLumVJ2W3W8RjxFNF4rHipNbtbeJeYi6/GGz1IaJU7bSiXyD2E+eyv5u23Lew9S5HmYkRDxEfZL879pDQrM6ObvwjwAC22Jtp2yMEfAAAAABJRU5ErkJggg==') no-repeat 0px 6px; margin: 0 !important; min-height:50px;  text-align: justify; }
+.tweet_list li { padding-left: 50px !important; text-align:justify; line-height:1.6em !important; }
+.tweet_avatar, .tweet_time  { display:none; }
+.tweet_text { font-color: #1d2a54; font-size: 15px; line-height: 1.643em; min-height:50px; }
+.tweet_text a { font-weight: normal; transition: color 0.2s;}
+.tweet_text a:hover { color: #6972a3; }
+
+/* NAV AREA MIDDLE */
+.libraryMenuShadow { box-shadow: 0 0 50px #f1f1f1 inset; } /* 60px original */
+.libraryMenu { padding-top:30px; padding-bottom:40px; }
+.libraryMenu ul, .libraryMenu li { margin:0 !important; padding:0 !important; list-style:none; }
+.libraryMenu li:before { content: "» "; }
+.libraryMenu a { font-weight: 400;  transition: color 0.2s;  }
+.libraryMenu a:hover { color: #6972a3 !important; }
+
+/* BOTTOM QUICKLINKS */
+.quicklinks a { font-size: 1.286em; font-weight:400; opacity:0.8; transition: 0.2s ease; }
+.quicklinks span:last-child { text-align:right; }
+.quicklinks a:after { content: " »"; }
+.quicklinks a img { padding-right:10px; vertical-align:middle; }
+.quicklinks a:hover { opacity:1;  }
+
+/* HOURS OF OPERATION */
+#libraryHours .border { border: 1px solid #8b8f9a; }
+#libraryHours { padding:0; margin: 0 0 0 30px; width: 267px; }
+#libraryHours .dates span { width: 37px; display:inline-block; background: #48547b; margin:0; padding:0; border-right: 1px solid #525c7c; text-align:center; min-height:36px; line-height:36px; color: #FFF; font-weight: normal; font-size: 14px; cursor:pointer; transition: all 0.2s; }
+#libraryHours .dates span.active, #libraryHours .dates span:hover { background: #5d688c; }
+#libraryHours .dates span:last-child { border-right:none !important;  }
+#libraryHours .today { padding: 20px 30px; text-align:right; color: #1D2A54; position:relative;cursor:default !important; }
+#libraryHours .today label {  margin:0; padding-top:4px; font-weight: 300; float:left;  }
+#libraryHours .today .active, .active label { font-weight: normal !important; }
+#libraryHours .today p { letter-spacing: normal !important; cursor:pointer; }
+#libraryHours .arrow:after { 	z-index: 2; position: absolute; top: 98.1%; left: 44.5%; content: ''; width: 0; height: 0; border-top: solid 15px #FFF; border-left: solid 15px transparent; border-right: solid 15px transparent; transition: all 0.2s; }
+#libraryHours .todayHours { padding: 20px 30px; color: #FFF; }
+#libraryHours .todayHours .time { background: #717ea8; font-weight: bold;  color: #FFF; }
+#libraryHours .todayHours { background: #717ea8; font-weight: normal !important; }
+#libraryHours .todayHours .half { width:100px; display:inline-block; font-size:1.429em; /* 20px; */ vertical-align:top; }
+#libraryHours .todayHours .half:last-child { text-align:right;}
+#libraryHours .todayHours span:last-child { font-size: 12px !important; }
+#libraryHours .moreHours { background: #3c476b; text-align:center; padding: 16px 30px; }
+#libraryHours .moreHours a { color: #FFF !important; transition: color 0.2s;  }
+#libraryHours .moreHours a:hover  { color: #bdc9f3 !important; }
+#libraryHours .fullwidth { text-align:center  !important; width:207px !important; }
+.arc { display:none !important; }
+.desktoponly { display:inline-block !important; }
+
+.subtitle { margin-bottom:0px !important; }
+.notice:before { content: "* "; }
+.notice { font-size:0.75em; font-style:italic; padding-top:5px; }
+
+
+/* ASK A LIBRARIAN */
+#askalibrarian { 
+	z-index:1000;
+	position: fixed;
+	background: #FFF;
+	text-align:center;
+	width: 200px;
+	height: 265px;
+	bottom:-215px; right: 20px; 
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 0 50px #f1f1f1 inset; 
+}
+#askalibrarian .toggle i { padding-right: 20px; font-size:12px; }
+#askalibrarian .toggle { height: 50px; overflow: hidden; cursor:pointer; }
+#askalibrarian .toggle h6 { margin: 0; line-height:1.2em; padding-top:12px;background: #1D2A54;border-radius: 10px 10px 0 0;color: #fff;height: 50px; cursor:pointer; }
+#askalibrarian h5 { margin: 0; }
+#askalibrarian .info { 	font-size: 1.2em; padding-top: 10px; text-align:left;  }
+#askalibrarian .moreinfo { font-weight: 700; font-size: 13px; margin-left:28px; cursor:help; }
+#askalibrarian .moreinfo:hover { color: #6972a3 !important; }
+#askalibrarian .info table { width: 100%; }
+
+.lpPoweredBy {
+	display:none;
+}
+.lpEmtStarRating {
+	display:none;
+}
+
+/* iPad / Smaller Desktops */
+@media screen and (max-width: 1200px) { 
+	.desktoponly { display:none !important; }
+	.searchbox { width: 555px !important; }
+	.searchbox2 { width: 565px !important; }
+	.quicklinks a:after { content: "" !important; }
+	
+	/* HOURS OF OPERATION */
+	#libraryHours { padding:0; margin: 0 0 0 30px; width: 204px; }
+	#libraryHours .dates span { width: 28px; line-height:28px; min-height:28px; }
+	#libraryHours .today { font-size: 12px; padding: 20px; }
+	#libraryHours .todayHours .half { width: 69px; font-size:13px; line-height: 1.6em;   }
+	#libraryHours .arrow:after { 	left: 44.5%; border-top: solid 10px #FFF; border-left: solid 10px transparent; border-right: solid 10px transparent;  }
+	#libraryHours .today label { font-size:12px !important; }
+	#libraryHours .fullwidth { width: 142px !important; }
+	#libraryHours .moreHours { font-size:13px !important; line-height: 1em; }
+	.hidden { display:none !important; }
+	.tweet_text { font-size: 13px; }
+	
+}
+@media screen and (min-width:1200px) {
+	
+	.hidden { display: inline-block !important; visibility:visible !important; }	
+}
