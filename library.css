@@ -41,7 +41,7 @@
 
 /* NAV AREA MIDDLE */
 .libraryMenuShadow { box-shadow: 0 0 50px #f1f1f1 inset; } /* 60px original */
-.libraryMenu { padding-top:30px; padding-bottom:40px; }
+.libraryMenu { padding-bottom:0px; }
 .libraryMenu ul, .libraryMenu li { margin:0 !important; padding:0 !important; list-style:none; }
 .libraryMenu li:before { content: "» "; }
 .libraryMenu a { font-weight: 400;  transition: color 0.2s;  }
