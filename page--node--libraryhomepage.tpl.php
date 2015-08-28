@@ -72,7 +72,7 @@ $saturday = strtotime('+ 6 days',$time);
     <?php print render($action_links); ?>
     </ul>
     <?php endif; ?>
-    <div class="row-fluid heightfix lulContent padt30 padb30">
+    <div class="row-fluid heightfix lulContent padt20 padb20">
       <div class="span9">
    		<h1 class="page-header2"><?php echo $LANG == 'en' ? 'J.N. Desmarais Library &amp; Archives':'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>'; ?></h1>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
