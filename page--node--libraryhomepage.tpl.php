@@ -38,9 +38,9 @@ $wednesday = strtotime('+ 3 days',$time);
 $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
-?><head>
-<link rel="stylesheet" type="text/css" href="/sites/all/themes/lul/css/pagespecific/library.css"/>
-</head>
+
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme() . '/css/pagespecific/library.css', 'type' => 'text/css'));
+?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
 
