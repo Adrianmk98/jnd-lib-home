@@ -45,7 +45,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
 
 
 
-<div class="main-container2 container">
+<div class="main-container2 container" vocab="http://schema.org/" typeof="Library">
 	<?php if (!empty($page['highlighted'])): ?>
     <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
     <?php endif; ?>
@@ -74,7 +74,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
     <?php endif; ?>
     <div class="row-fluid heightfix lulContent padt20 padb20">
       <div class="span9">
-   		<h1 class="page-header2"><?php echo $LANG == 'en' ? 'J.N. Desmarais Library &amp; Archives':'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>'; ?></h1>
+        <h1 class="page-header2" property="name"><?php echo $LANG == 'en' ? 'J.N. Desmarais Library &amp; Archives':'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>'; ?></h1>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
           <li class="active"><a href="#catalogue" data-toggle="tab" id="librarySearchTab" class="dropdown-toggle">Catalogue&nbsp;&nbsp;&nbsp;<b class="caret"></b></a> 
           	<ul class="dropdown-menu">
