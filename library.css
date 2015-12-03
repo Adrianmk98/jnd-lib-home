@@ -61,7 +61,7 @@
 #libraryHours .dates span { width: 37px; display:inline-block; background: #48547b; margin:0; padding:0; border-right: 1px solid #525c7c; text-align:center; min-height:36px; line-height:36px; color: #FFF; font-weight: 200; font-size: 14px; cursor:pointer; }
 #libraryHours .dates span.active, #libraryHours .dates span:hover { background: #5d688c; }
 #libraryHours .dates span:last-child { border-right:none !important;  }
-#libraryHours .today { padding: 20px 30px; text-align:right; color: #003e7e; position:relative;cursor:default !important; }
+#libraryHours .today { padding: 1em; text-align:right; color: #003e7e; position:relative;cursor:default !important; }
 #libraryHours .today label {  margin:0; padding-top:4px; font-weight: 100; float:left;  }
 #libraryHours .today .active, .active label { font-weight: 200 !important; }
 #libraryHours .today p { letter-spacing: normal !important; cursor:pointer; }
