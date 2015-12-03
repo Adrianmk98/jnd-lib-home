@@ -108,6 +108,9 @@
 div.input-append {
     margin-bottom: 0;
 }
+.googlescholar .input-append {
+    width: 90%;
+}
 
 /* iPad / Smaller Desktops */
 @media screen and (max-width: 1200px) { 

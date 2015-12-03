@@ -86,6 +86,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
                 <li class="filtermenu"><a data-filter="series" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Series' : 'Par séries'; ?></a></li>
             </ul>
     	  </li>
+          <li><a href="#googlescholar" data-toggle="tab"><?php echo $LANG == 'en' ? 'Scholarly Articles' : 'Articles scientifiques'; ?></a></li>
           <li><a href="#journals" data-toggle="tab"><?php echo $LANG == 'en' ? 'E-Journals' : 'Revues électroniques'; ?></a></li>
           <li><a href="#databases" data-toggle="tab"><?php echo $LANG == 'en' ? 'Research Databases' : 'Bases de données'; ?></a></li>
           <li><a href="#researchguides" data-toggle="tab"><?php echo $LANG == 'en' ? 'Research Guides' : 'Guides de recherche'; ?></a></li>
@@ -103,6 +104,17 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
               <input id="detail" type="hidden" name="detail_record_view" value="1" />
             </form>
             <div class="searchoptions"> <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?locg=105"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> | <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?pane=numeric"><?php echo $LANG == 'en' ? 'Numeric Search' : 'Recherche numérique'; ?></a><!-- | <a href="https://laurentian.concat.ca/eg/opac/advanced?pane=expert"><?php echo $LANG == 'en' ? 'Expert Search' : 'Recherche experte'; ?></a> --> </div>
+          </div>
+          <div class="tab-pane fade" id="googlescholar">
+            <form name="googlescholar" method="get" accept-charset="utf-8" action="http://scholar.google.ca.librweb.laurentian.ca/scholar" id="gscholar">
+                <input type="hidden" name="hl" value="<?php echo($LANG) ?>">
+                 <div class="control-group">
+                    <div class="input-append">
+                        <input class="q" id="scholar_value" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search for articles in Google Scholar...' : 'Rechercher des articles en Google Scholar...'; ?>" name="q" />
+                        <button class="btn" type="button" id="searchArticles"><span class="fui-search"></span></button>
+                    </div>
+                  </div>
+            </form>
           </div>
           <div class="tab-pane fade" id="journals">
           
