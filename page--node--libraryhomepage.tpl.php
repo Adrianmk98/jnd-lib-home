@@ -230,41 +230,6 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
         }
         echo "<span style='float:right'><a href='$news_link'>$news_text</a></span></div>";?>
       </div> <!-- /.span9 -->
-      <div class="span3" id="libraryHours">
-      	<div class="border">
-            <div class="dates">
-              <?php if($LANG == 'en') { ?>
-                <span id="Sun" data-day="<?php echo date('m/d/Y',$sunday);?>">S</span><span id="Mon" data-day="<?php echo date('m/d/Y',$monday);?>">M</span><span id="Tue" data-day="<?php echo date('m/d/Y',$tuesday);?>">T</span><span id="Wed" data-day="<?php echo date('m/d/Y',$wednesday);?>">W</span><span id="Thu" data-day="<?php echo date('m/d/Y',$thursday);?>">T</span><span id="Fri" data-day="<?php echo date('m/d/Y',$friday);?>">F</span><span id="Sat" data-day="<?php echo date('m/d/Y',$saturday);?>">S</span>
-              <?php } else { ?>
-       <span id="Sun" data-day="<?php echo date('m/d/Y',$sunday);?>">D</span><span id="Mon" data-day="<?php echo date('m/d/Y',$monday);?>">L</span><span id="Tue" data-day="<?php echo date('m/d/Y',$tuesday);?>">M</span><span id="Wed" data-day="<?php echo date('m/d/Y',$wednesday);?>">M</span><span id="Thu" data-day="<?php echo date('m/d/Y',$thursday);?>">J</span><span id="Fri" data-day="<?php echo date('m/d/Y',$friday);?>">V</span><span id="Sat" data-day="<?php echo date('m/d/Y',$saturday);?>">S</span>
-              <?php } ?>
-            </div>
-            <div class="today arrow">
-            	<p class="jnd"></p>
-            	<p class="arc"></p>
-            	<p class="jwt"></p>
-            	<p class="uos"></p>
-            </div>
-            <div class="moreHours">
-				<a href="/<?php echo $LANG == 'en' ? 'library-hours' : 'biblio-horaire'; ?>"><?php echo $LANG == 'en' ? 'View all campus library hours' : 'Voir tous les horaires'; ?> &raquo;</a>
-            </div>
-        </div>
-        <?php /*  RM'd because Archives want two timeslots.
-        <div>
-            <p class="notice"><?php echo $LANG == 'en' ? 'Archives are CLOSED between 12:00PM and 1:00PM.' : 'Les Archives sont FERMÉ entre 12h et 13h.'; ?></p>
-        </div>
-		*/
-		?>
-      </div>
-      <div class="span3" id="twitter-widget">
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<?php echo $twitter_id; ?>" data-widget-id="<?php echo $twitter_widget; ?>">Tweets by @LaurentianLib</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div>
-    </div> <!--/.row-fluid-->
-</div> <!-- /.container -->
-
-
-<div class="main-container2 libraryMenuShadow container">
   <div class="row-fluid libraryMenu lulContent" id="lulContent">
     <div class="span25">
       <h5><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
@@ -316,7 +281,40 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
       </ul>
     </div>
   </div> <!-- /.row-fluid-->
-</div> <!-- /.container-->
+
+      <div class="span3" id="libraryHours">
+      	<div class="border">
+            <div class="dates">
+              <?php if($LANG == 'en') { ?>
+                <span id="Sun" data-day="<?php echo date('m/d/Y',$sunday);?>">S</span><span id="Mon" data-day="<?php echo date('m/d/Y',$monday);?>">M</span><span id="Tue" data-day="<?php echo date('m/d/Y',$tuesday);?>">T</span><span id="Wed" data-day="<?php echo date('m/d/Y',$wednesday);?>">W</span><span id="Thu" data-day="<?php echo date('m/d/Y',$thursday);?>">T</span><span id="Fri" data-day="<?php echo date('m/d/Y',$friday);?>">F</span><span id="Sat" data-day="<?php echo date('m/d/Y',$saturday);?>">S</span>
+              <?php } else { ?>
+       <span id="Sun" data-day="<?php echo date('m/d/Y',$sunday);?>">D</span><span id="Mon" data-day="<?php echo date('m/d/Y',$monday);?>">L</span><span id="Tue" data-day="<?php echo date('m/d/Y',$tuesday);?>">M</span><span id="Wed" data-day="<?php echo date('m/d/Y',$wednesday);?>">M</span><span id="Thu" data-day="<?php echo date('m/d/Y',$thursday);?>">J</span><span id="Fri" data-day="<?php echo date('m/d/Y',$friday);?>">V</span><span id="Sat" data-day="<?php echo date('m/d/Y',$saturday);?>">S</span>
+              <?php } ?>
+            </div>
+            <div class="today arrow">
+            	<p class="jnd"></p>
+            	<p class="arc"></p>
+            	<p class="jwt"></p>
+            	<p class="uos"></p>
+            </div>
+            <div class="moreHours">
+				<a href="/<?php echo $LANG == 'en' ? 'library-hours' : 'biblio-horaire'; ?>"><?php echo $LANG == 'en' ? 'View all campus library hours' : 'Voir tous les horaires'; ?> &raquo;</a>
+            </div>
+        </div>
+        <?php /*  RM'd because Archives want two timeslots.
+        <div>
+            <p class="notice"><?php echo $LANG == 'en' ? 'Archives are CLOSED between 12:00PM and 1:00PM.' : 'Les Archives sont FERMÉ entre 12h et 13h.'; ?></p>
+        </div>
+		*/
+		?>
+      </div>
+      <div class="span3" id="twitter-widget">
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<?php echo $twitter_id; ?>" data-widget-id="<?php echo $twitter_widget; ?>">Tweets by @LaurentianLib</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+    </div> <!--/.row-fluid-->
+</div> <!-- /.container -->
+
 <div class="main-container2 container">
   <div class="row-fluid padt20 padb20 quicklinks">
   	<span class="<?php echo $LANG == 'en' ? 'span3' : 'span4'; ?>">

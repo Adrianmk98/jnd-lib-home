@@ -28,7 +28,7 @@
 
 /* OVERRIDES */
 .main-container2 { background: #FFF; } /* replaces .main-container, no shadow */
-.libraryMenuShadow .row-fluid .span25 { width: 17.95%; padding-left:25px; }
+#lulContent .span25 { width: 17.5%; }
 /* Accessibility - sufficient contrast */
 #librarySearch, #librarySearch li a { color: #252a2f }
 #librarySearch li.active a { color: #141719 }
