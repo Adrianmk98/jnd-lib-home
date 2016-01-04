@@ -408,7 +408,11 @@ $(document).ready(function(){
 		// TODO: Error Checking
 		$('#scholarportal').submit();
 	});
-	
+
+    // Google Scholar Search
+    $("#searchArticles").on("click", function(){
+        $('#gscholar').submit();
+    });
 	
 	// Databases Search
 	// Redirect to this URL (on "Search" Databases)
