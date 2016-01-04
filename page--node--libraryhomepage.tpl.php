@@ -229,7 +229,6 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
             $news_link = "https://biblio.laurentian.ca/research/news";
         }
         echo "<span style='float:right'><a href='$news_link'>$news_text</a></span></div>";?>
-      </div> <!-- /.span9 -->
   <div class="row-fluid libraryMenu lulContent" id="lulContent">
     <div class="span25">
       <h5><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
@@ -281,7 +280,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
       </ul>
     </div>
   </div> <!-- /.row-fluid-->
-
+      </div> <!-- /.span9 -->
       <div class="span3" id="libraryHours">
       	<div class="border">
             <div class="dates">
