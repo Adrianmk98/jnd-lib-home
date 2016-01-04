@@ -110,7 +110,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
                 <input type="hidden" name="hl" value="<?php echo($LANG) ?>">
                  <div class="control-group">
                     <div class="input-append">
-                        <input class="q" id="scholar_value" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search for articles in Google Scholar...' : 'Rechercher des articles en Google Scholar...'; ?>" name="q" />
+                        <input class="searchbox" id="scholar_value" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search for articles in Google Scholar...' : 'Rechercher des articles en Google Scholar...'; ?>" name="q" />
                         <button class="btn" type="button" id="searchArticles"><span class="fui-search"></span></button>
                     </div>
                   </div>
