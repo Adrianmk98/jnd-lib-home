@@ -50,7 +50,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
     "@id": "http://laurentian.ca/library",
     "address": {
         "@type": "PostalAddress",
-        "name": "J.N. Desmarais Library",
+        "name": "Laurentian University Library and Archives",
         "streetAddress": "935 Ramsey Lake Road",
         "addressLocality": "Sudbury",
         "addressRegion": "ON",
@@ -60,6 +60,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
     "contactPoint": [
         {
             "@type": "ContactPoint",
+            "name": "Circulation",
             "contactType": "customer support",
             "telephone": "+1-705-675-4800",
             "email": "circulation@laurentian.ca",
@@ -67,13 +68,15 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
         },
         {
             "@type": "ContactPoint",
+            "name": "Reference and research assistance",
             "contactType": "customer service",
             "email": "reference@laurentian.ca",
             "url": "https://biblio.laurentian.ca/research/contact-us",
             "availableLanguage" : ["English", "French"]
         }
     ],
-    "name": "J.N. Desmarais Library",
+    "name": "Laurentian University Library and Archives",
+    "alternateName": "J.N. Desmarais Library and Archives",
     "url": "http://laurentian.ca/library"
 }    
 </script>
