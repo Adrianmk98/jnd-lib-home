@@ -39,13 +39,49 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme() . '/css/pagespecific/library.css', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme() . '/css/pagespecific/library.css?v=101', 'type' => 'text/css'));
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Library",
+    "@id": "http://laurentian.ca/library",
+    "address": {
+        "@type": "PostalAddress",
+        "name": "J.N. Desmarais Library",
+        "streetAddress": "935 Ramsey Lake Road",
+        "addressLocality": "Sudbury",
+        "addressRegion": "ON",
+        "addressCountry": "ON",
+        "postalCode": "P3E 2C6"
+    },
+    "contactPoint": [
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "telephone": "+1-705-675-4800",
+            "email": "circulation@laurentian.ca",
+            "availableLanguage" : ["English", "French"]
+        },
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "reference@laurentian.ca",
+            "url": "https://biblio.laurentian.ca/research/contact-us",
+            "availableLanguage" : ["English", "French"]
+        }
+    ],
+    "name": "J.N. Desmarais Library",
+    "url": "http://laurentian.ca/library"
+}    
+</script>
 
-
-<div class="main-container2 container" vocab="http://schema.org/" typeof="Library">
+<div class="main-container2 container" vocab="http://schema.org/" resource="http://laurentian.ca/library" typeof="Library">
+    <link property="sameAs" href="http://laurentienne.ca/bibliotheque" />
+    <link property="sameAs" href="https://laurentian.concat.ca/eg/opac/library/OSUL" />
+    <link property="sameAs" href="https://laurentienne.concat.ca/eg/opac/library/OSUL" />
 	<?php if (!empty($page['highlighted'])): ?>
     <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
     <?php endif; ?>
