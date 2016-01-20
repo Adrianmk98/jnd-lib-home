@@ -7,14 +7,20 @@
  * @notes           Removed all Sidebars for this TPL, copy from page.tpl.php if need to be reintroduced
  */
  
- // TODO:  Add SEO Tags
- // TODO:  Testing different scenerios with window.open instead of moving away from laurentian.ca ... 
 global $language;
 $LANG = $language->language;
 
 $twitter_id = 'LaurentianLib';
 $twitter_widget = '664917838747017216';
 $d = date('l, F j');    
+$lib_title = 'J.N. Desmarais Library and Archives';
+$lib_title_schema = $lib_title;
+$lib_name_schema = 'Laurentian University Library and Archives';
+$lib_ref_schema = 'Reference and research assistance';
+$lib_contact_url = 'https://biblio.laurentian.ca/research/contact-us';
+$lib_url_en = 'https://laurentian.ca/library';
+$lib_url_fr = 'https://laurentienne.ca/bibliotheque';
+$lib_url = $lib_url_en;
 
 if($LANG == 'fr')
 {
@@ -25,6 +31,12 @@ if($LANG == 'fr')
     $d = ucfirst($d);
     $twitter_id = 'BibLaurentienne';
     $twitter_widget = '684093957912047616';
+    $lib_title = 'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>';
+    $lib_title_schema = 'Bibliothèque et archives J. N. Desmarais';
+    $lib_name_schema = 'Bibliothèque et archives Université Laurentienne';
+    $lib_ref_schema = 'Aide dans vos recherches';
+    $lib_contact_url = 'http://biblio.laurentian.ca/research/fr/coordonnées-et-renseignements';
+    $lib_url = $lib_url_en;
 }
 
 $node = menu_get_object();
@@ -47,14 +59,14 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
 {
     "@context": "http://schema.org",
     "@type": "Library",
-    "@id": "http://laurentian.ca/library",
+    "@id": "<?php echo $lib_url ?>",
     "address": {
         "@type": "PostalAddress",
-        "name": "Laurentian University Library and Archives",
+        "name": "<?php echo $lib_name_schema ?>",
         "streetAddress": "935 Ramsey Lake Road",
         "addressLocality": "Sudbury",
         "addressRegion": "ON",
-        "addressCountry": "ON",
+        "addressCountry": "Canada",
         "postalCode": "P3E 2C6"
     },
     "contactPoint": [
@@ -68,21 +80,21 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
         },
         {
             "@type": "ContactPoint",
-            "name": "Reference and research assistance",
+            "name": "<?php echo $lib_ref_schema ?>",
             "contactType": "customer service",
             "email": "reference@laurentian.ca",
-            "url": "https://biblio.laurentian.ca/research/contact-us",
+            "url": "<?php echo $lib_contact_url ?>",
             "availableLanguage" : ["English", "French"]
         }
     ],
-    "name": "Laurentian University Library and Archives",
-    "alternateName": "J.N. Desmarais Library and Archives",
-    "url": "http://laurentian.ca/library"
+    "name": "<?php echo $lib_name_schema ?>",
+    "alternateName": "<?php echo $lib_title_schema ?>",
+    "url": "<?php echo $lib_url ?>"
 }    
 </script>
 
-<div class="main-container2 container" vocab="http://schema.org/" resource="http://laurentian.ca/library" typeof="Library">
-    <link property="sameAs" href="http://laurentienne.ca/bibliotheque" />
+<div class="main-container2 container" vocab="http://schema.org/" resource="<?php echo $lib_url ?>" typeof="Library">
+    <link property="sameAs" href="<?php echo $LANG == 'en' ? $lib_url_fr : $lib_url_en; ?>" />
     <link property="sameAs" href="https://laurentian.concat.ca/eg/opac/library/OSUL" />
     <link property="sameAs" href="https://laurentienne.concat.ca/eg/opac/library/OSUL" />
 	<?php if (!empty($page['highlighted'])): ?>
@@ -113,7 +125,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
     <?php endif; ?>
     <div class="row-fluid heightfix lulContent padt20 padb20">
       <div class="span9">
-        <h1 class="page-header2" property="name"><?php echo $LANG == 'en' ? 'J.N. Desmarais Library &amp; Archives':'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>'; ?></h1>
+        <h1 class="page-header2" property="name"><?php echo $lib_title ?></h1>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
           <li class="active"><a href="#catalogue" data-toggle="tab" id="librarySearchTab" class="dropdown-toggle">Catalogue&nbsp;&nbsp;&nbsp;<b class="caret"></b></a> 
           	<ul class="dropdown-menu">
