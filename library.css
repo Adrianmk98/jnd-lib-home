@@ -8,6 +8,9 @@
 
 /* SEARCH AREA */
 #librarySearchContent { overflow:hidden; }
+.input-append input.searchbox[type="text"] {
+    color: black;
+}
 #librarySearchContent select { border: 2px solid #BDC3C7; }
 #librarySearch .caret { font-size:10px; }
 
