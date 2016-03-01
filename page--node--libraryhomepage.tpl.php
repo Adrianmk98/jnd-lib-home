@@ -35,7 +35,7 @@ if($LANG == 'fr')
     $lib_title_schema = 'Bibliothèque et archives J. N. Desmarais';
     $lib_name_schema = 'Bibliothèque et archives Université Laurentienne';
     $lib_ref_schema = 'Aide dans vos recherches';
-    $lib_contact_url = 'http://biblio.laurentian.ca/research/fr/coordonnées-et-renseignements';
+    $lib_contact_url = 'https://biblio.laurentian.ca/research/fr/coordonnées-et-renseignements';
     $lib_url = $lib_url_en;
 }
 
@@ -51,7 +51,7 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme() . '/css/pagespecific/library.css?v=102', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://laurentian.ca/' . path_to_theme() . '/css/pagespecific/library.css?v=102', 'type' => 'text/css'));
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
@@ -225,7 +225,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
                	<option id="blank" data-url="#" selected="selected"><?php echo $LANG == 'en' ? 'Please make a selection' : 'Veuillez faire une sélection'; ?> ...</option>
                <?php
 			   	// Using JSON Feed from Biblio Service
-					$DBs = $LANG == 'en' ? 'http://laurentian.ca/feeds/library-dbEN.json' : 'http://laurentian.ca/feeds/library-dbFR.json'; 
+					$DBs = $LANG == 'en' ? 'https://laurentian.ca/feeds/library-dbEN.json' : 'https://laurentian.ca/feeds/library-dbFR.json'; 
 					$json = json_decode(file_get_contents($DBs),true);
 					
 					foreach($json as $key => $value){	
@@ -238,7 +238,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
                </select>
                <button class="btn" type="button" id="searchDB"><span class="fui-search"></span></button>
            </form>
-           <div class="searchoptions padt10"> <a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a></div>
+           <div class="searchoptions padt10"> <a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a></div>
            <p class="padt20 pt13 justify" id="dbdesc"></p>
           </div>
           <div class="tab-pane fade" id="researchguides">
@@ -248,7 +248,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
                	<option id="blank" data-url="#"><?php echo $LANG == 'en' ? 'Please make a selection' : 'Veuillez faire une sélection'; ?> ...</option>
                 <?php
 			   	// Using JSON Feed from Biblio Service
-					$guides = $LANG == 'en' ? 'http://laurentian.ca/feeds/library-guidesEN.json' : 'http://laurentian.ca/feeds/library-guidesFR.json'; 
+					$guides = $LANG == 'en' ? 'https://laurentian.ca/feeds/library-guidesEN.json' : 'https://laurentian.ca/feeds/library-guidesFR.json'; 
 					$json = json_decode(file_get_contents($guides),true);
 					
 					foreach($json as $key => $value){	
@@ -265,7 +265,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
                </select>
                <button class="btn" type="button" id="searchGuides"><span class="fui-search"></span></button>
            </form>
-           <div class="searchoptions padt10"> <a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a> <?php if($LANG == 'fr') echo " | <a href='http://biblio.laurentian.ca/research/fr/guides/guide-de-ressources-en-fran%C3%A7ais'>Guide des ressources en français</a>"; ?></div>
+           <div class="searchoptions padt10"> <a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'View All' : 'Afficher tous'; ?></a> <?php if($LANG == 'fr') echo " | <a href='https://biblio.laurentian.ca/research/fr/guides/guide-de-ressources-en-fran%C3%A7ais'>Guide des ressources en français</a>"; ?></div>
 
           
           </div>
@@ -296,52 +296,52 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
 <div class="span9">
   <div class="row-fluid libraryMenu lulContent padb20" id="lulContent">
     <div class="span25">
-      <h5><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
+      <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
       <ul>
-        <li><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives#tab2"><?php echo $LANG == 'en' ? 'Policies &amp; Procedures' : 'Politiques et procédures'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/archival-fonds' : 'http://biblio.laurentian.ca/research/fr/guides/fonds-darchives'; ?>"><?php echo $LANG == 'en' ? 'Archival Fonds' : 'Fonds d\'archives'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee' : 'https://biblio.laurentian.ca/research/fr/guides/registres-de-l%C3%A9glise-anglicane'; ?>"><?php echo $LANG == 'en' ? 'Anglican Diocese of Moosonee Fonds' : 'Fonds anglican du diocèse de Moosonee'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/special-collections-archives' : 'http://biblio.laurentian.ca/research/fr/guides/collections-sp%C3%A9ciales-archives'; ?>"><?php echo $LANG == 'en' ? 'Special Collections' : 'Collections spéciales'; ?></a></li>        
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/archives#tab3': 'http://biblio.laurentian.ca/research/fr/guides/archives#tab3'; ?>"><?php echo $LANG == 'en' ? 'Related Sites' : 'Sites connexes'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives#tab2"><?php echo $LANG == 'en' ? 'Policies &amp; Procedures' : 'Politiques et procédures'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archival-fonds' : 'https://biblio.laurentian.ca/research/fr/guides/fonds-darchives'; ?>"><?php echo $LANG == 'en' ? 'Archival Fonds' : 'Fonds d\'archives'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee' : 'https://biblio.laurentian.ca/research/fr/guides/registres-de-l%C3%A9glise-anglicane'; ?>"><?php echo $LANG == 'en' ? 'Anglican Diocese of Moosonee Fonds' : 'Fonds anglican du diocèse de Moosonee'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/special-collections-archives' : 'https://biblio.laurentian.ca/research/fr/guides/collections-sp%C3%A9ciales-archives'; ?>"><?php echo $LANG == 'en' ? 'Special Collections' : 'Collections spéciales'; ?></a></li>        
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archives#tab3': 'https://biblio.laurentian.ca/research/fr/guides/archives#tab3'; ?>"><?php echo $LANG == 'en' ? 'Related Sites' : 'Sites connexes'; ?></a></li>
       </ul>
     </div>
     <div class="span25">
       <h5><a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/login?redirect_to=/eg/opac/myopac/main?locg=105"><?php echo $LANG == 'en' ? 'myLibrary' : 'maBiblio'; ?></a></h5>
       <ul>
         <li><a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/login?redirect_to=/eg/opac/myopac/main?locg=105"><?php echo $LANG == 'en' ? 'My Account' : 'Mon compte'; ?></a></li>
-        <li><a href="http://biblio.laurentian.ca/reserves/<?php if ($LANG == 'fr') echo "#"; ?>"><?php echo $LANG == 'en' ? 'Course Reserves' : 'Réserves pour les cours'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/reserves/<?php if ($LANG == 'fr') echo "#"; ?>"><?php echo $LANG == 'en' ? 'Course Reserves' : 'Réserves pour les cours'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/managing-citations' : 'https://biblio.laurentian.ca/research/fr/guides/gestion-citations'; ?>"><?php echo $LANG == 'en' ? 'Managing citations' : 'Logiciels bibliographiques'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/interlibrary-loans-racer' : 'http://biblio.laurentian.ca/research/fr/guides/pr%C3%AAt-entre-biblioth%C3%A8ques-racer'; ?>"><?php echo $LANG == 'en' ? 'Interlibrary Loan' : 'Prêt entre bibliothèques'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer' : 'https://biblio.laurentian.ca/research/fr/guides/pr%C3%AAt-entre-biblioth%C3%A8ques-racer'; ?>"><?php echo $LANG == 'en' ? 'Interlibrary Loan' : 'Prêt entre bibliothèques'; ?></a></li>
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research' : 'Recherche'; ?></a></h5>
+      <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research' : 'Recherche'; ?></a></h5>
       <ul>
-        <li><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'Databases' : 'Bases de données'; ?></a></li>
-        <li><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Subject Guides' : 'Guides par discipline'; ?></a></li>
-        <li><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'Research Help' : 'Aide à la recherche'; ?></a></li>
-        <li><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services/#tab8"><?php echo $LANG == 'en' ? 'Research Skills Tutorial' : 'Tutoriel de compétences de recherche'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'Databases' : 'Bases de données'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Subject Guides' : 'Guides par discipline'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'Research Help' : 'Aide à la recherche'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services/#tab8"><?php echo $LANG == 'en' ? 'Research Skills Tutorial' : 'Tutoriel de compétences de recherche'; ?></a></li>
         <!--<li><a href="https://biblio.laurentian.ca/research/pages/workshops-atelier"><?php echo $LANG == 'en' ? ' In-person Library Workshops' :  'Ateliers offerts à la Bibliothèque'; ?></a></li>-->
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/content/resources' : 'http://biblio.laurentian.ca/research/fr/content/ressources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
+      <h5><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/resources' : 'https://biblio.laurentian.ca/research/fr/content/ressources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
       <ul>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://laurentian.concat.ca':'http://laurentienne.concat.ca'; ?>">Catalogue</a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/data-and-statistics' : 'http://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-statistiques'; ?>"><?php echo $LANG == 'en' ? 'Data' : 'Données'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/geospatial-data-lu' : 'http://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-g%C3%A9ospatiales'; ?>" title="<?php echo $LANG == 'en' ? 'Geographic Information Systems' : 'Système d\'information géographique'; ?>"><?php echo $LANG == 'en' ? 'GIS' : 'SIG'; ?></a></li>
-        <li><a href="http://zone.biblio.laurentian.ca/dspace/?locale=<?php echo strtolower($LANG); ?>"><?php echo $LANG == 'en' ? 'LU Zone' : 'Zone UL'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/content/previous-exams' : 'http://biblio.laurentian.ca/research/fr/content/examens-des-ann%C3%A9es-pr%C3%A9c%C3%A9dentes'; ?>"><?php echo $LANG == 'en' ? 'Previous Exams' : 'Examens des années précédentes'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://laurentian.concat.ca':'https://laurentienne.concat.ca'; ?>">Catalogue</a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/data-and-statistics' : 'https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-statistiques'; ?>"><?php echo $LANG == 'en' ? 'Data' : 'Données'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/geospatial-data-lu' : 'https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-g%C3%A9ospatiales'; ?>" title="<?php echo $LANG == 'en' ? 'Geographic Information Systems' : 'Système d\'information géographique'; ?>"><?php echo $LANG == 'en' ? 'GIS' : 'SIG'; ?></a></li>
+        <li><a href="https://zone.biblio.laurentian.ca/dspace/?locale=<?php echo strtolower($LANG); ?>"><?php echo $LANG == 'en' ? 'LU Zone' : 'Zone UL'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/previous-exams' : 'https://biblio.laurentian.ca/research/fr/content/examens-des-ann%C3%A9es-pr%C3%A9c%C3%A9dentes'; ?>"><?php echo $LANG == 'en' ? 'Previous Exams' : 'Examens des années précédentes'; ?></a></li>
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr"; ?>/service">Services</a></h5>
+      <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr"; ?>/service">Services</a></h5>
       <ul>
-        <li><a href="http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'for Students' : 'pour étudiants'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/services-faculty' : 'http://biblio.laurentian.ca/research/fr/guides/services-de-biblioth%C3%A8que-%C3%A0-l%E2%80%99intention-du-corps-professoral-2013-2014'; ?>"><?php echo $LANG == 'en' ? 'for Faculty' : 'pour le corps professoral'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/services-other-library-users' : 'http://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>"><?php echo $LANG == 'en' ? 'for Staff' : 'pour les employés'; ?> </a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/services-other-library-users' : 'http://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>#tab2"><?php echo $LANG == 'en' ? 'for Alumni' : 'pour les anciens'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/guides/services-other-library-users' : 'http://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>#tab3"><?php echo $LANG == 'en' ? 'for Visitors' : 'pour les visiteurs'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'for Students' : 'pour étudiants'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-faculty' : 'https://biblio.laurentian.ca/research/fr/guides/services-de-biblioth%C3%A8que-%C3%A0-l%E2%80%99intention-du-corps-professoral-2013-2014'; ?>"><?php echo $LANG == 'en' ? 'for Faculty' : 'pour le corps professoral'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-other-library-users' : 'https://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>"><?php echo $LANG == 'en' ? 'for Staff' : 'pour les employés'; ?> </a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-other-library-users' : 'https://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>#tab2"><?php echo $LANG == 'en' ? 'for Alumni' : 'pour les anciens'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-other-library-users' : 'https://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>#tab3"><?php echo $LANG == 'en' ? 'for Visitors' : 'pour les visiteurs'; ?></a></li>
       </ul>
     </div>
   </div> <!-- /.row-fluid-->
@@ -369,13 +369,13 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => path_to_theme()
 <div class="main-container2 container">
   <div class="row-fluid quicklinks">
   	<span class="<?php echo $LANG == 'en' ? 'span3' : 'span4'; ?>">
-    	<a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/contact-us' : 'http://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="<?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?>" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
+    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="<?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?>" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
     </span>
     <span class="<?php echo $LANG == 'en' ? 'span4' : 'span3'; ?>">
-    	<a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/content/donations-jn-desmarais-library' : 'http://biblio.laurentian.ca/research/fr/content/dons-%C3%A0-la-biblioth%C3%A8que-jn-desmarais'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="Donate" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
+    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/donations-jn-desmarais-library' : 'https://biblio.laurentian.ca/research/fr/content/dons-%C3%A0-la-biblioth%C3%A8que-jn-desmarais'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="Donate" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
     </span>
     <span class="span2">
-    	<a href="<?php echo $LANG == 'en' ? 'http://biblio.laurentian.ca/research/content/library-accessibility-services' : 'http://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="<?php echo  "/" .  path_to_theme() .  "/images/library/access.png"; ?>" alt="Accessibility" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
+    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="<?php echo  "/" .  path_to_theme() .  "/images/library/access.png"; ?>" alt="Accessibility" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
     </span>
     <span class="span3">
     	<a href="/<?php echo $LANG == 'en' ? 'library-events' : 'biblio-evenements'; ?>#cal"><img src="<?php echo  "/" . path_to_theme() .  "/images/library/cal.png"; ?>" alt="Library Calendar" /><?php echo $LANG == 'en' ? 'Library Calendar' : 'Événements <span class="hidden">de la Biblio</span>'; ?></a>
@@ -465,7 +465,7 @@ $(document).ready(function(){
 	
 	// Databases Search
 	// Redirect to this URL (on "Search" Databases)
-	var URLforDB = "http://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z";
+	var URLforDB = "https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z";
 	$('#dblist').on("change", function(){
 		var optionSelected = $("option:selected",this);
 		URLforDB = optionSelected.data("url");
