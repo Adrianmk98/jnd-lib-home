@@ -51,7 +51,7 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://laurentian.ca/' . path_to_theme() . '/css/pagespecific/library.css?v=102', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://laurentian.ca/' . path_to_theme() . '/css/pagespecific/library.css?v=103', 'type' => 'text/css'));
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
@@ -385,28 +385,14 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
 <div id="lang"  style="display:none;" data-lang="<?php echo $language->language;?>"></div>
 <?php include( path_to_theme() . "/templates/includes/footer.inc.php"); ?>
 <div id="askalibrarian">
-	<?php if($LANG == 'fr') echo "<style>#askalibrarian .toggle h6 { padding-top:4px !important; }</style>"; ?>
-	<div class="toggle"><h6><?php echo $LANG == 'en' ? 'Ask A Librarian' : 'Clavardez avec nos bibliothécaires'; ?><i class="icon-chevron-up fr"></i></h6></div>
-    <div class="info">
-        <iframe src="/askalibrarian.php?lang=<?php echo strtolower($LANG); ?>" width="200" height="170" frameborder="0" scrolling="no"></iframe>
-        <a class="moreinfo" href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us':'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>" target="_blank"><i class="fa fa-info-circle"></i> <?php echo $LANG == 'en' ? 'More info...' : 'En savoir plus...'; ?></a></p>
-    </div>
+    <a href="<?php
+          echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us':'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements';
+      ?>"><h6><?php echo $LANG == 'en' ? 'Ask A Librarian' : 'Clavardez avec nos bibliothécaires'; ?></h6></a>
 </div>
 <script>
 // Main JS File
 // Incl. inline due to needing PHP $language->language
 $(document).ready(function(){
-	
-	$('.toggle').on("click",function(){
-		console.log('yes');
-		if($('#askalibrarian').hasClass("open")){
-			$('.toggle i').removeClass("icon-chevron-down").addClass("icon-chevron-up");
-			$('#askalibrarian').removeClass("open").animate({ bottom: -215 });
-		} else {			
-			$('.toggle i').removeClass("icon-chevron-up").addClass("icon-chevron-down");
-			$('#askalibrarian').addClass("open").animate({ bottom: 0 });
-		}
-	});
 	$('.filtermenu a').on("click",function(e){
 		 e.stopPropagation();
 		 
