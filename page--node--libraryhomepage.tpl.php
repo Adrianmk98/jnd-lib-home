@@ -328,10 +328,10 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
       <h5><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/resources' : 'https://biblio.laurentian.ca/research/fr/content/ressources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
       <ul>
         <li><a href="<?php echo $LANG == 'en' ? 'https://laurentian.concat.ca':'https://laurentienne.concat.ca'; ?>">Catalogue</a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/copyright-lu' : 'https://biblio.laurentian.ca/research/fr/guides/droit-d%E2%80%99auteur-ul'; ?>"><?php echo $LANG == 'en' ? 'Copyright @ LU' : 'Droit d’auteur @ UL'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/data-and-statistics' : 'https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-statistiques'; ?>"><?php echo $LANG == 'en' ? 'Data' : 'Données'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/geospatial-data-lu' : 'https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-g%C3%A9ospatiales'; ?>" title="<?php echo $LANG == 'en' ? 'Geographic Information Systems' : 'Système d\'information géographique'; ?>"><?php echo $LANG == 'en' ? 'GIS' : 'SIG'; ?></a></li>
-        <li><a href="https://zone.biblio.laurentian.ca/dspace/?locale=<?php echo strtolower($LANG); ?>"><?php echo $LANG == 'en' ? 'LU Zone' : 'Zone UL'; ?></a></li>
-        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/previous-exams' : 'https://biblio.laurentian.ca/research/fr/content/examens-des-ann%C3%A9es-pr%C3%A9c%C3%A9dentes'; ?>"><?php echo $LANG == 'en' ? 'Previous Exams' : 'Examens des années précédentes'; ?></a></li>
+        <li><a href="https://zone.biblio.laurentian.ca/dspace/?locale=<?php echo strtolower($LANG); ?>"><?php echo $LANG == 'en' ? 'LU|Zone|UL: research repository' : 'LU|Zone|UL : dépôt de recherche'; ?></a></li>
       </ul>
     </div>
     <div class="span25">
