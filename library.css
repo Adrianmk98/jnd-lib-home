@@ -84,29 +84,16 @@
 #askalibrarian { 
 	z-index:1000;
 	position: fixed;
-	background: #FFF;
+	background: #003e73;
 	text-align:center;
 	width: 200px;
-	height: 265px;
-	bottom:-215px; right: 20px; 
+	bottom:-10px;
+    right: 20px; 
 	border-radius: 10px 10px 0 0;
 	box-shadow: 0 0 20px #f1f1f1; 
 }
-#askalibrarian .toggle i { padding-right: 20px; font-size:12px; }
-#askalibrarian .toggle { height: 50px; overflow: hidden; cursor:pointer; }
-#askalibrarian .toggle h6 { margin: 0; line-height:1.2em; padding-top:12px;background: #003e7e; border-radius: 10px 10px 0 0;color: #fff;height: 50px; cursor:pointer; }
-#askalibrarian h5 { margin: 0; }
-#askalibrarian .info { 	font-size: 1.2em; padding-top: 10px; text-align:left;  }
-#askalibrarian .moreinfo { font-weight: 700; font-size: 13px; margin-left:28px; cursor:help; }
-#askalibrarian .moreinfo:hover { color: #6972a3 !important; }
-#askalibrarian .info table { width: 100%; }
+#askalibrarian h6 { color: #fff; }
 
-.lpPoweredBy {
-	display:none;
-}
-.lpEmtStarRating {
-	display:none;
-}
 div.input-append {
     margin-bottom: 0;
 }
