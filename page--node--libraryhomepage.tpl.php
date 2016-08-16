@@ -13,8 +13,8 @@ $LANG = $language->language;
 $twitter_id = 'LaurentianLib';
 $twitter_widget = '664917838747017216';
 $d = date('l, F j');    
-$lib_title = 'J.N. Desmarais Library and Archives';
-$lib_title_schema = $lib_title;
+$lib_title = 'Library and Archives';
+$lib_title_schema = 'J.N. Desmarais Library and Archives';
 $lib_name_schema = 'Laurentian University Library and Archives';
 $lib_ref_schema = 'Reference and research assistance';
 $lib_contact_url = 'https://biblio.laurentian.ca/research/contact-us';
@@ -31,7 +31,7 @@ if($LANG == 'fr')
     $d = ucfirst($d);
     $twitter_id = 'BibLaurentienne';
     $twitter_widget = '684093957912047616';
-    $lib_title = 'Bibliothèque et archives <span class="desktoponly">J. N. Desmarais</span>';
+    $lib_title = 'Bibliothèque et archives';
     $lib_title_schema = 'Bibliothèque et archives J. N. Desmarais';
     $lib_name_schema = 'Bibliothèque et archives Université Laurentienne';
     $lib_ref_schema = 'Aide dans vos recherches';
@@ -540,7 +540,7 @@ function updateLibraryTime(day)
             // Based on the date selected, rewrite HTML
 
             
-            $('#libraryHours .jnd').html("<label>J.N.D.</label>"+information.JND);
+            $('#libraryHours .jnd').html("<label>JN&nbsp;Desmarais</label>"+information.JND);
             $('#libraryHours .arc').html("<label>Archives</label>"+information.Archives);
             $('#libraryHours .jwt').html("<label>Huntington</label>"+information.JWT);
             $('#libraryHours .uos').html("<label>U&nbsp;<?php echo $LANG == 'en' ? 'of' : 'de'; ?>&nbsp;S</label>"+information.UoS);
