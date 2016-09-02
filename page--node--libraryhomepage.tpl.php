@@ -157,7 +157,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
             <div class="searchoptions"> <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?locg=105"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> | <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?pane=numeric"><?php echo $LANG == 'en' ? 'Numeric Search' : 'Recherche numérique'; ?></a><!-- | <a href="https://laurentian.concat.ca/eg/opac/advanced?pane=expert"><?php echo $LANG == 'en' ? 'Expert Search' : 'Recherche experte'; ?></a> --> </div>
           </div>
           <div class="tab-pane fade" id="googlescholar">
-            <form name="googlescholar" method="get" accept-charset="utf-8" action="http://scholar.google.ca.librweb.laurentian.ca/scholar" id="gscholar">
+            <form name="googlescholar" method="get" accept-charset="utf-8" action="http://scholar.google.ca/scholar" id="gscholar">
                 <input type="hidden" name="hl" value="<?php echo($LANG) ?>">
                  <div class="control-group">
                     <div class="input-append">
