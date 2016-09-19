@@ -387,7 +387,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
 <div id="askalibrarian">
     <a href="<?php
           echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us':'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements';
-      ?>"><h6><?php echo $LANG == 'en' ? 'Ask A Librarian' : 'Clavardez avec nos bibliothécaires'; ?></h6></a>
+      ?>"><h6><?php echo $LANG == 'en' ? 'Ask the Library' : 'Clavardez avec nous'; ?></h6></a>
 </div>
 <script>
 // Main JS File
