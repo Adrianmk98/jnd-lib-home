@@ -382,6 +382,10 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
     	<a href="/<?php echo $LANG == 'en' ? 'library-events' : 'biblio-evenements'; ?>#cal"><img src="<?php echo  "/" . path_to_theme() .  "/images/library/cal.png"; ?>" alt="Library Calendar" /><?php echo $LANG == 'en' ? 'Library Calendar' : 'Événements <span class="hidden">de la Biblio</span>'; ?></a>
     </span>
   </div>
+  <div style="padding: 1em; margin-left: 1em; margin-right: 1em;"><?php echo
+    $LANG == 'en' ? 'We would like to acknowledge that the J.N. Desmarais Library  is located on the traditional territory of the Atikameksheng Anishnaabek, which is within the Robinson-Huron Treaty territory.'
+    : 'Nous désirons reconnaître que la Bibliothèque J.N. Desmarais est située sur le territoire traditionnel de la Nation Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le traité Robinson-Huron.'; ?>
+  </div>
 </div>
 <div id="lang"  style="display:none;" data-lang="<?php echo $language->language;?>"></div>
 <?php include( path_to_theme() . "/templates/includes/footer.inc.php"); ?>
