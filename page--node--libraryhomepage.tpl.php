@@ -303,7 +303,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archival-fonds' : 'https://biblio.laurentian.ca/research/fr/guides/fonds-darchives'; ?>"><?php echo $LANG == 'en' ? 'Archival Fonds' : 'Fonds d\'archives'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee' : 'https://biblio.laurentian.ca/research/fr/guides/registres-de-l%C3%A9glise-anglicane'; ?>"><?php echo $LANG == 'en' ? 'Anglican Diocese of Moosonee Fonds' : 'Fonds anglican du diocèse de Moosonee'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/special-collections-archives' : 'https://biblio.laurentian.ca/research/fr/guides/collections-sp%C3%A9ciales-archives'; ?>"><?php echo $LANG == 'en' ? 'Special Collections' : 'Collections spéciales'; ?></a></li>        
-        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archives#tab3': 'https://biblio.laurentian.ca/research/fr/guides/archives#tab3'; ?>"><?php echo $LANG == 'en' ? 'Related Sites' : 'Sites connexes'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archives#tab4': 'https://biblio.laurentian.ca/research/fr/guides/archives#tab4'; ?>"><?php echo $LANG == 'en' ? 'Related Sites' : 'Sites connexes'; ?></a></li>
       </ul>
     </div>
     <div class="span25">
