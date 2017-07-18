@@ -157,7 +157,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
             <div class="searchoptions"> <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?locg=105"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> | <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?pane=numeric"><?php echo $LANG == 'en' ? 'Numeric Search' : 'Recherche numérique'; ?></a><!-- | <a href="https://laurentian.concat.ca/eg/opac/advanced?pane=expert"><?php echo $LANG == 'en' ? 'Expert Search' : 'Recherche experte'; ?></a> --> </div>
           </div>
           <div class="tab-pane fade" id="googlescholar">
-            <form name="googlescholar" method="get" accept-charset="utf-8" action="http://scholar.google.ca/scholar" id="gscholar">
+            <form name="googlescholar" method="get" accept-charset="utf-8" action="https://scholar.google.ca/scholar" id="gscholar">
                 <input type="hidden" name="hl" value="<?php echo($LANG) ?>">
                 <input type="hidden" name="inst" value="15149000113179683052">
                  <div class="control-group">
@@ -170,7 +170,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
           </div>
           <div class="tab-pane fade" id="journals">
           
-            <form name="az_user_form" method="post" accept-charset="UTF-8" action="http://sfx.scholarsportal.info/laurentian/az<?php if($LANG == 'fr') echo '?&lang=fre'; ?>" id="scholarportal">
+            <form name="az_user_form" method="post" accept-charset="UTF-8" action="https://sfx.scholarsportal.info/laurentian/az<?php if($LANG == 'fr') echo '?&lang=fre'; ?>" id="scholarportal">
             
                 <input type="hidden" name="param_sid_save" value="01db6cbfdb33135b9b43356830c46a89">
                 <input type="hidden" name="param_letter_group_script_save" value="">
@@ -217,7 +217,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
                 <input type="hidden" name="param_chinese_checkbox_value" id="param_chinese_checkbox_value" value="">
             
             </form>
-             <div class="searchoptions"> <a href="http://sfx.scholarsportal.info/laurentian/az?param_sid_save=01db6cbfdb33135b9b43356830c46a89&param_letter_group_script_save=&param_current_view_save=table&param_textSearchType_save=contains&param_lang_save=eng&param_chinese_checkbox_type_save=&param_perform_save=locate&param_letter_group_save=&param_chinese_checkbox_save=&param_services2filter_save=getFullTxt&param_pattern_save=testsdfsd&param_starts_with_browse_save=0&param_jumpToPage_save=&param_type_save=textSearch&param_langcode_save=en&param_jumpToPage_value=&param_pattern_value=&param_textSearchType_value=contains&param_issn_value=&param_vendor_active=1&param_locate_category_active=1"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> </div>
+             <div class="searchoptions"> <a href="https://sfx.scholarsportal.info/laurentian/az?param_sid_save=01db6cbfdb33135b9b43356830c46a89&param_letter_group_script_save=&param_current_view_save=table&param_textSearchType_save=contains&param_lang_save=eng&param_chinese_checkbox_type_save=&param_perform_save=locate&param_letter_group_save=&param_chinese_checkbox_save=&param_services2filter_save=getFullTxt&param_pattern_save=testsdfsd&param_starts_with_browse_save=0&param_jumpToPage_save=&param_type_save=textSearch&param_langcode_save=en&param_jumpToPage_value=&param_pattern_value=&param_textSearchType_value=contains&param_issn_value=&param_vendor_active=1&param_locate_category_active=1"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> </div>
           
           </div>
           <div class="tab-pane fade" id="databases">
