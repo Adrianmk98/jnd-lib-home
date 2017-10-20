@@ -159,7 +159,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
           <div class="tab-pane fade" id="googlescholar">
             <form name="googlescholar" method="get" accept-charset="utf-8" action="https://scholar.google.ca/scholar" id="gscholar">
                 <input type="hidden" name="hl" value="<?php echo($LANG) ?>">
-                <input type="hidden" name="inst" value="15149000113179683052">
+                <input type="hidden" name="inst" value="16499083251021320657">
                  <div class="control-group">
                     <div class="input-append">
                         <input class="searchbox" id="scholar_value" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search for articles in Google Scholar...' : 'Rechercher des articles en Google Scholar...'; ?>" name="q" />
