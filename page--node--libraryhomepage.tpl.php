@@ -378,9 +378,6 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
     <span class="span2">
     	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="<?php echo  "/" .  path_to_theme() .  "/images/library/access.png"; ?>" alt="Accessibility" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
     </span>
-    <span class="span3">
-    	<a href="/<?php echo $LANG == 'en' ? 'library-events' : 'biblio-evenements'; ?>#cal"><img src="<?php echo  "/" . path_to_theme() .  "/images/library/cal.png"; ?>" alt="Library Calendar" /><?php echo $LANG == 'en' ? 'Library Calendar' : 'Événements <span class="hidden">de la Biblio</span>'; ?></a>
-    </span>
   </div>
   <div style="padding: 1em; margin-left: 1em; margin-right: 1em;"><?php echo
     $LANG == 'en' ? 'We would like to acknowledge that the J.N. Desmarais Library &amp; Archives are located on the traditional territory of the Atikameksheng Anishnaabek, which is within the Robinson-Huron Treaty territory.'
