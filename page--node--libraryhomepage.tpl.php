@@ -326,7 +326,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/resources' : 'https://biblio.laurentian.ca/research/fr/content/ressources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
+      <h5><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/resources' : 'https://biblio.laurentian.ca/research/fr/ressources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
       <ul>
         <li><a href="<?php echo $LANG == 'en' ? 'https://laurentian.concat.ca':'https://laurentienne.concat.ca'; ?>">Catalogue</a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/copyright-lu' : 'https://biblio.laurentian.ca/research/fr/guides/droit-d%E2%80%99auteur-ul'; ?>"><?php echo $LANG == 'en' ? 'Copyright @ LU' : 'Droit d’auteur @ UL'; ?></a></li>
@@ -370,13 +370,13 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
 <div class="main-container2 container">
   <div class="row-fluid quicklinks">
   	<span class="<?php echo $LANG == 'en' ? 'span3' : 'span4'; ?>">
-    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="<?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?>" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
+    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
     </span>
     <span class="<?php echo $LANG == 'en' ? 'span4' : 'span3'; ?>">
-    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="Donate" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
+    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
     </span>
     <span class="span2">
-    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="<?php echo  "/" .  path_to_theme() .  "/images/library/access.png"; ?>" alt="Accessibility" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
+    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="https://biblio.laurentian.ca/research/sites/default/files/pictures/access_icon.png" alt="" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
     </span>
   </div>
   <div style="padding: 1em; margin-left: 1em; margin-right: 1em;"><?php echo
