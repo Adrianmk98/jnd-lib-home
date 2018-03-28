@@ -51,7 +51,7 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://laurentian.ca/' . path_to_theme() . '/css/pagespecific/library.css?v=103', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://laurentian.ca/' . path_to_theme() . '/css/pagespecific/library.css?v=104', 'type' => 'text/css'));
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
