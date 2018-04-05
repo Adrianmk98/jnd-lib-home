@@ -152,6 +152,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
                 </div>
               </div>
               <input type="hidden" name="locg" value="105" />
+              <input id="catalogueSearchType" type="hidden" name="qtype" value="keyword" />
               <input id="detail" type="hidden" name="detail_record_view" value="1" />
             </form>
             <div class="searchoptions"> <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?locg=105"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> | <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?pane=numeric"><?php echo $LANG == 'en' ? 'Numeric Search' : 'Recherche numérique'; ?></a><!-- | <a href="https://laurentian.concat.ca/eg/opac/advanced?pane=expert"><?php echo $LANG == 'en' ? 'Expert Search' : 'Recherche experte'; ?></a> --> </div>
@@ -408,6 +409,9 @@ $(document).ready(function(){
 		 placeholder = "<?php echo $LANG == 'en' ? 'Search by ': 'Rechercher par '; ?>";
 		 filteredby = $(this).data("filter");
 		 
+		 // Change the search type
+		 document.getElementById('catalogueSearchType').value = filteredby;
+
 		 // i10n 
 		 switch (filteredby) {
 			case "keyword":
