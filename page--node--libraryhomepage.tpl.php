@@ -349,6 +349,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
   </div> <!-- /.row-fluid-->
   </div><?php /* span9 */ ?>
       <div class="span3">
+        <div class='needs-js'><?php echo $LANG == 'en' ? 'Chat loading...' : 'Clavardez...'; ?></div>
         <div id="libnews"><?php
             if ($LANG == 'fr') {
                 $news_link = "https://biblio.laurentian.ca/research/fr/nouvelles";
@@ -387,11 +388,6 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
 </div>
 <div id="lang"  style="display:none;" data-lang="<?php echo $language->language;?>"></div>
 <?php include( path_to_theme() . "/templates/includes/footer.inc.php"); ?>
-<div id="askalibrarian">
-    <a href="<?php
-          echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us':'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements';
-      ?>"><h6><?php echo $LANG == 'en' ? 'Ask the Library' : 'Clavardez avec nous'; ?></h6></a>
-</div>
 <script>
 // Main JS File
 // Incl. inline due to needing PHP $language->language
@@ -606,4 +602,9 @@ function formatdateLang(today,closed)
         });
 
 }
+(function() {
+  var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
+  x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "ca.libraryh3lp.com/js/libraryh3lp.js?<?php echo $LANG == 'en' ? '643' : '531'; ?>";
+  var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
+})();
 </script>
