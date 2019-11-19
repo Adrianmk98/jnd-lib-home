@@ -8,6 +8,7 @@
  */
  
 global $language;
+global $base_url;
 $LANG = $language->language;
 
 $twitter_id = 'LaurentianLib';
@@ -18,8 +19,8 @@ $lib_title_schema = 'J.N. Desmarais Library and Archives';
 $lib_name_schema = 'Laurentian University Library and Archives';
 $lib_ref_schema = 'Reference and research assistance';
 $lib_contact_url = 'https://biblio.laurentian.ca/research/contact-us';
-$lib_url_en = 'https://laurentian.ca/library';
-$lib_url_fr = 'https://laurentienne.ca/bibliotheque';
+$lib_url_en = 'https://www1.laurentian.ca/library';
+$lib_url_fr = 'https://www1.laurentienne.ca/bibliotheque';
 $lib_url = $lib_url_en;
 
 if($LANG == 'fr')
@@ -51,7 +52,7 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://laurentian.ca/' . path_to_theme() . '/css/pagespecific/library.css?v=104', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_theme() . '/css/pagespecific/library.css?v=104', 'type' => 'text/css'));
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
@@ -227,7 +228,8 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
                	<option id="blank" data-url="#" selected="selected"><?php echo $LANG == 'en' ? 'Please make a selection' : 'Veuillez faire une sélection'; ?> ...</option>
                <?php
 			   	// Using JSON Feed from Biblio Service
-					$DBs = $LANG == 'en' ? 'https://laurentian.ca/feeds/library-dbEN.json' : 'https://laurentian.ca/feeds/library-dbFR.json'; 
+					$DBs = $LANG == 'en' ? $base_url.'/feeds/library-dbEN.json' : $base_url.'/feeds/library-dbFR.json';
+
 					$json = json_decode(file_get_contents($DBs),true);
 					
 					foreach($json as $key => $value){	
@@ -250,7 +252,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
                	<option id="blank" data-url="#"><?php echo $LANG == 'en' ? 'Please make a selection' : 'Veuillez faire une sélection'; ?> ...</option>
                 <?php
 			   	// Using JSON Feed from Biblio Service
-					$guides = $LANG == 'en' ? 'https://laurentian.ca/feeds/library-guidesEN.json' : 'https://laurentian.ca/feeds/library-guidesFR.json'; 
+					$guides = $LANG == 'en' ? $base_url.'/feeds/library-guidesEN.json' : $base_url.'/feeds/library-guidesFR.json';
 					$json = json_decode(file_get_contents($guides),true);
 					
 					foreach($json as $key => $value){	
@@ -320,7 +322,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
       <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research' : 'Recherche'; ?></a></h5>
       <ul>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'Databases' : 'Bases de données'; ?></a></li>
-        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Subject Guides' : 'Guides par discipline'; ?></a></li>
+        <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research Guides' : 'Guides de recherche'; ?></a></li>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'Research Help' : 'Aide à la recherche'; ?></a></li>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services/#tab8"><?php echo $LANG == 'en' ? 'Research Skills Tutorial' : 'Tutoriel de compétences de recherche'; ?></a></li>
         <!--<li><a href="https://biblio.laurentian.ca/research/pages/workshops-atelier"><?php echo $LANG == 'en' ? ' In-person Library Workshops' :  'Ateliers offerts à la Bibliothèque'; ?></a></li>-->
@@ -341,6 +343,7 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => 'https://lauren
       <ul>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'for Students' : 'pour étudiants'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-faculty' : 'https://biblio.laurentian.ca/research/fr/guides/services-de-biblioth%C3%A8que-%C3%A0-l%E2%80%99intention-du-corps-professoral-2013-2014'; ?>"><?php echo $LANG == 'en' ? 'for Faculty' : 'pour le corps professoral'; ?></a></li>
+        <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/off-campus-library-services' : 'https://biblio.laurentian.ca/research/fr/guides/services-de-la-biblioth%C3%A8que-hors-campus'; ?>"><?php echo $LANG == 'en' ? 'for Off Campus' : 'pour hors campus'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-other-library-users' : 'https://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>"><?php echo $LANG == 'en' ? 'for Staff' : 'pour les employés'; ?> </a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-other-library-users' : 'https://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>#tab2"><?php echo $LANG == 'en' ? 'for Alumni' : 'pour les anciens'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-other-library-users' : 'https://biblio.laurentian.ca/research/fr/guides/services-pour-autres-utilisateurs'; ?>#tab3"><?php echo $LANG == 'en' ? 'for Visitors' : 'pour les visiteurs'; ?></a></li>
@@ -570,13 +573,13 @@ function bottom(day,library)
             date = day.split('/');
           
            if(library == 'JND' || library == 'jnd')
-                open = information.JND.split('-');
+                op = information.JND.split('-');
             else if(library == 'Archives')
-                open = information.Archives.split('-');
+                op = information.Archives.split('-');
             else if(library == 'JWT')
-                 open = information.JWT.split('-');
+                 op = information.JWT.split('-');
             else if(library == 'UOS')
-                 open = information.UoS.split('-');
+                 op = information.UoS.split('-');
 
           
             if(open.length == 2)
