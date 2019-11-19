@@ -31,7 +31,7 @@
 
 /* OVERRIDES */
 .main-container2 { background: #FFF; } /* replaces .main-container, no shadow */
-#lulContent .span25 { width: 17.5%; }
+#lulContent .span25 { width: 17.5%; margin-left: 0px; }
 /* Accessibility - sufficient contrast */
 #librarySearch, #librarySearch li a { color: #252a2f }
 #librarySearch li.active a { color: #141719 }
