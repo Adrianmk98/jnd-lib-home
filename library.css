@@ -141,4 +141,5 @@ div.input-append {
 	.quicklinks span:last-child { text-align:center !important;}
 	.searchbox, .searchbox2 { width: 100% !important; }
 	.quicklinks span { margin-bottom:10px; width:100% !important; text-align: center; }
+  .span3 { width: 100% !important; }
 }
