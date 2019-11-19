@@ -53,6 +53,19 @@ $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
 drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_theme() . '/css/pagespecific/library.css?v=104', 'type' => 'text/css'));
+
+function parse_news_feed($news_atom) {
+    $news_feed = implode(file($news_atom));
+    $news_xml = simplexml_load_string($news_feed);
+    $news_json = json_encode($news_xml);
+    $news_array = json_decode($news_json,TRUE);
+    // just grab the first item
+    $news_item = $news_array['channel']['item'][0];
+    $news_date = date_parse($news_item['pubDate']);
+    // give it an ISO publication date
+    $news_item['date'] = sprintf("%04d-%02d-%02d", $news_date['year'], $news_date['month'], $news_date['day']);
+    return($news_item);
+}
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
 
@@ -355,13 +368,17 @@ drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_t
         <div class='needs-js'><?php echo $LANG == 'en' ? 'Chat loading...' : 'Clavardez...'; ?></div>
         <div id="libnews"><?php
             if ($LANG == 'fr') {
+                $news_atom = 'https://biblio.laurentian.ca/research/fr/news.xml';
                 $news_link = "https://biblio.laurentian.ca/research/fr/nouvelles";
                 $news_text = "Nouvelles...";
             }
             else {
+                $news_atom = 'https://biblio.laurentian.ca/research/news.xml';
                 $news_text = "More news...";
                 $news_link = "https://biblio.laurentian.ca/research/news";
             }
+            $news_item = parse_news_feed($news_atom);
+            print("<p><a href='$news_item[link]'>$news_item[title]</a> ($news_item[date])</p>");
             echo "<span><a href='$news_link'>$news_text</a></span>";
         ?></div>
         <div id="twitter-widget">
