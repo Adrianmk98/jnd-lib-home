@@ -139,6 +139,6 @@ div.input-append {
 	#libraryHours { width: 204px; }
 	.main-container2 .span9, .span25 { width:90% !important; }
 	.quicklinks span:last-child { text-align:center !important;}
-	.searchbox { width: 100% !important; }
+	.searchbox, .searchbox2 { width: 100% !important; }
 	.quicklinks span { margin-bottom:10px; width:100% !important; text-align: center; }
 }
