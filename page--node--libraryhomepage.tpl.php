@@ -373,6 +373,22 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </ul>
     </div>
   </div> <!-- /.row-fluid-->
+  <div class="row-fluid quicklinks" style="padding-top: 1em">
+    <span class="span4">
+      <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
+    </span>
+    <span class="<?php echo $LANG == 'en' ? 'span5' : 'span4'; ?>">
+      <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
+    </span>
+    <span class="span3">
+      <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="https://biblio.laurentian.ca/research/sites/default/files/pictures/access_icon.png" alt="" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
+    </span>
+  </div>
+  <div style="padding: 1em; margin-left: 1em; margin-right: 1em;"><?php echo
+    $LANG == 'en' ? 'We would like to acknowledge that the J.N. Desmarais Library &amp; Archives are located on the traditional territory of the Atikameksheng Anishnaabek, which is within the Robinson-Huron Treaty territory.'
+    : 'Nous désirons reconnaître que la Bibliothèque J.N. Desmarais &amp; les archives sont situés sur le territoire traditionnel de la Nation Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le traité Robinson-Huron.'; ?>
+  </div>
+
   </div><?php /* span9 */ ?>
       <div class="span3">
         <div class='needs-js'><?php echo $LANG == 'en' ? 'Chat loading...' : 'Clavardez...'; ?></div>
@@ -401,23 +417,6 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </div>
     </div> <!--/.row-fluid-->
   </div> <!-- /.container -->
-</div>
-<div class="main-container2 container">
-  <div class="row-fluid quicklinks">
-  	<span class="<?php echo $LANG == 'en' ? 'span3' : 'span4'; ?>">
-    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
-    </span>
-    <span class="<?php echo $LANG == 'en' ? 'span4' : 'span3'; ?>">
-    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
-    </span>
-    <span class="span2">
-    	<a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="https://biblio.laurentian.ca/research/sites/default/files/pictures/access_icon.png" alt="" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
-    </span>
-  </div>
-  <div style="padding: 1em; margin-left: 1em; margin-right: 1em;"><?php echo
-    $LANG == 'en' ? 'We would like to acknowledge that the J.N. Desmarais Library &amp; Archives are located on the traditional territory of the Atikameksheng Anishnaabek, which is within the Robinson-Huron Treaty territory.'
-    : 'Nous désirons reconnaître que la Bibliothèque J.N. Desmarais &amp; les archives sont situés sur le territoire traditionnel de la Nation Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le traité Robinson-Huron.'; ?>
-  </div>
 </div>
 <div id="lang"  style="display:none;" data-lang="<?php echo $language->language;?>"></div>
 <?php include( path_to_theme() . "/templates/includes/footer.inc.php"); ?>
