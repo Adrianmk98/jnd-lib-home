@@ -52,19 +52,29 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_theme() . '/css/pagespecific/library.css?v=105', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_theme() . '/css/pagespecific/library.css?v=106', 'type' => 'text/css'));
 
-function parse_news_feed($news_atom) {
+function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
+    $news_items = array();
     $news_feed = implode(file($news_atom));
     $news_xml = simplexml_load_string($news_feed);
     $news_json = json_encode($news_xml);
     $news_array = json_decode($news_json,TRUE);
-    // just grab the first item
-    $news_item = $news_array['channel']['item'][0];
-    $news_date = date_parse($news_item['pubDate']);
-    // give it an ISO publication date
-    $news_item['date'] = sprintf("%04d-%02d-%02d", $news_date['year'], $news_date['month'], $news_date['day']);
-    return($news_item);
+    // grab at least the first item
+    for ($i = 0; $i < $max_items; $i++) {
+      $news_item = $news_array['channel']['item'][$i];
+      $news_date = date_parse($news_item['pubDate']);
+      // give it an ISO publication date
+      $news_item['date'] = sprintf("%04d-%02d-%02d", $news_date['year'], $news_date['month'], $news_date['day']);
+      $margin = date_sub(date_create('now'), date_interval_create_from_date_string($max_age));
+      // only show items from the past 30 days
+      if ($i and date_create($news_item['date']) < $margin) {
+        break;
+      }
+      // add it to the array
+      $news_items[] = $news_item;
+    }
+    return($news_items);
 }
 ?>
 <?php include( path_to_theme() . "/templates/includes/header.inc.php"); ?>
@@ -370,16 +380,19 @@ function parse_news_feed($news_atom) {
             if ($LANG == 'fr') {
                 $news_atom = 'https://biblio.laurentian.ca/research/fr/news.xml';
                 $news_link = "https://biblio.laurentian.ca/research/fr/nouvelles";
-                $news_text = "Nouvelles...";
+                $news_heading = "Nouvelles";
             }
             else {
                 $news_atom = 'https://biblio.laurentian.ca/research/news.xml';
-                $news_text = "More news...";
                 $news_link = "https://biblio.laurentian.ca/research/news";
+                $news_heading = "News";
             }
-            $news_item = parse_news_feed($news_atom);
-            print("<p><a href='$news_item[link]'>$news_item[title]</a> ($news_item[date])</p>");
-            echo "<span><a href='$news_link'>$news_text</a></span>";
+
+            $news_items = parse_news_feed($news_atom);
+            print("<h5><a href='$news_link'>$news_heading</a></h5><ul>");
+            foreach ($news_items as $news_item) {
+              print("<li><a href='$news_item[link]'>$news_item[title]</a> ($news_item[date])</li>\n");
+            }
         ?></div>
         <div id="twitter-widget">
 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<?php echo $twitter_id; ?>" data-widget-id="<?php echo $twitter_widget; ?>">Tweets by @LaurentianLib</a>

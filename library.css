@@ -104,8 +104,18 @@ div.input-append {
     width: 90%;
 }
 
-.lulContent {
-    padding-bottom: 0px;
+div#lulContent {
+    padding: 0px;
+}
+
+div#libnews li {
+  line-height: 1em;
+}
+div#libnews ul {
+  margin-bottom: 1em;
+}
+div#lulContent h5 {
+	margin-top: 0px;
 }
 
 /* iPad / Smaller Desktops */
