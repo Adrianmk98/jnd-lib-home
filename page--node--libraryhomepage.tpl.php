@@ -52,7 +52,7 @@ $thursday = strtotime('+ 4 days',$time);
 $friday = strtotime('+ 5 days',$time);
 $saturday = strtotime('+ 6 days',$time);
 
-drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_theme() . '/css/pagespecific/library.css?v=104', 'type' => 'text/css'));
+drupal_add_html_head_link(array('rel' => 'stylesheet', 'href' => '/' . path_to_theme() . '/css/pagespecific/library.css?v=105', 'type' => 'text/css'));
 
 function parse_news_feed($news_atom) {
     $news_feed = implode(file($news_atom));
