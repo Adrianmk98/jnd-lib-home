@@ -11,8 +11,7 @@ global $language;
 global $base_url;
 $LANG = $language->language;
 
-$twitter_id = 'LaurentianLib';
-$twitter_widget = '664917838747017216';
+$twitter_widget = '<a class="twitter-timeline" data-width="300" data-height="400" href="https://twitter.com/LaurentianLib?ref_src=twsrc%5Etfw">Tweets by LaurentianLib</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
 $d = date('l, F j');    
 $lib_title = 'Library and Archives';
 $lib_title_schema = 'J.N. Desmarais Library and Archives';
@@ -30,8 +29,7 @@ if($LANG == 'fr')
     setlocale(LC_ALL,'fr_FR');
     $d = strftime('%A, %e %B',time());
     $d = ucfirst($d);
-    $twitter_id = 'BibLaurentienne';
-    $twitter_widget = '684093957912047616';
+    $twitter_widget = '<a class="twitter-timeline" data-lang="fr" data-width="300" data-height="400" data-theme="light" href="https://twitter.com/BibLaurentienne?ref_src=twsrc%5Etfw">Tweets by BibLaurentienne</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
     $lib_title = 'Bibliothèque et archives';
     $lib_title_schema = 'Bibliothèque et archives J. N. Desmarais';
     $lib_name_schema = 'Bibliothèque et archives Université Laurentienne';
@@ -410,10 +408,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
               print("<li><a href='$news_item[link]'>$news_item[title]</a> ($news_item[date])</li>\n");
             }
         ?></div>
-        <div id="twitter-widget">
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<?php echo $twitter_id; ?>" data-widget-id="<?php echo $twitter_widget; ?>">Tweets by @LaurentianLib</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
+        <div id="twitter-widget"><?php echo($twitter_widget); ?></div>
       </div>
     </div> <!--/.row-fluid-->
   </div> <!-- /.container -->
