@@ -31,7 +31,7 @@
 
 /* OVERRIDES */
 .main-container2 { background: #FFF; } /* replaces .main-container, no shadow */
-#lulContent .span25 { width: 17.5%; margin-left: 0px; }
+#lulContent .span25 { width: 20%; margin-left: 0px; }
 /* Accessibility - sufficient contrast */
 #librarySearch, #librarySearch li a { color: #252a2f }
 #librarySearch li.active a { color: #141719 }
@@ -41,15 +41,13 @@ body { font-family: "Open Sans", sans-serif !important; font-size: 1em !importan
 /* NAV AREA MIDDLE */
 .libraryMenuShadow { box-shadow: 0 0 50px #f1f1f1 inset; } /* 60px original */
 .libraryMenu { padding-top:1em; }
-.libraryMenu ul, .libraryMenu li { margin:0 !important; padding:0 !important; list-style:none; }
-.libraryMenu li:before { content: "» "; }
-.libraryMenu a { font-weight: 300; }
+.libraryMenu ul { margin:0 !important; padding:0 !important; list-style:none; }
+.libraryMenu li { padding-left:1em !important; text-indent: -1em; list-style:none; }
 .libraryMenu a:hover { color: #6972a3 !important; text-decoration:underline; }
 
 /* BOTTOM QUICKLINKS */
-.quicklinks a { font-size: 1.286em; font-weight: 200; opacity:0.8; }
+.quicklinks a { font-size: 1.286em; font-weight: bolder; opacity:0.8; }
 .quicklinks span:last-child { text-align:right; }
-.quicklinks a:after { content: " »"; }
 .quicklinks a img { padding-right:10px; vertical-align:middle; }
 .quicklinks a:hover { opacity:1; text-decoration:underline; }
 
@@ -62,6 +60,7 @@ body { font-family: "Open Sans", sans-serif !important; font-size: 1em !importan
 #libraryHours .today label {  margin:0; padding-top:4px; font-weight: 100; float:left;  }
 #libraryHours .today .active, .active label { font-weight: 200 !important; }
 #libraryHours .today p { letter-spacing: normal !important; cursor:pointer; }
+#libraryHours .today label, #libraryHours .today p { font-size: 0.9em; }
 #libraryHours .arrow:after { 	z-index: 2; position: absolute; top: 98.1%; left: 44.5%; content: ''; width: 0; height: 0; border-top: solid 15px #FFF; border-left: solid 15px transparent; border-right: solid 15px transparent; }
 #libraryHours .moreHours { background: #3c476b; text-align:center; padding: 16px 30px; }
 #libraryHours .moreHours a { color: #FFF !important; }
@@ -139,10 +138,14 @@ div#lulContent h5 {
 }
 
 @media screen and (max-width: 780px) { 
-	#libraryHours { width: 204px; }
 	.main-container2 .span9, .span25 { width:90% !important; }
 	.quicklinks span:last-child { text-align:center !important;}
 	.searchbox, .searchbox2 { width: 100% !important; }
 	.quicklinks span { margin-bottom:10px; width:100% !important; text-align: center; }
-  .span3 { width: 100% !important; }
+  .news-panel { width: 100% !important; }
+  div#lulContent h5 { margin-top: 1em; }
+  h5#archives-links { margin-top: 0em; }
+  .libraryh3lp { width: 50%; margin: 0 auto; }
+  #libraryHours { width: 204px; }
+  #search-hours { padding-bottom: 0px !important; }
 }

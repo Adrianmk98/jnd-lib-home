@@ -145,7 +145,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
     <?php print render($action_links); ?>
     </ul>
     <?php endif; ?>
-    <div class="row-fluid heightfix lulContent padt20 padb20">
+    <div class="row-fluid heightfix lulContent padt20 padb20" id="search-hours">
       <div class="span9">
         <h1 class="page-header2" property="name"><?php echo $lib_title ?></h1>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
@@ -312,7 +312,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
             	<p class="uos"></p>
             </div>
             <div class="moreHours">
-				<a href="/<?php echo $LANG == 'en' ? 'library-hours' : 'biblio-horaire'; ?>"><?php echo $LANG == 'en' ? 'View all campus library hours' : 'Voir tous les horaires'; ?> &raquo;</a>
+				<a href="/<?php echo $LANG == 'en' ? 'library-hours' : 'biblio-horaire'; ?>"><?php echo $LANG == 'en' ? 'All campus library hours' : 'Tous les horaires'; ?></a>
             </div>
         </div>
     </div>
@@ -321,7 +321,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
 <div class="span9">
   <div class="row-fluid libraryMenu lulContent padb20" id="lulContent">
     <div class="span25">
-      <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
+      <h5 id="archives-links"><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
       <ul>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives#tab2"><?php echo $LANG == 'en' ? 'Policies &amp; Procedures' : 'Politiques et procédures'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archival-fonds' : 'https://biblio.laurentian.ca/research/fr/guides/fonds-darchives'; ?>"><?php echo $LANG == 'en' ? 'Archival Fonds' : 'Fonds d\'archives'; ?></a></li>
@@ -375,8 +375,8 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
     <span class="span4">
       <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
     </span>
-    <span class="<?php echo $LANG == 'en' ? 'span5' : 'span4'; ?>">
-      <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Giving to the Library &amp; Archives' : 'Dons à la Bibliothèque'; ?></a>
+    <span class="span4">
+      <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Giving to the Library' : 'Dons à la Bibliothèque'; ?></a>
     </span>
     <span class="span3">
       <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/content/library-accessibility-services' : 'https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9'; ?>"><img src="https://biblio.laurentian.ca/research/sites/default/files/pictures/access_icon.png" alt="" /><?php echo $LANG == 'en' ? 'Accessibility' : 'Accessibilité'; ?></a>
@@ -388,7 +388,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
   </div>
 
   </div><?php /* span9 */ ?>
-      <div class="span3">
+      <div class="span3 news-panel">
         <div class='needs-js'><?php echo $LANG == 'en' ? 'Chat loading...' : 'Clavardez...'; ?></div>
         <div id="libnews"><?php
             if ($LANG == 'fr') {
