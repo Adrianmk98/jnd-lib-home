@@ -396,9 +396,6 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
   </div>
 
   </div><?php /* span9 */ ?>
-    <div class="span3">
-        <a href="<?php echo $language->language == 'en' ? 'https://laurentian.ca/COVID-19#faq-library-archives' : 'https://laurentienne.ca/COVID-19#faq-bibliotheque-archives';?>" style="display: block; padding: 10px; border: 1px solid #a30046; margin-bottom: 20px; color: #a30046; background-color:#eac7cb; font-weight: bold;"><?php echo $language->language == 'en' ? 'COVID-19: Library and Archives FAQ' : 'COVID-19: Foire aux questions, Bibliothèque et Archives';?></a>
-    </div>
       <div class="span3 news-panel">
         <div class='needs-js'><?php echo $LANG == 'en' ? 'Chat loading...' : 'Clavardez...'; ?></div>
         <div id="libnews"><?php
