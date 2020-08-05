@@ -151,11 +151,18 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
     <div class="row-fluid heightfix lulContent padt20 padb20" id="search-hours">
       <div class="span9">
         <h1 class="page-header2" property="name"><?php echo $lib_title ?></h1>
-        <h2><a href="<?php
-          echo $LANG == 'en' ? "https://biblio.laurentian.ca/research/content/covid-19-library-and-archives-faq" : "https://biblio.laurentian.ca/research/fr/content/covid-19-foire-aux-questions-biblioth%C3%A8que-et-archives"; ?>"
-            style="display: block; padding: 1em; border: 1px solid #a30046; color: #a30046; background-color:#eac7cb; font-weight: bold;"><?php
-            echo $LANG == 'en' ? "COVID-19: Library and Archives FAQ" : "COVID-19: Foire aux questions, Bibliothèque et Archives"
-        ?></a></h2>
+        <div style="display: block; padding: 1em; border: 1px solid #a30046; background-color:#eac7cb; font-weight: bold;">
+          <h2><a href="<?php
+            echo $LANG == 'en' ? "https://biblio.laurentian.ca/research/content/covid-19-library-and-archives-faq" : "https://biblio.laurentian.ca/research/fr/content/covid-19-foire-aux-questions-biblioth%C3%A8que-et-archives"; ?>" style="color: #a30046;"><?php
+              echo $LANG == 'en' ? "COVID-19: Library and Archives FAQ" : "COVID-19: Foire aux questions, Bibliothèque et Archives"
+          ?></a></h2>
+          <div style="text-align: center">
+            <a href="<?php
+              echo $LANG == 'en' ? "https://docs.google.com/forms/d/e/1FAIpQLScLz0n-6aO58b4XzTuZzkCwdfTgLbcDa6aviyD_aDtvVDGCuw/viewform" : "https://docs.google.com/forms/d/e/1FAIpQLSet0rh9KwIyYKqM-jte8PCXSbLPUmQg-cITIDob0OOaWjyYhw/viewform"; ?>" style="color: #a30046;"><?php
+              echo $LANG == 'en' ? "Form: curbside pickup and scanning services" : "Formulaire : ramassage en bordure de rue et de numérisation"
+          ?></a>
+          </div>
+        </div>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
           <li class="active"><a href="#catalogue" data-toggle="tab" id="librarySearchTab" class="dropdown-toggle">Catalogue&nbsp;&nbsp;&nbsp;<b class="caret"></b></a> 
           	<ul class="dropdown-menu">
