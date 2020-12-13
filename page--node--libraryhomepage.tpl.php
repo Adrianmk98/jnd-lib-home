@@ -164,99 +164,40 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
           </div>
         </div>
         <ul id="librarySearch" class="nav nav-tabs nav-append-content">
-          <li class="active"><a href="#catalogue" data-toggle="tab" id="librarySearchTab" class="dropdown-toggle">Catalogue&nbsp;&nbsp;&nbsp;<b class="caret"></b></a> 
-          	<ul class="dropdown-menu">
-                <li class="current filtermenu"><a data-filter="keyword" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Keyword' : 'Par mot-clé'; ?></a></li>
-                <li class="filtermenu"><a data-filter="title" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Title' : 'Par titre'; ?></a></li>
-                <li class="filtermenu"><a data-filter="jtitle" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Journal Title': 'Par titre de revue'; ?></a></li>
-                <li class="filtermenu"><a data-filter="author" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Author' : 'Par auteur'; ?></a></li>
-                <li class="filtermenu"><a data-filter="subject" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Subject' : 'Par sujet'; ?></a></li>
-                <li class="filtermenu"><a data-filter="series" href="#catalogue" ><?php echo $LANG == 'en' ? 'By Series' : 'Par séries'; ?></a></li>
-            </ul>
-    	  </li>
-          <li><a href="#googlescholar" data-toggle="tab"><?php echo $LANG == 'en' ? 'Scholarly Articles' : 'Articles scientifiques'; ?></a></li>
-          <li><a href="#journals" data-toggle="tab"><?php echo $LANG == 'en' ? 'E-Journals' : 'Revues électroniques'; ?></a></li>
+          <li class="active"><a href="#catalogue" data-toggle="tab" id="librarySearchTab" class="dropdown-toggle">Omni</a></li>
           <li><a href="#databases" data-toggle="tab"><?php echo $LANG == 'en' ? 'Research Databases' : 'Bases de données'; ?></a></li>
           <li><a href="#researchguides" data-toggle="tab"><?php echo $LANG == 'en' ? 'Research Guides' : 'Guides de recherche'; ?></a></li>
         </ul>
         <div id="librarySearchContent" class="tab-content border pad10">
           <div class="tab-pane fade in active" id="catalogue">
-            <form action="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/results" method="get" id="concat">
+            <form id="simple" name="searchForm" method="get" target="_self" action="https://omni.laurentian.ca/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8"">
+              <!-- Customizable Parameters -->
+              <input type="hidden" name="vid" value="01OCUL_LU:OMNI">
+              <input type="hidden" name="tab" value="Everything">
+              <input type="hidden" name="search_scope" value="MyInst_and_CI">
+              <input type="hidden" name="mode" value="basic">
+              <!-- Fixed parameters -->
+              <input type="hidden" name="displayMode" value="full">
+              <input type="hidden" name="bulkSize" value="10">
+              <input type="hidden" name="highlight" value="true">
+              <input type="hidden" name="dum" value="true">
+              <input type="hidden" name="query" id="primoQuery" value="">
+              <input type="hidden" name="displayField" value="all">
+              <!-- Enable this if "Expand My Results" is enabled by default in Views Wizard -->
+              <input type="hidden" name="pcAvailabiltyMode" value="true">
+              <input type="hidden" name="lang" value="<?php echo $LANG == 'en' ? 'en' : 'fr'; ?>">
+
+              <input class="searchsubmit" id="go" aria-label="Search" onclick="searchPrimo()" type="submit" value="" alt="Search">
+              <!-- Search Button -->
               <div class="control-group">
                 <div class="input-append">
-                  <input class="searchbox" id="query" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search by keyword ...' : 'Rechercher par mot-clé ...'; ?>" name="query" />
+                  <label for="primoQueryTemp" class="element-invisible">Search query</label>
+                  <input type="text" class="search_field search_box" id="primoQueryTemp" value="" size="50" placeholder="<?php echo $LANG == 'en' ? 'Search Omni for articles, books, journals, videos, and more...' : 'Trouver des articles, livres, périodiques, vidéos et plus encore'?>">
                   <button class="btn" type="button" id="searchCatalogue"><span class="fui-search"></span></button>
                 </div>
               </div>
-              <input type="hidden" name="locg" value="105" />
-              <input id="catalogueSearchType" type="hidden" name="qtype" value="keyword" />
-              <input id="detail" type="hidden" name="detail_record_view" value="1" />
             </form>
-            <div class="searchoptions"> <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?locg=105"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> | <a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/advanced?pane=numeric"><?php echo $LANG == 'en' ? 'Numeric Search' : 'Recherche numérique'; ?></a><!-- | <a href="https://laurentian.concat.ca/eg/opac/advanced?pane=expert"><?php echo $LANG == 'en' ? 'Expert Search' : 'Recherche experte'; ?></a> --> </div>
-          </div>
-          <div class="tab-pane fade" id="googlescholar">
-            <form name="googlescholar" method="get" accept-charset="utf-8" action="https://scholar.google.ca/scholar" id="gscholar">
-                <input type="hidden" name="hl" value="<?php echo($LANG) ?>">
-                <input type="hidden" name="inst" value="16499083251021320657">
-                 <div class="control-group">
-                    <div class="input-append">
-                        <input class="searchbox" id="scholar_value" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search for articles in Google Scholar...' : 'Rechercher des articles en Google Scholar...'; ?>" name="q" />
-                        <button class="btn" type="button" id="searchArticles"><span class="fui-search"></span></button>
-                    </div>
-                  </div>
-            </form>
-          </div>
-          <div class="tab-pane fade" id="journals">
-          
-            <form name="az_user_form" method="post" accept-charset="UTF-8" action="https://sfx.scholarsportal.info/laurentian/az<?php if($LANG == 'fr') echo '?&lang=fre'; ?>" id="scholarportal">
-            
-                <input type="hidden" name="param_sid_save" value="01db6cbfdb33135b9b43356830c46a89">
-                <input type="hidden" name="param_letter_group_script_save" value="">
-                <input type="hidden" name="param_current_view_save" value="table">
-                <input type="hidden" name="param_textSearchType_save" value="contains">
-                <input type="hidden" name="param_lang_save" value="<?php print $LANG == 'en' ? 'eng' : 'fre'; ?>">
-                <input type="hidden" name="param_chinese_checkbox_type_save" value="">
-                <input type="hidden" name="param_perform_save" value="searchTitle">
-                <input type="hidden" name="param_letter_group_save" value="">
-                <input type="hidden" name="param_chinese_checkbox_save" value="">
-                <input type="hidden" name="param_services2filter_save" value="getFullTxt">
-                <input type="hidden" name="param_pattern_save" value="test">
-                <input type="hidden" name="param_starts_with_browse_save" value="0">
-                <input type="hidden" name="param_jumpToPage_save" value="">
-                <input type="hidden" name="param_type_save" value="textSearch">
-                <input type="hidden" name="param_langcode_save" value="<?php echo $LANG; ?>">
-                
-                <input type="hidden" name="param_type_value" value="textSearch">
-                <input type="hidden" name="param_jumpToPage_value" value="">
-                
-                 <div class="control-group">
-                    <div class="input-append">
-                        <input class="searchbox" id="param_pattern_value" type="text" placeholder="<?php echo $LANG == 'en' ? 'Search for journals ...' : 'Rechercher des revues ...'; ?>" name="param_pattern_value" />
-                        
-                        <button class="btn" type="button" id="searchJournals"><span class="fui-search"></span></button>
-                    </div>
-                  </div>
-                
-                
-                
-              <input type="radio" name="param_textSearchType_value" id="startsWith" value="startsWith" style="display:none;">
-               
-                <input type="radio" name="param_textSearchType_value" id="contains" value="contains" checked="checked" style="display:none;">
-                
-                
-                <!-- UI Script Control -->
-                <input type="hidden" name="param_starts_with_browse_value" value="0">
-                
-                <!-- for ajax -->
-                <input type="hidden" name="param_ui_control_scripts_value" value="">
-                
-                
-                <!-- needed to be passed as one of ajax parameters-->
-                <input type="hidden" name="param_chinese_checkbox_value" id="param_chinese_checkbox_value" value="">
-            
-            </form>
-             <div class="searchoptions"> <a href="https://sfx.scholarsportal.info/laurentian/az?param_sid_save=01db6cbfdb33135b9b43356830c46a89&param_letter_group_script_save=&param_current_view_save=table&param_textSearchType_save=contains&param_lang_save=eng&param_chinese_checkbox_type_save=&param_perform_save=locate&param_letter_group_save=&param_chinese_checkbox_save=&param_services2filter_save=getFullTxt&param_pattern_save=testsdfsd&param_starts_with_browse_save=0&param_jumpToPage_save=&param_type_save=textSearch&param_langcode_save=en&param_jumpToPage_value=&param_pattern_value=&param_textSearchType_value=contains&param_issn_value=&param_vendor_active=1&param_locate_category_active=1"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a> </div>
-          
+            <div class="searchoptions"> <a href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced<?php echo $LANG == 'en' ? '' : '&amp;lang=fr'; ?>"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a></div>
           </div>
           <div class="tab-pane fade" id="databases">
           	 <form>
@@ -444,55 +385,14 @@ $(document).ready(function(){
 		 $("#qtype option").attr("selected",""); // reset all selected
 		 $("#qtype option[value=" + $(this).data("filter") + "]").attr('selected','selected'); // select filter
 		 
-		 placeholder = "<?php echo $LANG == 'en' ? 'Search by ': 'Rechercher par '; ?>";
-		 filteredby = $(this).data("filter");
-		 
-		 // Change the search type
-		 document.getElementById('catalogueSearchType').value = filteredby;
-
-		 // i10n 
-		 switch (filteredby) {
-			case "keyword":
-				filteredby = "<?php echo $LANG == 'en' ? 'keyword' : 'mot-clé'; ?> ";
-				break;
-			case "title":
-				filteredby = "<?php echo $LANG == 'en' ? 'title' : 'titre'; ?> ";
-				break;
-			case "jtitle":
-				filteredby = "<?php echo $LANG == 'en' ? 'journal title' : 'titre de revue'; ?> ";
-				break;
-			case "author":
-				filteredby = "<?php echo $LANG == 'en' ? 'author' : 'auteur'; ?> ";
-				break;
-			case "subject":
-				filteredby = "<?php echo $LANG == 'en' ? 'subject' : 'sujet'; ?> ";
-				break;
-			case "series":
-				filteredby = "<?php echo $LANG == 'en' ? 'series' : 'séries'; ?> ";
-				break;
-		 }
-		 $("#query").attr("placeholder", placeholder + filteredby + " ..."); // Update Placeholder as per filter
-		 
-		 $('#librarySearchTab').click(); // Tab doesn't stay selected with dropdown? 
 	});
 	
 	// Catalogue Search
 	$("#searchCatalogue").on("click", function(){
-		// TODO: Error Checking
-		$('#concat').submit();
-	});
-	
-	// Journals Search
-	$("#searchJournals").on("click", function(){
-		// TODO: Error Checking
-		$('#scholarportal').submit();
-	});
+      document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+      document.forms["searchForm"].submit();
+  });
 
-    // Google Scholar Search
-    $("#searchArticles").on("click", function(){
-        $('#gscholar').submit();
-    });
-	
 	// Databases Search
 	// Redirect to this URL (on "Search" Databases)
 	var URLforDB = "https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z";
