@@ -530,7 +530,6 @@ $(document).ready(function(){
 	
 	
 	
-    bottom('<?php echo date("m/d/Y");?>','JND');
     $('.jnd').addClass("active");
     updateLibraryTime($('.dates .active').attr('id'));
 
@@ -543,36 +542,31 @@ $(document).ready(function(){
          temp = library.split(' ');
          library = temp[0];
          library = library == 'arc' ? 'Archives' : library.toUpperCase();
-    
-         bottom(date,library);
-   
-
-		
 	});
 });
 
 
 function updateLibraryTime(day)
 {
+
             // Move Highlighted Class "active"
             library = ' ';
              $('#libraryHours .dates .active').removeClass("active");
             library = $('#libraryHours .border .today p.active').attr('class');
-            console.log('library: ' +library);
+            
             if(library)
            {
                 temp = library.split(' ');
                 library = temp[0];
                 library = library == 'arc' ? 'Archives' : library.toUpperCase();
-                bottom($('#'+day).data('day'),library);
             }
 
 
         $('#'+day).addClass("active");
-        
+ 
 
         var request = $.ajax({
-          url: "<?php echo "/" . path_to_theme(). "/templates/includes/feeds/json.librarycal.php"; ?>",
+          url: "<?php echo "/" . path_to_theme(). "/templates/includes/feeds/librarywidget.php"; ?>",
           type: "POST",
           async: false,
           data: { date: $('#'+day).data('day'), lang :"<?php echo $LANG;?>", mode: 'single'},
@@ -593,42 +587,6 @@ function updateLibraryTime(day)
         }); 
 }
 
-function bottom(day,library)
-{
-
-    var request = $.ajax({
-          url: "<?php echo "/" . path_to_theme(). "/templates/includes/feeds/json.librarycal.php"; ?>",
-          type: "POST",
-          async: false,
-          data: { date:  day, lang :"<?php echo $LANG;?>", mode: 'single'},
-          dataType: "html"
-        }).done(function( msg ) {
-    
-            var information = jQuery.parseJSON(msg);
-
-            //console.log(information); // debug
-			
-            // Update HTML based on date selected
-            date = day.split('/');
-          
-           if(library == 'JND' || library == 'jnd')
-                op = information.JND.split('-');
-            else if(library == 'Archives')
-                op = information.Archives.split('-');
-            else if(library == 'JWT')
-                 op = information.JWT.split('-');
-            else if(library == 'UOS')
-                 op = information.UoS.split('-');
-
-          
-            if(open.length == 2)
-				formatdateLang(day,false);
-            else
-                formatdateLang(day,true);
-
-        });
-
-}
 function formatdateLang(today,closed)
 {
     var request = $.ajax({
