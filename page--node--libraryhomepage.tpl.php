@@ -21,6 +21,7 @@ $lib_contact_url = 'https://biblio.laurentian.ca/research/contact-us';
 $lib_url_en = 'https://www1.laurentian.ca/library';
 $lib_url_fr = 'https://www1.laurentienne.ca/bibliotheque';
 $lib_url = $lib_url_en;
+$lib_catalogue = "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI";
 
 if($LANG == 'fr')
 {
@@ -36,6 +37,7 @@ if($LANG == 'fr')
     $lib_ref_schema = 'Aide dans vos recherches';
     $lib_contact_url = 'https://biblio.laurentian.ca/research/fr/coordonnées-et-renseignements';
     $lib_url = $lib_url_en;
+    $lib_catalogue = "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=fr";
 }
 
 $node = menu_get_object();
@@ -97,14 +99,14 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
             "name": "Circulation",
             "contactType": "customer support",
             "telephone": "+1-705-675-4800",
-            "email": "circulation@laurentian.ca",
+            "email": "omni@laurentian.ca",
             "availableLanguage" : ["English", "French"]
         },
         {
             "@type": "ContactPoint",
             "name": "<?php echo $lib_ref_schema ?>",
             "contactType": "customer service",
-            "email": "reference@laurentian.ca",
+            "email": "omni@laurentian.ca",
             "url": "<?php echo $lib_contact_url ?>",
             "availableLanguage" : ["English", "French"]
         }
@@ -117,8 +119,6 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
 
 <div class="main-container2 container" vocab="http://schema.org/" resource="<?php echo $lib_url ?>" typeof="Library">
     <link property="sameAs" href="<?php echo $LANG == 'en' ? $lib_url_fr : $lib_url_en; ?>" />
-    <link property="sameAs" href="https://laurentian.concat.ca/eg/opac/library/OSUL" />
-    <link property="sameAs" href="https://laurentienne.concat.ca/eg/opac/library/OSUL" />
 	<?php if (!empty($page['highlighted'])): ?>
     <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
     <?php endif; ?>
@@ -287,10 +287,10 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/login?redirect_to=/eg/opac/myopac/main?locg=105"><?php echo $LANG == 'en' ? 'myLibrary' : 'maBiblio'; ?></a></h5>
+      <h5><a href="$lib_catalogue"><?php echo $LANG == 'en' ? 'myLibrary' : 'maBiblio'; ?></a></h5>
       <ul>
-        <li><a href="https://<?php echo $LANG == 'en' ? 'laurentian' : 'laurentienne'; ?>.concat.ca/eg/opac/login?redirect_to=/eg/opac/myopac/main?locg=105"><?php echo $LANG == 'en' ? 'My Account' : 'Mon compte'; ?></a></li>
-        <li><a href="https://biblio.laurentian.ca/reserves/<?php if ($LANG == 'fr') echo "#"; ?>"><?php echo $LANG == 'en' ? 'Course Reserves' : 'Réserves pour les cours'; ?></a></li>
+        <li><a href="https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview<?php echo $LANG == 'en' ? '' : '&amp;lang=fr'; ?>"><?php echo $LANG == 'en' ? 'My Account' : 'Mon compte'; ?></a></li>
+        <li><a href="$lib_catalogue"><?php echo $LANG == 'en' ? 'Course Reserves' : 'Réserves pour les cours'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/managing-citations' : 'https://biblio.laurentian.ca/research/fr/guides/gestion-citations'; ?>"><?php echo $LANG == 'en' ? 'Managing citations' : 'Logiciels bibliographiques'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer' : 'https://biblio.laurentian.ca/research/fr/guides/pr%C3%AAt-entre-biblioth%C3%A8ques-racer'; ?>"><?php echo $LANG == 'en' ? 'Interlibrary Loan' : 'Prêt entre bibliothèques'; ?></a></li>
       </ul>
@@ -308,7 +308,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
     <div class="span25">
       <h5><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/resources' : 'https://biblio.laurentian.ca/research/fr/content/resources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
       <ul>
-        <li><a href="<?php echo $LANG == 'en' ? 'https://laurentian.concat.ca':'https://laurentienne.concat.ca'; ?>">Catalogue</a></li>
+        <li><a href="$lib_catalogue">Catalogue</a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/copyright-lu' : 'https://biblio.laurentian.ca/research/fr/guides/droit-d%E2%80%99auteur-ul'; ?>"><?php echo $LANG == 'en' ? 'Copyright @ LU' : 'Droit d’auteur @ UL'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/data-and-statistics' : 'https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-statistiques'; ?>"><?php echo $LANG == 'en' ? 'Data' : 'Données'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/geospatial-data-lu' : 'https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-g%C3%A9ospatiales'; ?>" title="<?php echo $LANG == 'en' ? 'Geographic Information Systems' : 'Système d\'information géographique'; ?>"><?php echo $LANG == 'en' ? 'GIS' : 'SIG'; ?></a></li>
@@ -329,7 +329,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
   </div> <!-- /.row-fluid-->
   <div class="row-fluid quicklinks" style="padding-top: 1em">
     <span class="span4">
-      <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
+      <a href="$lib_contact_url"><img src="<?php echo "/" . path_to_theme() .  "/images/library/email.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Contact &amp; About Us' : 'Coordonnées et renseignements'; ?></a>
     </span>
     <span class="span4">
       <a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/contact-us#tab3' : 'https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3'; ?>"><img src="<?php echo "/" . path_to_theme() .  "/images/library/donate.png"; ?>" alt="" /> <?php echo $LANG == 'en' ? 'Giving to the Library' : 'Dons à la Bibliothèque'; ?></a>
