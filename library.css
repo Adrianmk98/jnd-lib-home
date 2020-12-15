@@ -17,9 +17,13 @@
 .searchoptions { color: #252a2f; text-align:right; }
 .searchoptions a { color: #252a2f !important; }
 .searchoptions a:hover { color: #141719 !important; }
-.searchbox { width: 782px !important; }
+.searchbox, #primoQueryTemp { width: 782px !important; }
 .searchbox2 { width: 791px !important; font-size:15px; margin:0; height: 41px;  }
 
+::placeholder {
+  color: black !important;
+  opacity: 100%;
+}
 
 /* CATALOGUE SEARCH */
 .current { background: #E1E4E7 !important; color: #647483 !important; }
@@ -115,7 +119,7 @@ div#lulContent h5 {
 /* iPad / Smaller Desktops */
 @media screen and (max-width: 1200px) { 
 	.desktoponly { display:none !important; }
-	.searchbox { width: 555px !important; }
+	.searchbox, #primoQueryTemp { width: 555px !important; }
 	.searchbox2 { width: 565px !important; }
 	.quicklinks a:after { content: "" !important; }
 	
@@ -140,7 +144,7 @@ div#lulContent h5 {
 @media screen and (max-width: 780px) { 
 	.main-container2 .span9, .span25 { width:90% !important; }
 	.quicklinks span:last-child { text-align:center !important;}
-	.searchbox, .searchbox2 { width: 100% !important; }
+	.searchbox, .searchbox2, #primoQueryTemp  { width: 100% !important; }
 	.quicklinks span { margin-bottom:10px; width:100% !important; text-align: center; }
   .news-panel { width: 100% !important; }
   div#lulContent h5 { margin-top: 1em; }
