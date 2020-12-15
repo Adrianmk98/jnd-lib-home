@@ -22,6 +22,7 @@ $lib_url_en = 'https://www1.laurentian.ca/library';
 $lib_url_fr = 'https://www1.laurentienne.ca/bibliotheque';
 $lib_url = $lib_url_en;
 $lib_catalogue = "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI";
+$omni_announce = "https://biblio.laurentian.ca/research/content/laurentian-university-libraries-announce-omni-new-academic-search-tool";
 
 if($LANG == 'fr')
 {
@@ -38,6 +39,7 @@ if($LANG == 'fr')
     $lib_contact_url = 'https://biblio.laurentian.ca/research/fr/coordonnées-et-renseignements';
     $lib_url = $lib_url_en;
     $lib_catalogue = "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=fr";
+    $omni_announce = "https://biblio.laurentian.ca/research/fr/content/les-biblioth%C3%A8ques-de-luniversit%C3%A9-laurentienne-annoncent-omni-un-nouvel-outil-de-recherche";
 }
 
 $node = menu_get_object();
@@ -151,8 +153,8 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
     <div class="row-fluid heightfix lulContent padt20 padb20" id="search-hours">
       <div class="span9">
         <h1 class="page-header2" property="name"><?php echo $lib_title ?></h1>
-        <div style="display: block; padding: 1em; border: 1px solid #a30046; background-color:#eac7cb; font-weight: bold;">
-          <h2><a href="<?php
+        <div style="display: block; padding: 0.5em; margin-bottom: 0.5em; border: 1px solid #a30046; background-color:#eac7cb; font-weight: bold;">
+          <h2><a id="covid-faq" href="<?php
             echo $LANG == 'en' ? "https://biblio.laurentian.ca/research/content/covid-19-library-and-archives-faq" : "https://biblio.laurentian.ca/research/fr/content/covid-19-foire-aux-questions-biblioth%C3%A8que-et-archives"; ?>" style="color: #a30046;"><?php
               echo $LANG == 'en' ? "COVID-19: Library and Archives FAQ" : "COVID-19: Foire aux questions, Bibliothèque et Archives"
           ?></a></h2>
@@ -185,13 +187,15 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
               <div class="control-group">
                 <div class="input-append">
                   <label for="primoQueryTemp" class="element-invisible">Search query</label>
-                  <input type="text" class="search_field search_box" id="primoQueryTemp" value="" size="50" placeholder="<?php echo $LANG == 'en' ? 'Search Omni for articles, books, journals, videos, and more...' : 'Trouver des articles, livres, périodiques, vidéos et plus encore'?>">
+                  <input type="text" class="search_field search_box" id="primoQueryTemp" value="" placeholder="<?php echo $LANG == 'en' ? 'Search Omni for articles, books, journals, videos, and more...' : 'Trouver des articles, livres, périodiques, vidéos et plus encore'?>">
                   <button class="btn" type="button" id="searchCatalogue"><span class="fui-search"></span></button>
                 </div>
               </div>
             </form>
-            <div class="searchoptions"> <a href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced<?php echo $LANG == 'en' ? '' : '&amp;lang=fr'; ?>"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a></div>
-          </div>
+            <div class="searchoptions flex-between">
+              <a id="omni-announce" href="<?php echo $omni_announce ?>"><?php echo $LANG == 'en' ? 'Announcing Omni' : "Annonce d'Omni" ?></a>
+              <a href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced<?php echo $LANG == 'en' ? '' : '&amp;lang=fr'; ?>"><?php echo $LANG == 'en' ? 'Advanced Search' : 'Recherche avancée'; ?></a></div>
+            </div>
           <div class="tab-pane fade" id="databases">
           	 <form>
                <select class="searchbox2" id="dblist">
