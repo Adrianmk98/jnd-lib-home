@@ -20,6 +20,11 @@
 .searchbox, #primoQueryTemp { width: 782px !important; }
 .searchbox2 { width: 791px !important; font-size:15px; margin:0; height: 41px;  }
 
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+
 ::placeholder {
   color: black !important;
   opacity: 100%;
