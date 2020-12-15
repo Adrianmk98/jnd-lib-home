@@ -166,7 +166,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
         </ul>
         <div id="librarySearchContent" class="tab-content border pad10">
           <div class="tab-pane fade in active" id="catalogue">
-            <form id="simple" name="searchForm" method="get" target="_self" action="https://omni.laurentian.ca/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8"">
+            <form id="simple" name="searchForm" method="get" target="_self" action="https://omni.laurentian.ca/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
               <!-- Customizable Parameters -->
               <input type="hidden" name="vid" value="01OCUL_LU:OMNI">
               <input type="hidden" name="tab" value="Everything">
@@ -371,6 +371,12 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
 <script>
 // Main JS File
 // Incl. inline due to needing PHP $language->language
+
+function searchPrimo() {
+  document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+  document.forms["searchForm"].submit();
+}
+
 $(document).ready(function(){
 	$('.filtermenu a').on("click",function(e){
 		 e.stopPropagation();
@@ -386,8 +392,7 @@ $(document).ready(function(){
 	
 	// Catalogue Search
 	$("#searchCatalogue").on("click", function(){
-      document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
-      document.forms["searchForm"].submit();
+    searchPrimo();
   });
 
 	// Databases Search
