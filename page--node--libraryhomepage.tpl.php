@@ -188,7 +188,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
                 <div class="input-append">
                   <label for="primoQueryTemp" class="element-invisible">Search query</label>
                   <input type="text" class="search_field search_box" id="primoQueryTemp" value="" placeholder="<?php echo $LANG == 'en' ? 'Search Omni for articles, books, journals, videos, and more...' : 'Trouver des articles, livres, périodiques, vidéos et plus encore'?>">
-                  <button class="btn" type="button" id="searchCatalogue"><span class="fui-search"></span></button>
+                  <button class="btn" type="button" id="searchCatalogue" aria-label="Search Catalogue"><span class="fui-search"></span></button>
                 </div>
               </div>
             </form>
@@ -274,7 +274,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
 <div class="span9">
   <div class="row-fluid libraryMenu lulContent padb20" id="lulContent">
     <div class="span25">
-      <h5 id="archives-links"><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h5>
+      <h4 id="archives-links"><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives">Archives</a></h4>
       <ul>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides/archives#tab2"><?php echo $LANG == 'en' ? 'Policies &amp; Procedures' : 'Politiques et procédures'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/archival-fonds' : 'https://biblio.laurentian.ca/research/fr/guides/fonds-darchives'; ?>"><?php echo $LANG == 'en' ? 'Archival Fonds' : 'Fonds d\'archives'; ?></a></li>
@@ -284,7 +284,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="<?php echo $lib_catalogue ?>"><?php echo $LANG == 'en' ? 'myLibrary' : 'maBiblio'; ?></a></h5>
+      <h4><a href="<?php echo $lib_catalogue ?>"><?php echo $LANG == 'en' ? 'myLibrary' : 'maBiblio'; ?></a></h4>
       <ul>
         <li><a href="https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview<?php echo $LANG == 'en' ? '' : '&amp;lang=fr'; ?>"><?php echo $LANG == 'en' ? 'My Account' : 'Mon compte'; ?></a></li>
         <li><a href="<?php echo $lib_catalogue ?>"><?php echo $LANG == 'en' ? 'Course Reserves' : 'Réserves pour les cours'; ?></a></li>
@@ -293,7 +293,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research' : 'Recherche'; ?></a></h5>
+      <h4><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research' : 'Recherche'; ?></a></h4>
       <ul>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>databases-a-z"><?php echo $LANG == 'en' ? 'Databases' : 'Bases de données'; ?></a></li>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>guides"><?php echo $LANG == 'en' ? 'Research Guides' : 'Guides de recherche'; ?></a></li>
@@ -303,7 +303,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/resources' : 'https://biblio.laurentian.ca/research/fr/content/resources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h5>
+      <h4><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/resources' : 'https://biblio.laurentian.ca/research/fr/content/resources'; ?>"><?php echo $LANG == 'en' ? 'Resources' : 'Ressources'; ?></a></h4>
       <ul>
         <li><a href="<?php echo $lib_catalogue ?>">Catalogue</a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/copyright-lu' : 'https://biblio.laurentian.ca/research/fr/guides/droit-d%E2%80%99auteur-ul'; ?>"><?php echo $LANG == 'en' ? 'Copyright @ LU' : 'Droit d’auteur @ UL'; ?></a></li>
@@ -313,7 +313,7 @@ function parse_news_feed($news_atom, $max_items = 4, $max_age = '30 days') {
       </ul>
     </div>
     <div class="span25">
-      <h5><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr"; ?>/service">Services</a></h5>
+      <h4><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr"; ?>/service">Services</a></h4>
       <ul>
         <li><a href="https://biblio.laurentian.ca/research/<?php if($LANG == 'fr') echo "fr/"; ?>services"><?php echo $LANG == 'en' ? 'for Students' : 'pour étudiants'; ?></a></li>
         <li><a href="<?php echo $LANG == 'en' ? 'https://biblio.laurentian.ca/research/guides/services-faculty' : 'https://biblio.laurentian.ca/research/fr/guides/services-de-biblioth%C3%A8que-%C3%A0-l%E2%80%99intention-du-corps-professoral-2013-2014'; ?>"><?php echo $LANG == 'en' ? 'for Faculty' : 'pour le corps professoral'; ?></a></li>

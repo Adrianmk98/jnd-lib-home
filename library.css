@@ -126,7 +126,7 @@ div#libnews li {
 div#libnews ul {
   margin-bottom: 1em;
 }
-div#lulContent h5 {
+div#lulContent h4 {
 	margin-top: 0px;
 }
 
@@ -161,8 +161,8 @@ div#lulContent h5 {
 	.searchbox, .searchbox2, #primoQueryTemp  { width: 100% !important; }
 	.quicklinks span { margin-bottom:10px; width:100% !important; text-align: center; }
   .news-panel { width: 100% !important; }
-  div#lulContent h5 { margin-top: 1em; }
-  h5#archives-links { margin-top: 0em; }
+  div#lulContent h4 { margin-top: 1em; }
+  h4#archives-links { margin-top: 0em; }
   .libraryh3lp { width: 50%; margin: 0 auto; }
   #libraryHours { width: 204px; }
   #search-hours { padding-bottom: 0px !important; }
