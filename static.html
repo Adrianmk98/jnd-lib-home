@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Laurentian University Library &amp; Archives</title>
+    <link href="static.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header"><img src="https://laurentian.ca/sites/all/themes/newLul/assets/images/laurentian.svg" alt="Laurentian University logo" id="lulogo" /> <a href="https://biblio.laurentienne.ca/">Français</a></div>
+      <div id="content">
+        <div id="main">
+          <div id="libheader"><h1>Library and Archives</h1><a id="covid19" href="">COVID-19: Library and Archives FAQ</a></div>
+          <div id="searchbox">
+            <div id="search-wrapper">
+              <div id="search-inner">
+                <form id="simple" name="omniForm" method="get" target="_self" action="https://omni.laurentian.ca/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8">
+                  <!-- Customizable Parameters -->
+                  <input type="hidden" name="vid" value="01OCUL_LU:OMNI">
+                  <input type="hidden" name="tab" value="Everything">
+                  <input type="hidden" name="search_scope" value="MyInst_and_CI">
+                  <input type="hidden" name="mode" value="basic">
+                  <!-- Fixed parameters -->
+                  <input type="hidden" name="displayMode" value="full">
+                  <input type="hidden" name="bulkSize" value="10">
+                  <input type="hidden" name="highlight" value="true">
+                  <input type="hidden" name="dum" value="true">
+                  <input type="hidden" name="query" id="primoQuery" value="">
+                  <input type="hidden" name="displayField" value="all">
+                  <!-- Enable this if "Expand My Results" is enabled by default in Views Wizard -->
+                  <input type="hidden" name="pcAvailabiltyMode" value="true">
+
+                  <input class="searchsubmit" id="omnigo" aria-label="Search" type="submit" value="" alt="Search"><label for="primoQueryTemp" class="element-invisible">Search query</label><input type="text" class="search_field" id="primoQueryTemp" value="" placeholder="Search Omni for books, journals, articles, videos...">
+                  <!-- Search Button -->
+                </form>
+                <div class="search-links">
+                  <a id="search-omni">What is Omni?</a>
+                  <a id="search-advanced" href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced">Advanced search</a>
+                </div>
+                <div id="what-is-omni" data-collapsed="false">
+                  <p>Your best place to discover millions of quality, academic resources from 16 Ontario university libraries, including books, full text articles, unique special collections, videos, and much more. For more information about Omni see our <a href="/about/about-library/omni/omni-faq">Omni FAQ</a> and <a href="https://guides.lib.uoguelph.ca/Omni">getting started with Omni guide</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav id="mainmenu">
+            <div id="archives">
+              <h2 id="archives-links"><a href="https://biblio.laurentian.ca/research/guides/archives">Archives</a></h2>
+              <ul>
+                <li><a href="https://biblio.laurentian.ca/research/guides/archives#tab2">Policies &amp; Procedures</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/archival-fonds">Archival Fonds</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee">Anglican Diocese of Moosonee Fonds</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/special-collections-archives">Special Collections</a></li>        
+                <li><a href="https://biblio.laurentian.ca/research/guides/archives#tab3">Related Sites</a></li>
+              </ul>
+            </div>
+            <div id="mylibrary">
+              <h2><a href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI">myLibrary</a></h2>
+              <ul>
+                <li><a href="https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview">My Account</a></li>
+                <li><a href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI">Course Reserves</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/managing-citations">Managing citations</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer">Interlibrary Loan</a></li>
+              </ul>
+            </div>
+            <div id="research">
+              <h2><a href="https://biblio.laurentian.ca/research/guides">Research</a></h2>
+              <ul>
+                <li><a href="https://biblio.laurentian.ca/research/databases-a-z">Databases</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides">Research Guides</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/services">Research Help</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/services/#tab8">Research Skills Tutorial</a></li>
+                <!--<li><a href="https://biblio.laurentian.ca/research/pages/workshops-atelier"> In-person Library Workshops</a></li>-->
+              </ul>
+            </div>
+            <div id="resources">
+              <h2><a href="https://biblio.laurentian.ca/research/resources">Resources</a></h2>
+              <ul>
+                <li><a href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI">Catalogue</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/copyright-lu">Copyright @ LU</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/data-and-statistics">Data</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/geospatial-data-lu" title="Geographic Information Systems">GIS</a></li>
+                <li><a href="https://zone.biblio.laurentian.ca/dspace/?locale=en">LU|Zone|UL: research repository</a></li>
+              </ul>
+            </div>
+            <div id="services">
+              <h2><a href="https://biblio.laurentian.ca/research//service">Services</a></h2>
+              <ul>
+                <li><a href="https://biblio.laurentian.ca/research/services">for Students</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/services-faculty">for Faculty</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/off-campus-library-services">for Off Campus</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/services-other-library-users">for Staff </a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/services-other-library-users#tab2">for Alumni</a></li>
+                <li><a href="https://biblio.laurentian.ca/research/guides/services-other-library-users#tab3">for Visitors</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div id="bigthree">
+            <a href="">Contact us</a> <a href="">Giving to the Library</a> <a href="">Accessibility</a>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="hours">
+            HOURS
+          </div>
+          <div id="ask">
+            <div class='needs-js'>Chat loading...</div>
+          </div>
+          <div id="news">
+            <h2><a href="https://biblio.laurentian.ca/research/news">News</a></h2>
+          </div>
+        </div>
+      </div>
+      <p id="acknowledgement">
+        We would like to acknowledge that the J.N. Desmarais Library &amp;
+        Archives are located on the traditional territory of the Atikameksheng
+        Anishnaabek and Wanipitei First Nations, which is within the
+        Robinson-Huron Treaty territory. 
+      </p>
+      <div id="footer">
+        <span id="copyright">Laurentian University, Sudbury, Ontario, Canada.</span>
+        <nav>
+          <ul>
+            <li><a href="">Policies</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Feedback</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  <script>
+    (function(){
+      const what = document.getElementById('search-omni');
+      const whatis = document.getElementById('what-is-omni');
+
+      what.addEventListener('click', function(event) {
+        var state = whatis.getAttribute('data-collapsed');
+
+        if (state == "true") {
+          whatis.setAttribute('data-collapsed', "false");
+        } else {
+          whatis.setAttribute('data-collapsed', "true");
+        }
+      });
+
+      let form = document.getElementById("simple");
+      form.addEventListener("submit", (event) => {
+            document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+            form.submit();
+        }, { once: true });
+
+      function searchPrimo() {
+      };
+    }());
+
+    /* Chat widget */
+    (function() {
+      var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
+      x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "ca.libraryh3lp.com/js/libraryh3lp.js?643";
+      var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
+    })();
+
+  </script>
+  </body>
+</html>
