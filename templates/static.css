@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+}
+#container {
+  font-family: "Open Sans", sans-serif;
+}
+#header, .search-links, #footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+h1, h2, h3, h4 {
+  color: #003e7e;
+  margin: 0;
+}
+#covid19 {
+  color: #a30046;
+  align-self: center;
+}
+#bigthree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: solid thin;
+  padding: 1em;
+}
+#search-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#search-wrapper {
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	background-color: white;
+	box-shadow: 3px 3px 10px #626262;
+	padding: 1.5em 0em 1em 0em;
+	margin: 0 auto;
+}
+#search-inner {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#simple {
+	width: 100%;
+	float: left;
+}
+#search-wrapper, #searchForm {
+	display: flex;
+	align-content: center;
+	border: 1px solid #CCC;
+}
+.searchsubmit {
+  border: none;
+	/*background: url(/sites/all/themes/library/icons/search-icon.png) center/1.25em white no-repeat; */
+	height: 45px;
+	box-sizing: border-box;
+	background-color: #F5F5F5;
+}
+.element-invisible {
+  display: none;
+}
+.search_field {
+  border: none;
+	box-sizing: border-box;
+	height: 45px;
+	padding-left: 0.5em;
+	font-size: 1.25em;
+}
+.search-links {
+	width: 100%;
+	border: none;
+	border-top: 2px solid blue;
+  padding-top: 4px;
+}
+#what-is-omni[data-collapsed="false"] {
+  display: none;
+}
+nav#mainmenu h2 {
+  margin-bottom: 0px;
+}
+nav#mainmenu ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0.5em;
+}
+
+nav#mainmenu li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+#bigthree a {
+  justify-self: center;
+}
+a {
+  color: #003e7e;
+  text-decoration-color: #c2e0ff;
+}
+#news {
+  margin: 0;
+}
+#footer {
+  background-color: rgb(1, 43, 87);
+  color: rgb(255, 196, 35);
+  font-size: 80%;
+  padding: 0 1em 0 1em;
+}
+#footer a {
+  color: rgb(255, 196, 35);
+  text-decoration: none;
+  font-weight: bold;
+}
+#footer ul {
+  margin: 0;
+}
+#footer li {
+  display: inline-block;
+  margin-right: 1em;
+}
+#footer li:before {
+  content: "> ";
+}
+#lulogo {
+  width: 200px;
+}
+#sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#hours table {
+  border: thin black solid;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  background-color: #003e7e;
+  color: white
+}
+#hours th {
+  text-align: left;
+  padding-left: 0.5em;
+}
+#hours th, #hours td {
+  border: thin black solid;
+  border-left: none;
+  border-right: none;
+}
+#hours thead th {
+  text-align: center;
+}
+#hours table a {
+  color: white;
+}
+#hours table h2 {
+  color: white;
+  display: inline-block;
+}
+#all-hours {
+  float: right;
+}
+#ask {
+  margin: auto;
+}
+#news ul {
+  margin-top: 0;
+}
+div.libraryh3lp {
+  height: 150px;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+ul.menu, ul.nav {
+  border: none;
+  list-style: none;
+  text-align: left;
+  float: left;
+  color: white;
+  padding-left: 0;
+  margin: 0;
+}
+ul.menu li, ul.nav li {
+  float: left;
+  margin: 0 0.5em 0 0.5em;
+  font-weight: bold;
+  padding: 0;
+  display: none;
+}
+ul.menu li a {
+  color: white;
+  text-decoration: none;
+}
+ul.nav li a {
+	color: #ffc423;
+  text-decoration: none;
+}
+ul.nav li.language {
+  display: block;
+}
+nav.navbar {
+	background-color: #003e7e;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 640px) {
+  #container {
+    max-width: 100em;
+    margin: auto;
+  }
+  #mainmenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .search_field {
+    width: 70%;
+  }
+  #sidebar {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+  }
+  #hours th, #hours td {
+    padding: 0 1em 0 1em;
+  }
+}
+@media screen and (min-width: 800px) {
+  #content {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+  }
+  ul.menu li, ul.nav li {
+    display: inherit;
+  }
+  #mainmenu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1em;
+  }
+  #lulogo {
+    width: 300px;
+  }
+  #header, #libheader, .search-links, #footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #search-wrapper {
+    padding: 1.5em 3em 1em 3em;
+  }
+  #sidebar {
+    display: grid;
+    grid-direction: row;
+    grid-template-columns: 1fr;
+    margin-left: 2em;
+  }
+}

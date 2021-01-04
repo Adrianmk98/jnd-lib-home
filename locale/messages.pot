@@ -1,0 +1,390 @@
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-01-02 07:16-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: templates/library.html:5
+msgid "Laurentian University Library &amp; Archives"
+msgstr ""
+
+#: templates/library.html:12
+msgid "Skip to main content"
+msgstr ""
+
+#: templates/library.html:15
+msgid "https://laurentian.ca/current-students"
+msgstr ""
+
+#: templates/library.html:15
+msgid "Students"
+msgstr ""
+
+#: templates/library.html:16
+msgid "https://laurentian.ca/faculty-staff"
+msgstr ""
+
+#: templates/library.html:16
+msgid "Faculty &amp; Staff"
+msgstr ""
+
+#: templates/library.html:17
+msgid "https://laurentian.ca/alumni"
+msgstr ""
+
+#: templates/library.html:17
+msgid "Alumni"
+msgstr ""
+
+#: templates/library.html:18
+msgid "https://my.laurentian.ca/user/login"
+msgstr ""
+
+#: templates/library.html:18
+msgid "Applicants"
+msgstr ""
+
+#: templates/library.html:19
+msgid "https://laurentian.ca/parents"
+msgstr ""
+
+#: templates/library.html:19
+msgid "Parents"
+msgstr ""
+
+#: templates/library.html:24
+msgid "https://laurentian.ca/give"
+msgstr ""
+
+#: templates/library.html:24
+msgid "Donate"
+msgstr ""
+
+#: templates/library.html:25
+msgid "https://bibio.laurentienne.ca/"
+msgstr ""
+
+#: templates/library.html:25
+msgid "Français"
+msgstr ""
+
+#: templates/library.html:29
+msgid "Laurentian University logo"
+msgstr ""
+
+#: templates/library.html:32
+msgid "Library and Archives"
+msgstr ""
+
+#: templates/library.html:32
+msgid ""
+"https://biblio.laurentian.ca/research/content/covid-19-library-and-"
+"archives-faq"
+msgstr ""
+
+#: templates/library.html:32
+msgid "COVID-19: Library and Archives FAQ"
+msgstr ""
+
+#: templates/library.html:52
+msgid "Search"
+msgstr ""
+
+#: templates/library.html:52
+msgid "Search query"
+msgstr ""
+
+#: templates/library.html:52
+msgid "Search Omni for books, journals, articles, videos..."
+msgstr ""
+
+#: templates/library.html:56
+msgid "What is Omni?"
+msgstr ""
+
+#: templates/library.html:57
+msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced"
+msgstr ""
+
+#: templates/library.html:57
+msgid "Advanced search"
+msgstr ""
+
+#: templates/library.html:62
+msgid ""
+"Your best place to discover millions of quality, academic resources from "
+"16 Ontario university libraries, including books, full text articles, "
+"unique special collections, videos, and much more. For more information "
+"about Omni see our <a href=\"/about/about-library/omni/omni-faq\">Omni "
+"FAQ</a> and <a href=\"https://guides.lib.uoguelph.ca/Omni\">getting "
+"started with Omni guide</a>."
+msgstr ""
+
+#: templates/library.html:71
+msgid "https://biblio.laurentian.ca/research/guides/archives"
+msgstr ""
+
+#: templates/library.html:71
+msgid "Archives"
+msgstr ""
+
+#: templates/library.html:73
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab2"
+msgstr ""
+
+#: templates/library.html:73
+msgid "Policies &amp; Procedures"
+msgstr ""
+
+#: templates/library.html:74
+msgid "https://biblio.laurentian.ca/research/guides/archival-fonds"
+msgstr ""
+
+#: templates/library.html:74
+msgid "Archival Fonds"
+msgstr ""
+
+#: templates/library.html:75
+msgid "https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee"
+msgstr ""
+
+#: templates/library.html:75
+msgid "Anglican Diocese of Moosonee Fonds"
+msgstr ""
+
+#: templates/library.html:76
+msgid "https://biblio.laurentian.ca/research/guides/special-collections-archives"
+msgstr ""
+
+#: templates/library.html:76
+msgid "Special Collections"
+msgstr ""
+
+#: templates/library.html:77
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab3"
+msgstr ""
+
+#: templates/library.html:77
+msgid "Related Sites"
+msgstr ""
+
+#: templates/library.html:81
+msgid "https://biblio.laurentian.ca/research/service"
+msgstr ""
+
+#: templates/library.html:81
+msgid "Services"
+msgstr ""
+
+#: templates/library.html:83
+msgid "https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview"
+msgstr ""
+
+#: templates/library.html:83
+msgid "My Account"
+msgstr ""
+
+#: templates/library.html:84 templates/library.html:101
+msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI"
+msgstr ""
+
+#: templates/library.html:84
+msgid "Course Reserves"
+msgstr ""
+
+#: templates/library.html:85
+msgid "https://biblio.laurentian.ca/research/guides/managing-citations"
+msgstr ""
+
+#: templates/library.html:85
+msgid "Managing citations"
+msgstr ""
+
+#: templates/library.html:86
+msgid "https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer"
+msgstr ""
+
+#: templates/library.html:86
+msgid "Interlibrary Loan"
+msgstr ""
+
+#: templates/library.html:90 templates/library.html:93
+msgid "https://biblio.laurentian.ca/research/guides"
+msgstr ""
+
+#: templates/library.html:90
+msgid "Research"
+msgstr ""
+
+#: templates/library.html:92
+msgid "https://biblio.laurentian.ca/research/databases-a-z"
+msgstr ""
+
+#: templates/library.html:92
+msgid "Databases"
+msgstr ""
+
+#: templates/library.html:93
+msgid "Research Guides"
+msgstr ""
+
+#: templates/library.html:94
+msgid "https://biblio.laurentian.ca/research/services"
+msgstr ""
+
+#: templates/library.html:94
+msgid "Research Help"
+msgstr ""
+
+#: templates/library.html:95
+msgid "https://biblio.laurentian.ca/research/services/#tab8"
+msgstr ""
+
+#: templates/library.html:95
+msgid "Research Skills Tutorial"
+msgstr ""
+
+#: templates/library.html:99
+msgid "https://biblio.laurentian.ca/research/resources"
+msgstr ""
+
+#: templates/library.html:99
+msgid "Resources"
+msgstr ""
+
+#: templates/library.html:101
+msgid "Catalogue"
+msgstr ""
+
+#: templates/library.html:102
+msgid "https://biblio.laurentian.ca/research/guides/copyright-lu"
+msgstr ""
+
+#: templates/library.html:102
+msgid "Copyright @ LU"
+msgstr ""
+
+#: templates/library.html:103
+msgid "https://biblio.laurentian.ca/research/guides/data-and-statistics"
+msgstr ""
+
+#: templates/library.html:103
+msgid "Data"
+msgstr ""
+
+#: templates/library.html:104
+msgid "https://biblio.laurentian.ca/research/guides/geospatial-data-lu"
+msgstr ""
+
+#: templates/library.html:104
+msgid "Geographic Information Systems"
+msgstr ""
+
+#: templates/library.html:104
+msgid "GIS"
+msgstr ""
+
+#: templates/library.html:105
+msgid "https://zone.biblio.laurentian.ca/dspace/?locale=en"
+msgstr ""
+
+#: templates/library.html:105
+msgid "LU|Zone|UL: research repository"
+msgstr ""
+
+#: templates/library.html:110
+msgid "https://biblio.laurentian.ca/research/contact-us"
+msgstr ""
+
+#: templates/library.html:110
+msgid "Contact us"
+msgstr ""
+
+#: templates/library.html:111
+msgid "https://biblio.laurentian.ca/research/contact-us#tab3"
+msgstr ""
+
+#: templates/library.html:111
+msgid "Giving to the Library"
+msgstr ""
+
+#: templates/library.html:112
+msgid ""
+"https://biblio.laurentian.ca/research/content/library-accessibility-"
+"services"
+msgstr ""
+
+#: templates/library.html:112 templates/library.html:154
+msgid "Accessibility"
+msgstr ""
+
+#: templates/library.html:119
+msgid "Today's hours"
+msgstr ""
+
+#: templates/library.html:119
+msgid "https://laurentian.ca/library-hours"
+msgstr ""
+
+#: templates/library.html:119
+msgid "All hours"
+msgstr ""
+
+#: templates/library.html:129
+msgid "Chat loading..."
+msgstr ""
+
+#: templates/library.html:132
+msgid "https://biblio.laurentian.ca/research/news"
+msgstr ""
+
+#: templates/library.html:132
+msgid "News"
+msgstr ""
+
+#: templates/library.html:143
+msgid ""
+"We would like to acknowledge that the J.N. Desmarais Library &amp;\n"
+"        Archives are located on the traditional territory of the "
+"Atikameksheng\n"
+"        Anishnaabek and Wanipitei First Nations, which is within the\n"
+"        Robinson-Huron Treaty territory."
+msgstr ""
+
+#: templates/library.html:150
+msgid "Laurentian University, Sudbury, Ontario, Canada."
+msgstr ""
+
+#: templates/library.html:153
+msgid "https://laurentian.ca/policies-accountability"
+msgstr ""
+
+#: templates/library.html:153
+msgid "Policies"
+msgstr ""
+
+#: templates/library.html:154
+msgid "https://laurentian.ca/accessibility-services"
+msgstr ""
+
+#: templates/library.html:155
+msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
+msgstr ""
+
+#: templates/library.html:155
+msgid "Feedback"
+msgstr ""
+
