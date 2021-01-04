@@ -1,11 +1,13 @@
+body {
+  margin: 0;
+}
 #container {
-  max-width: 100em;
-  margin: auto;
   font-family: "Open Sans", sans-serif;
 }
 #header, .search-links, #footer {
   display: flex;
   justify-content: space-between;
+  margin-top: 1em;
 }
 
 h1, h2, h3, h4 {
@@ -102,7 +104,7 @@ a {
 #footer {
   background-color: rgb(1, 43, 87);
   color: rgb(255, 196, 35);
-  font-size: 80%;
+  font-size: 90%;
   padding: 0 1em 0 1em;
 }
 #footer a {
@@ -115,19 +117,105 @@ a {
 }
 #footer li {
   display: inline-block;
+  margin-right: 1em;
 }
 #footer li:before {
-  content: ">";
+  content: "> ";
 }
 #lulogo {
   width: 200px;
 }
 #sidebar {
   display: grid;
-  grid-direction: column;
   grid-template-columns: 1fr;
 }
+#hours table {
+  border: thin black solid;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  background-color: #003e7e;
+  color: white
+}
+#hours th {
+  text-align: left;
+  padding-left: 0.5em;
+}
+#hours th, #hours td {
+  border: thin black solid;
+  border-left: none;
+  border-right: none;
+}
+#hours thead th {
+  text-align: center;
+}
+#hours table a {
+  color: white;
+}
+#hours table h2 {
+  color: white;
+  display: inline-block;
+}
+#all-hours {
+  float: right;
+}
+#ask {
+  margin: auto;
+}
+#news ul {
+  margin-top: 0;
+}
+div.libraryh3lp {
+  height: 150px;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+ul.menu, ul.nav {
+  border: none;
+  list-style: none;
+  text-align: left;
+  float: left;
+  color: white;
+  padding-left: 0;
+  margin: 0;
+  font-size: 90%;
+}
+ul.menu li, ul.nav li {
+  float: left;
+  margin: 0 0.5em 0 0.5em;
+  font-weight: bold;
+  padding: 0;
+  display: none;
+}
+ul.menu li a {
+  color: white;
+  text-decoration: none;
+}
+ul.nav li a {
+	color: #ffc423;
+  text-decoration: none;
+}
+ul.nav li.language {
+  display: block;
+}
+nav.navbar {
+	background-color: #003e7e;
+  display: flex;
+  justify-content: space-between;
+}
 @media screen and (min-width: 640px) {
+  #container {
+    max-width: 100em;
+    margin: auto;
+  }
   #mainmenu {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -136,8 +224,11 @@ a {
     width: 70%;
   }
   #sidebar {
-    grid-direction: column;
+    display: grid;
     grid-template-columns: 3fr 2fr 3fr;
+  }
+  #hours th, #hours td {
+    padding: 0 0 0 0.5em;
   }
 }
 @media screen and (min-width: 800px) {
@@ -145,9 +236,13 @@ a {
     display: grid;
     grid-template-columns: 5fr 2fr;
   }
+  ul.menu li, ul.nav li {
+    display: inherit;
+  }
   #mainmenu {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 1em;
   }
   #lulogo {
     width: 300px;
@@ -160,10 +255,9 @@ a {
     padding: 1.5em 3em 1em 3em;
   }
   #sidebar {
-  }
-  #sidebar {
-    margin-left: 2em;
+    display: grid;
     grid-direction: row;
     grid-template-columns: 1fr;
+    margin-left: 2em;
   }
 }
