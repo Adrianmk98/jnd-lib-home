@@ -86,7 +86,7 @@ def get_hours(lang="en-CA"):
             for lib in sorted(
                 libraries, key=lambda lib: locale.strxfrm(libraries[lib])
             ):
-                if lib not in x["libraries"] or x["libraries"][lib]["closed"] == 0:
+                if lib not in x["libraries"] or x["libraries"][lib]["closed"] == 1:
                     hours.append({"name": libraries[lib], "hours": closed})
                 else:
                     o = format_time(x["libraries"][lib]["open"], lang)
@@ -153,7 +153,8 @@ def generate_page(lang="en-CA", filename="index.html"):
         lstrip_blocks=True,
     )
 
-    translations = Translations.load("locale", [lang])
+    loc = lang.replace("-", "_")
+    translations = Translations.load("locale", [loc])
     env.install_gettext_translations(translations)
 
     template = env.get_template("library.html")
