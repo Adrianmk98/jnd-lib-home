@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8">
     <title>{% autoescape false %}{{ _("Laurentian University Library &amp; Archives") }}{% endautoescape %}</title>
@@ -22,7 +22,7 @@
       </div>
       <ul class="nav">
         <li><a href="{{ _('https://laurentian.ca/give') }}">{{ _('Donate') }}</a></li>
-        <li class="language"><a href="{{ _('https://bibio.laurentienne.ca/') }}" class="language-link" xml:lang="fr">{{ _('Français') }}</a></li>
+        <li class="language"><a href="{{ _('https://bibio.laurentienne.ca/') }}" class="language-link" xml:lang="{{ _('fr-CA') }}">{{ _('Français') }}</a></li>
       </ul>
     </nav>
 
@@ -64,6 +64,35 @@
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div id="other-searches">
+            <div id="databases">
+              <input id="database-search" type="text" value="" placeholder="{{ _('Find a database') }}"><label for="database-search" class="element-invisible">{{ _('Database search') }}</label>
+              <ul>
+              {% for entry in databases %}
+                {% for db in entry.keys() -%} 
+                <li class="hide"><a href="{{ entry[db].url }}">{{ db }}</a> <span class="infolink">?</span>
+                {% if entry[db].notes -%}
+                  <span class="notes">{{ entry[db].notes }}</span>
+                {% endif %}
+                {% if entry[db].description -%}
+                  <span class="description hide">{{ entry[db].description }}</span>
+                {% endif %}
+                </li>
+                {% endfor %}
+              {% endfor %}
+              </ul>
+            </div>
+            <div id="guides">
+              <input id="guides-search" type="text" value="" placeholder="{{ _('Find a research guide') }}"><label for="guides-search" class="element-invisible">{{ _('Guides search') }}</label>
+              <ul>
+              {% for entry in guides %}
+                {% for guide in entry.keys() -%} 
+                <li class="hide"><a href="{{ entry[guide].url }}">{{ guide }}</a></li>
+                {% endfor %}
+              {% endfor %}
+              </ul>
             </div>
           </div>
           <nav id="mainmenu">
@@ -182,6 +211,53 @@
       function searchPrimo() {
       };
     }());
+
+    /* Database search */
+    window.addEventListener("load", function(){
+      let searchBox = document.getElementById("database-search");
+      searchBox.value = "";
+      searchBox.addEventListener("keyup", (e) => {
+        if (e.key == "Escape") {
+          searchBox.value = "";
+        }
+        var search = searchBox.value.toLowerCase();
+        var all = document.querySelectorAll("#databases li");
+
+        for (let i of all) {
+          let item = i.innerHTML.toLowerCase();
+          if ((item.indexOf(search) == -1) || (search == "")) { i.classList.add("hide"); }
+          else { i.classList.remove("hide"); }
+        }
+      });
+    });
+
+    /* Guides search */
+    window.addEventListener("load", function(){
+      let searchBox = document.getElementById("guides-search");
+      searchBox.value = "";
+      searchBox.addEventListener("keyup", (e) => {
+        if (e.key == "Escape") {
+          searchBox.value = "";
+        }
+        var search = searchBox.value.toLowerCase();
+        var all = document.querySelectorAll("#guides li");
+
+        for (let i of all) {
+          let item = i.innerHTML.toLowerCase();
+          if ((item.indexOf(search) == -1) || (search == "")) { i.classList.add("hide"); }
+          else { i.classList.remove("hide"); }
+        }
+      });
+    });
+
+
+    /* Show/hide description */
+    window.addEventListener("load", function(){
+        let all = document.querySelectorAll("#databases li span.infolink");
+        all.forEach(el => el.addEventListener("click", event => {
+          event.target.parentNode.querySelector("span.description").classList.toggle("hide");
+        }));
+    });
 
     /* Chat widget */
     (function() {

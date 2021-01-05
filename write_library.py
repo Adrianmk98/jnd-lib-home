@@ -3,13 +3,41 @@
 from babel.support import Translations
 import datetime
 import jinja2
+import locale
 import requests
 
-def get_hours(lang="en_CA"):
+
+def get_guides(lang="en-CA"):
+    "Retrieve guides from research guides database"
+
+    url = "https://biblio.laurentian.ca/research/guides-json"
+    if lang == "fr-CA":
+        url = "https://biblio.laurentian.ca/research/fr/guides-json"
+
+    r = requests.post(url)
+    guides = r.json()
+
+    return guides
+
+
+def get_databases(lang="en-CA"):
+    "Retrieve databases from research guides database"
+
+    url = "https://biblio.laurentian.ca/research/databases-a-z?json"
+    if lang == "fr-CA":
+        url = "https://biblio.laurentian.ca/research/fr/databases-a-z?json"
+
+    r = requests.post(url)
+    databases = r.json()
+
+    return databases
+
+
+def get_hours(lang="en-CA"):
     "Retrieve hours from library hours service"
 
-    import locale
-    locale.setlocale(locale.LC_ALL, lang)
+    l10n = lang.replace("-", "_")
+    locale.setlocale(locale.LC_ALL, l10n)
 
     libraries = {
         "Archives": "Archives",
@@ -23,7 +51,7 @@ def get_hours(lang="en_CA"):
     closed = "Closed"
     hour_format = "{} - {}"
 
-    if lang == "fr_CA":
+    if lang == "fr-CA":
         libraries = {
             "Archives": "Archives",
             "CRC": "Centre de Ressources en Éducation",
@@ -47,23 +75,29 @@ def get_hours(lang="en_CA"):
         "day": yesterday,
     }
     r = requests.post(
-        "https://laurentian.ca/sites/all/custom/library/library_hours.php", data=post_data
+        "https://laurentian.ca/sites/all/custom/library/library_hours.php",
+        data=post_data,
     )
     hours_data = r.json()
 
     hours = []
     for x in hours_data:
         if x["day"] == today:
-            for lib in sorted(libraries, key=lambda lib: locale.strxfrm(libraries[lib])):
+            for lib in sorted(
+                libraries, key=lambda lib: locale.strxfrm(libraries[lib])
+            ):
                 if lib not in x["libraries"] or x["libraries"][lib]["closed"] == 0:
-                    hours.append({ "name": libraries[lib], "hours": closed})
+                    hours.append({"name": libraries[lib], "hours": closed})
                 else:
-                    o = format_time(x['libraries'][lib]['open'], lang)
-                    c = format_time(x['libraries'][lib]['close'], lang)
-                    hours.append({ "name": libraries[lib], "hours": hour_format.format(o, c)})
-    return(hours)
+                    o = format_time(x["libraries"][lib]["open"], lang)
+                    c = format_time(x["libraries"][lib]["close"], lang)
+                    hours.append(
+                        {"name": libraries[lib], "hours": hour_format.format(o, c)}
+                    )
+    return hours
 
-def format_time(hour, lang="en_CA"):
+
+def format_time(hour, lang="en-CA"):
     "Format time according to locale preference"
 
     if len(hour) == 4:
@@ -73,7 +107,8 @@ def format_time(hour, lang="en_CA"):
     else:
         return datetime.time.fromisoformat(hour).strftime("%I:%M %p")
 
-def get_news(lang="en_CA", max_items=4, max_age=30):
+
+def get_news(lang="en-CA", max_items=4, max_age=30):
     "Pull news items from Library & Archives feed"
 
     import atoma
@@ -83,7 +118,7 @@ def get_news(lang="en_CA", max_items=4, max_age=30):
     news_heading = "News"
 
     if lang.startswith("fr"):
-        url = 'https://biblio.laurentian.ca/research/fr/news.xml'
+        url = "https://biblio.laurentian.ca/research/fr/news.xml"
         news_link = "https://biblio.laurentian.ca/research/fr/nouvelles"
         news_heading = "Nouvelles"
 
@@ -93,29 +128,50 @@ def get_news(lang="en_CA", max_items=4, max_age=30):
     news_items = []
     x = 0
     for item in feed.items:
-        if x == max_items or (x > 0 and item.pub_date.timestamp() < (datetime.datetime.today() - datetime.timedelta(days=max_age)).timestamp()):
+        if x == max_items or (
+            x > 0
+            and item.pub_date.timestamp()
+            < (datetime.datetime.today() - datetime.timedelta(days=max_age)).timestamp()
+        ):
             break
-        news_items.append({"title": item.title, "url": item.link, "published": item.pub_date.date()})
+        news_items.append(
+            {"title": item.title, "url": item.link, "published": item.pub_date.date()}
+        )
         x = x + 1
-    
+
     return news_items
 
-def generate_page(lang='en_CA', filename='index.html'):
+
+def generate_page(lang="en-CA", filename="index.html"):
     "Generate the library & archives home page"
 
-    env = jinja2.Environment(autoescape=jinja2.select_autoescape(['html']), extensions=['jinja2.ext.i18n'], loader=jinja2.FileSystemLoader('./templates/'), trim_blocks=True, lstrip_blocks=True)
+    env = jinja2.Environment(
+        autoescape=jinja2.select_autoescape(["html"]),
+        extensions=["jinja2.ext.i18n"],
+        loader=jinja2.FileSystemLoader("./templates/"),
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
 
-    translations = Translations.load('locale', [lang])
+    translations = Translations.load("locale", [lang])
     env.install_gettext_translations(translations)
 
-    template = env.get_template('library.html')
+    template = env.get_template("library.html")
     hours = get_hours(lang)
     news = get_news(lang)
-    ctx = { "hours": hours, "news": news, }
+    databases = get_databases(lang)
+    guides = get_guides(lang)
+    ctx = {
+        "lang": lang,
+        "hours": hours,
+        "news": news,
+        "databases": databases,
+        "guides": guides,
+    }
     with open(filename, mode="w", encoding="utf-8") as outf:
         outf.write(template.render(ctx))
 
-if __name__ == '__main__':
-    generate_page()
-    generate_page("fr_CA", "index.html.fr")
 
+if __name__ == "__main__":
+    generate_page()
+    generate_page("fr-CA", "index.html.fr")

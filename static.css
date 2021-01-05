@@ -126,8 +126,10 @@ a {
   width: 200px;
 }
 #sidebar {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+  justify-content: flex-start;
 }
 #hours table {
   border: thin black solid;
@@ -160,7 +162,7 @@ a {
   float: right;
 }
 #ask {
-  margin: auto;
+  margin: 0 auto;
 }
 #news ul {
   margin-top: 0;
@@ -223,13 +225,40 @@ nav.navbar {
   .search_field {
     width: 70%;
   }
-  #sidebar {
-    display: grid;
-    grid-template-columns: 3fr 2fr 3fr;
-  }
   #hours th, #hours td {
     padding: 0 0 0 0.5em;
   }
+}
+#database-search, #guides-search {
+  box-shadow: 3px 3px 10px #626262;
+  margin-right: 1em;
+}
+#databases {
+  z-index: 10;
+  opacity: 100%;
+  background-color: white;
+}
+#databases .notes {
+  font-weight: bold;
+}
+.hide {
+  display: none;
+}
+.infolink {
+	display: inline-block;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	width: 1.8ex;
+	height: 1.8ex;
+	line-height: 1.8ex;
+	border-radius: 1.2ex;
+	margin-right: 4px;
+	padding: 1px;
+	color: blue;
+	background: white;
+	border: 1px solid blue;
+	text-decoration: none;
 }
 @media screen and (min-width: 800px) {
   #content {
@@ -254,10 +283,8 @@ nav.navbar {
   #search-wrapper {
     padding: 1.5em 3em 1em 3em;
   }
-  #sidebar {
-    display: grid;
-    grid-direction: row;
-    grid-template-columns: 1fr;
-    margin-left: 2em;
+  #other-searches {
+    display: flex;
+    justify-content: left;
   }
 }
