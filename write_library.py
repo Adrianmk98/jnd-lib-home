@@ -197,7 +197,7 @@ def get_news(lang="en-CA", max_items=4, max_age=30):
     return news_items
 
 
-def generate_page(lang="en-CA", filename="index.html"):
+def generate_page(lang="en-CA", filename="prod/index.html"):
     "Generate the library & archives home page"
 
     env = jinja2.Environment(
@@ -217,12 +217,17 @@ def generate_page(lang="en-CA", filename="index.html"):
     news = get_news(lang)
     databases = get_databases(lang)
     guides = get_guides(lang)
+    libhelp = 643
+    if lang == "fr-CA":
+        libhelp = 531
+
     ctx = {
         "lang": lang,
         "hours": hours,
         "news": news,
         "databases": databases,
         "guides": guides,
+        "libhelp": libhelp,
     }
     with open(filename, mode="w", encoding="utf-8") as outf:
         outf.write(template.render(ctx))
@@ -230,4 +235,4 @@ def generate_page(lang="en-CA", filename="index.html"):
 
 if __name__ == "__main__":
     generate_page()
-    generate_page("fr-CA", "index_fr.html")
+    generate_page("fr-CA", "prod/index_fr.html")
