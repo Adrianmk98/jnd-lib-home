@@ -75,7 +75,7 @@ msgid "Donate"
 msgstr "Donnez"
 
 #: templates/library.html:25
-msgid "https://bibio.laurentienne.ca/"
+msgid "https://biblio.laurentienne.ca/"
 msgstr "https://biblio.laurentian.ca/"
 
 #: templates/library.html:25
