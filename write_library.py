@@ -40,26 +40,68 @@ def get_hours(lang="en-CA"):
     locale.setlocale(locale.LC_ALL, l10n)
 
     libraries = {
-        "Archives": "Archives",
-        "CRC": "Curriculum Resource Centre",
-        "JND": "J.N. Desmarais",
-        "JWT": "J.W. Tate, Huntington",
-        "MRC": "Music Resource Centre",
-        "SoA": "Architecture",
-        "UoS": "University of Sudbury",
+        "Archives": {
+            "name": "Archives",
+            "url": "https://biblio.laurentian.ca/research/guides/archives",
+        },
+        "CRC": {
+            "name": "Curriculum Resource Centre",
+            "url": "",
+        },
+        "JND": {
+            "name": "J.N. Desmarais",
+            "url": "",
+        },
+        "JWT": {
+            "name": "J.W. Tate, Huntington",
+            "url": "https://www.huntingtonu.ca/students/library",
+        },
+        "MRC": {
+            "name": "Music Resource Centre",
+            "url": "",
+        },
+        "SoA": {
+            "name": "Architecture",
+            "url": "https://biblio.laurentian.ca/research/guides/architecture",
+        },
+        "UoS": {
+            "name": "University of Sudbury",
+            "url": "https://usudbury.ca/en/services/library",
+        },
     }
     closed = "Closed"
     hour_format = "{} - {}"
 
     if lang == "fr-CA":
         libraries = {
-            "Archives": "Archives",
-            "CRC": "Centre de Ressources en Éducation",
-            "JND": "J.N. Desmarais",
-            "JWT": "J.W. Tate, Huntington",
-            "MRC": "Centre de Ressources en Musique",
-            "SoA": "Architecture",
-            "UoS": "University of Sudbury",
+            "Archives": {
+                "name": "Archives",
+                "url": "https://biblio.laurentian.ca/research/fr/guides/archives",
+            },
+            "CRC": {
+                "name": "Centre de Ressources en Éducation",
+                "url": "",
+            },
+            "JND": {
+                "name": "J.N. Desmarais",
+                "url": "",
+            },
+            "JWT": {
+                "name": "J.W. Tate, Huntington",
+                "url": "https://www.huntingtonu.ca/students/library",
+            },
+            "MRC": {
+                "name": "Centre de Ressources en Musique",
+                "url": "",
+            },
+            "SoA": {
+                "name": "Architecture",
+                "url": "https://biblio.laurentian.ca/research/fr/guides/architecture",
+            },
+            "UoS": {
+                "name": "Université de Sudbury",
+                "url": "https://usudbury.ca/fr/services/bibliotheque",
+            },
         }
         closed = "Fermée"
         hour_format = "{} à {}"
@@ -84,15 +126,28 @@ def get_hours(lang="en-CA"):
     for x in hours_data:
         if x["day"] == today:
             for lib in sorted(
-                libraries, key=lambda lib: locale.strxfrm(libraries[lib])
+                libraries, key=lambda lib: locale.strxfrm(libraries[lib]["name"])
             ):
-                if lib not in x["libraries"] or x["libraries"][lib]["closed"] == 1:
-                    hours.append({"name": libraries[lib], "hours": closed})
+                if lib not in x["libraries"]:
+                    # CRC and MRC temporarily disabled until we have separate pages & hours
+                    continue
+                if x["libraries"][lib]["closed"] == 1:
+                    hours.append(
+                        {
+                            "name": libraries[lib]["name"],
+                            "hours": closed,
+                            "url": libraries[lib]["url"],
+                        }
+                    )
                 else:
                     o = format_time(x["libraries"][lib]["open"], lang)
                     c = format_time(x["libraries"][lib]["close"], lang)
                     hours.append(
-                        {"name": libraries[lib], "hours": hour_format.format(o, c)}
+                        {
+                            "name": libraries[lib]["name"],
+                            "hours": hour_format.format(o, c),
+                            "url": libraries[lib]["url"],
+                        }
                     )
     return hours
 
@@ -175,4 +230,4 @@ def generate_page(lang="en-CA", filename="index.html"):
 
 if __name__ == "__main__":
     generate_page()
-    generate_page("fr-CA", "index.html.fr")
+    generate_page("fr-CA", "index_fr.html")

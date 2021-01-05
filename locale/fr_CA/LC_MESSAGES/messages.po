@@ -98,7 +98,9 @@ msgstr "Bibliothèque et archives"
 msgid ""
 "https://biblio.laurentian.ca/research/content/covid-19-library-and-"
 "archives-faq"
-msgstr "https://biblio.laurentian.ca/research/fr/content/covid-19-foire-aux-questions-biblioth%C3%A8que-et-archives"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/content/covid-19-foire-aux-"
+"questions-biblioth%C3%A8que-et-archives"
 
 #: templates/library.html:32
 msgid "COVID-19: Library and Archives FAQ"
@@ -133,10 +135,16 @@ msgid ""
 "Your best place to discover millions of quality, academic resources from "
 "16 Ontario university libraries, including books, full text articles, "
 "unique special collections, videos, and much more. For more information "
-"about Omni see our <a href=\"/about/about-library/omni/omni-faq\">Omni "
-"FAQ</a> and <a href=\"https://guides.lib.uoguelph.ca/Omni\">getting "
-"started with Omni guide</a>."
-msgstr "Omni est un outil de recherche universitaire unifié qui permet de rechercher des livres, des articles et de nombreux autres types de ressources pour faciliter vos démarches de recherche. Voir notre <a href=\"https://biblio.laurentian.ca/research/fr/content/omni-votre-nouvel-outil-de-recherche-universitaire-foire-aux-questions\">FAQ d'Omni</a>."
+"about Omni see our <a "
+"href=\"https://biblio.laurentian.ca/research/content/frequently-asked-"
+"questions-about-omni-laurentians-new-library-system\">Omni FAQ</a>."
+msgstr ""
+"Omni est un outil de recherche universitaire unifié qui permet de "
+"rechercher des livres, des articles et de nombreux autres types de "
+"ressources pour faciliter vos démarches de recherche. Voir notre <a "
+"href=\"https://biblio.laurentian.ca/research/fr/content/omni-votre-"
+"nouvel-outil-de-recherche-universitaire-foire-aux-questions\">FAQ "
+"d'Omni</a>."
 
 #: templates/library.html:71
 msgid "Find a database"
@@ -180,7 +188,9 @@ msgstr "Fonds d'archives"
 
 #: templates/library.html:104
 msgid "https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee"
-msgstr "https://biblio.laurentian.ca/research/fr/guides/registres-de-l%C3%A9glise-anglicane"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/guides/registres-de-l%C3"
+"%A9glise-anglicane"
 
 #: templates/library.html:104
 msgid "Anglican Diocese of Moosonee Fonds"
@@ -188,7 +198,9 @@ msgstr "Fonds anglican du diocèse de Moosonee"
 
 #: templates/library.html:105
 msgid "https://biblio.laurentian.ca/research/guides/special-collections-archives"
-msgstr "https://biblio.laurentian.ca/research/fr/guides/collections-sp%C3%A9ciales-archives"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/guides/collections-sp%C3"
+"%A9ciales-archives"
 
 #: templates/library.html:105
 msgid "Special Collections"
@@ -236,7 +248,9 @@ msgstr "Logiciels bibliographiques"
 
 #: templates/library.html:115
 msgid "https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer"
-msgstr "https://biblio.laurentian.ca/research/fr/guides/pr%C3%AAt-entre-biblioth%C3%A8ques-racer"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/guides/pr%C3%AAt-entre-"
+"biblioth%C3%A8ques-racer"
 
 #: templates/library.html:115
 msgid "Interlibrary Loan"
@@ -300,7 +314,9 @@ msgstr "Droit d’auteur @ UL"
 
 #: templates/library.html:132
 msgid "https://biblio.laurentian.ca/research/guides/data-and-statistics"
-msgstr "https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-statistiques"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-"
+"statistiques"
 
 #: templates/library.html:132
 msgid "Data"
@@ -328,7 +344,9 @@ msgstr "LU|Zone|UL : dépôt de recherche"
 
 #: templates/library.html:139
 msgid "https://biblio.laurentian.ca/research/contact-us"
-msgstr "https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-"
+"renseignements"
 
 #: templates/library.html:139
 msgid "Contact us"
@@ -336,7 +354,9 @@ msgstr "Coordonnées et renseignements"
 
 #: templates/library.html:140
 msgid "https://biblio.laurentian.ca/research/contact-us#tab3"
-msgstr "https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-renseignements#tab3"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-"
+"renseignements#tab3"
 
 #: templates/library.html:140
 msgid "Giving to the Library"
@@ -346,7 +366,9 @@ msgstr "Dons à la Bibliothèque"
 msgid ""
 "https://biblio.laurentian.ca/research/content/library-accessibility-"
 "services"
-msgstr "https://biblio.laurentian.ca/research/fr/content/services-daccessibilit%C3%A9"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/content/services-"
+"daccessibilit%C3%A9"
 
 #: templates/library.html:141 templates/library.html:183
 msgid "Accessibility"
@@ -383,7 +405,11 @@ msgid ""
 "Atikameksheng\n"
 "        Anishnaabek and Wanipitei First Nations, which is within the\n"
 "        Robinson-Huron Treaty territory."
-msgstr "Nous désirons reconnaître que la Bibliothèque J.N. Desmarais & les archives sont situés sur le territoire traditionnel de la Nation Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le traité Robinson-Huron."
+msgstr ""
+"Nous désirons reconnaître que la Bibliothèque J.N. Desmarais & les "
+"archives sont situés sur le territoire traditionnel de la Nation "
+"Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le "
+"traité Robinson-Huron."
 
 #: templates/library.html:179
 msgid "Laurentian University, Sudbury, Ontario, Canada."
@@ -403,7 +429,9 @@ msgstr "https://laurentienne.ca/services-daccessibilite"
 
 #: templates/library.html:184
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
-msgstr "https://docs.google.com/forms/d/e/1FAIpQLScin_KS6KK90r9qRpnqtD5tZs5brrcsd-V-GnTkkJ-reWtiQg/viewform"
+msgstr ""
+"https://docs.google.com/forms/d/e/1FAIpQLScin_KS6KK90r9qRpnqtD5tZs5brrcsd-V"
+"-GnTkkJ-reWtiQg/viewform"
 
 #: templates/library.html:184
 msgid "Feedback"

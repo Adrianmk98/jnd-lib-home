@@ -68,7 +68,7 @@
           </div>
           <div id="other-searches">
             <div id="databases">
-              <input id="database-search" type="text" value="" placeholder="{{ _('Find a database') }}"><label for="database-search" class="element-invisible">{{ _('Database search') }}</label>
+              <input id="database-search" type="text" value="" size="25" placeholder="{{ _('Find a database') }}"><label for="database-search" class="element-invisible">{{ _('Database search') }}</label>
               <ul>
               {% for entry in databases %}
                 {% for db in entry.keys() -%} 
@@ -85,7 +85,7 @@
               </ul>
             </div>
             <div id="guides">
-              <input id="guides-search" type="text" value="" placeholder="{{ _('Find a research guide') }}"><label for="guides-search" class="element-invisible">{{ _('Guides search') }}</label>
+              <input id="guides-search" type="text" value="" size="25" placeholder="{{ _('Find a research guide') }}"><label for="guides-search" class="element-invisible">{{ _('Guides search') }}</label>
               <ul>
               {% for entry in guides %}
                 {% for guide in entry.keys() -%} 
@@ -149,7 +149,11 @@
               </thead>
               <tbody>
                 {% for lib in hours %}
-                <tr><th><a href="">{{ lib.name }}</a></th><td>{{ lib.hours }}</td></tr>
+                  {% if lib.url %}
+                <tr><th><a href="{{ lib.url }}">{{ lib.name }}</a></th><td>{{ lib.hours }}</td></tr>
+                  {% else %}
+                <tr><th>{{ lib.name }}</th><td>{{ lib.hours }}</td></tr>
+                  {% endif %}
                 {% endfor %}
               </tbody>
             </table>
