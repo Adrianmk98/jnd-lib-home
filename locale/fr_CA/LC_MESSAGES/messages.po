@@ -156,11 +156,7 @@ msgstr "Recherche une base de données"
 
 #: templates/library.html:88
 msgid "Find a research guide"
-msgstr "Trouver une guide de récherche"
-
-#: templates/library.html:88
-msgid "Guides search"
-msgstr "Recherche une guide de récherche"
+msgstr "Trouver une guide de recherche"
 
 #: templates/library.html:100
 msgid "https://biblio.laurentian.ca/research/guides/archives"
