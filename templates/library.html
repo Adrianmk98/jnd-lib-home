@@ -49,7 +49,7 @@
                   <!-- Enable this if "Expand My Results" is enabled by default in Views Wizard -->
                   <input type="hidden" name="pcAvailabiltyMode" value="true">
 
-                  <input class="searchsubmit" id="omnigo" aria-label="{{ _('Search') }}" type="submit" value="" alt="{{ _('Search') }}"><label for="primoQueryTemp" class="element-invisible">{{ _('Search query') }}</label><input type="text" class="search_field" id="primoQueryTemp" value="" placeholder="{{ _('Search Omni for books, journals, articles, videos...') }}">
+                  <input class="searchsubmit" id="omnigo" aria-label="{{ _('Search') }}" type="submit" value="" alt="{{ _('Search') }}"><label for="primoQueryTemp" class="sr-only">{{ _('Search query') }}</label><input type="text" class="search_field" id="primoQueryTemp" value="" placeholder="{{ _('Search Omni for books, journals, articles, videos...') }}">
                   <!-- Search Button -->
                 </form>
                 <div class="search-links">
@@ -68,7 +68,7 @@
           </div>
           <div id="other-searches">
             <div id="databases">
-              <input id="database-search" type="text" value="" size="25" placeholder="{{ _('Find a database') }}"><label for="database-search" class="element-invisible">{{ _('Database search') }}</label>
+              <input id="database-search" type="text" value="" size="25" placeholder="{{ _('Find a database') }}"><label for="database-search" class="sr-only">{{ _('Database search') }}</label>
               <ul>
               {% for entry in databases %}
                 {% for db in entry.keys() -%} 
@@ -85,7 +85,7 @@
               </ul>
             </div>
             <div id="guides">
-              <input id="guides-search" type="text" value="" size="25" placeholder="{{ _('Find a research guide') }}"><label for="guides-search" class="element-invisible">{{ _('Guides search') }}</label>
+              <input id="guides-search" type="text" value="" size="25" placeholder="{{ _('Find a research guide') }}"><label for="guides-search" class="sr-only">{{ _('Guides search') }}</label>
               <ul>
               {% for entry in guides %}
                 {% for guide in entry.keys() -%} 
