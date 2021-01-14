@@ -89,7 +89,7 @@
               <ul>
               {% for entry in guides %}
                 {% for guide in entry.keys() -%} 
-                <li class="hide"><a href="/research/{% if lang == 'fr-CA' %}fr/{% endif %}{{ entry[guide].url }}">{{ guide }}</a></li>
+                <li class="hide"><a href="https://biblio.laurentian.ca/research/{% if lang == 'fr-CA' %}fr/{% endif %}{{ entry[guide].url }}">{{ guide }}</a></li>
                 {% endfor %}
               {% endfor %}
               </ul>
