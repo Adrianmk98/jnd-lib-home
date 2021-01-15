@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-04 22:06-0500\n"
+"POT-Creation-Date: 2021-01-15 01:36-0500\n"
 "PO-Revision-Date: 2021-01-04 22:06-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -158,6 +158,10 @@ msgstr "Recherche une base de données"
 msgid "Find a research guide"
 msgstr "Trouver un guide de recherche"
 
+#: templates/library.html:88
+msgid "Guides search"
+msgstr "Recherche un guide"
+
 #: templates/library.html:100
 msgid "https://biblio.laurentian.ca/research/guides/archives"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/archives"
@@ -281,8 +285,12 @@ msgid "Research Help"
 msgstr "Aide à la recherche"
 
 #: templates/library.html:124
-msgid "https://biblio.laurentian.ca/research/services/#tab8"
-msgstr "https://biblio.laurentian.ca/research/fr/services/#tab8"
+msgid ""
+"https://biblio.laurentian.ca/research/content/d2l-library-research-"
+"skills-tutorial"
+msgstr ""
+"https://biblio.laurentian.ca/research/fr/content/formation-tutoriel-de-"
+"comp%C3%A9tences-de-recherche"
 
 #: templates/library.html:124
 msgid "Research Skills Tutorial"
@@ -366,7 +374,7 @@ msgstr ""
 "https://biblio.laurentian.ca/research/fr/content/services-"
 "daccessibilit%C3%A9"
 
-#: templates/library.html:141 templates/library.html:183
+#: templates/library.html:141 templates/library.html:187
 msgid "Accessibility"
 msgstr "Accessibilité"
 
@@ -382,19 +390,19 @@ msgstr "https://laurentienne.ca/biblio-horaire"
 msgid "All hours"
 msgstr "Tous les horaires"
 
-#: templates/library.html:158
+#: templates/library.html:162
 msgid "Chat loading..."
 msgstr "Chargement du chat..."
 
-#: templates/library.html:161
+#: templates/library.html:165
 msgid "https://biblio.laurentian.ca/research/news"
 msgstr "https://biblio.laurentian.ca/research/fr/nouvelles"
 
-#: templates/library.html:161
+#: templates/library.html:165
 msgid "News"
 msgstr "Nouvelles"
 
-#: templates/library.html:172
+#: templates/library.html:176
 msgid ""
 "We would like to acknowledge that the J.N. Desmarais Library &amp;\n"
 "        Archives are located on the traditional territory of the "
@@ -407,29 +415,29 @@ msgstr ""
 "Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le "
 "traité Robinson-Huron."
 
-#: templates/library.html:179
+#: templates/library.html:183
 msgid "Laurentian University, Sudbury, Ontario, Canada."
 msgstr "Université Laurentienne. Sudbury, Ontario, Canada."
 
-#: templates/library.html:182
+#: templates/library.html:186
 msgid "https://laurentian.ca/policies-accountability"
 msgstr "https://laurentienne.ca/politiques"
 
-#: templates/library.html:182
+#: templates/library.html:186
 msgid "Policies"
 msgstr "Politiques"
 
-#: templates/library.html:183
+#: templates/library.html:187
 msgid "https://laurentian.ca/accessibility-services"
 msgstr "https://laurentienne.ca/services-daccessibilite"
 
-#: templates/library.html:184
+#: templates/library.html:188
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
 msgstr ""
 "https://docs.google.com/forms/d/e/1FAIpQLScin_KS6KK90r9qRpnqtD5tZs5brrcsd-V"
 "-GnTkkJ-reWtiQg/viewform"
 
-#: templates/library.html:184
+#: templates/library.html:188
 msgid "Feedback"
 msgstr "Commentaires"
 

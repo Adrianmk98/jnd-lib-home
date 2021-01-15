@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-04 22:06-0500\n"
+"POT-Creation-Date: 2021-01-15 01:36-0500\n"
 "PO-Revision-Date: 2021-01-04 22:06-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -75,7 +75,7 @@ msgid "Donate"
 msgstr ""
 
 #: templates/library.html:25
-msgid "https://bibio.laurentienne.ca/"
+msgid "https://biblio.laurentienne.ca/"
 msgstr ""
 
 #: templates/library.html:25
@@ -271,7 +271,9 @@ msgid "Research Help"
 msgstr ""
 
 #: templates/library.html:124
-msgid "https://biblio.laurentian.ca/research/services/#tab8"
+msgid ""
+"https://biblio.laurentian.ca/research/content/d2l-library-research-"
+"skills-tutorial"
 msgstr ""
 
 #: templates/library.html:124
@@ -348,7 +350,7 @@ msgid ""
 "services"
 msgstr ""
 
-#: templates/library.html:141 templates/library.html:183
+#: templates/library.html:141 templates/library.html:187
 msgid "Accessibility"
 msgstr ""
 
@@ -364,19 +366,19 @@ msgstr ""
 msgid "All hours"
 msgstr ""
 
-#: templates/library.html:158
+#: templates/library.html:162
 msgid "Chat loading..."
 msgstr ""
 
-#: templates/library.html:161
+#: templates/library.html:165
 msgid "https://biblio.laurentian.ca/research/news"
 msgstr ""
 
-#: templates/library.html:161
+#: templates/library.html:165
 msgid "News"
 msgstr ""
 
-#: templates/library.html:172
+#: templates/library.html:176
 msgid ""
 "We would like to acknowledge that the J.N. Desmarais Library &amp;\n"
 "        Archives are located on the traditional territory of the "
@@ -385,27 +387,27 @@ msgid ""
 "        Robinson-Huron Treaty territory."
 msgstr ""
 
-#: templates/library.html:179
+#: templates/library.html:183
 msgid "Laurentian University, Sudbury, Ontario, Canada."
 msgstr ""
 
-#: templates/library.html:182
+#: templates/library.html:186
 msgid "https://laurentian.ca/policies-accountability"
 msgstr ""
 
-#: templates/library.html:182
+#: templates/library.html:186
 msgid "Policies"
 msgstr ""
 
-#: templates/library.html:183
+#: templates/library.html:187
 msgid "https://laurentian.ca/accessibility-services"
 msgstr ""
 
-#: templates/library.html:184
+#: templates/library.html:188
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
 msgstr ""
 
-#: templates/library.html:184
+#: templates/library.html:188
 msgid "Feedback"
 msgstr ""
 
@@ -420,5 +422,16 @@ msgstr ""
 #~ "library/omni/omni-faq\">Omni FAQ</a> and <a"
 #~ " href=\"https://guides.lib.uoguelph.ca/Omni\">getting started"
 #~ " with Omni guide</a>."
+#~ msgstr ""
+
+#~ msgid "https://bibio.laurentienne.ca/"
+#~ msgstr ""
+
+#~ msgid "https://biblio.laurentian.ca/research/services/#tab8"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "https://biblio.laurentian.ca/research/pages/d2l-library-"
+#~ "research-skills-tutorial"
 #~ msgstr ""
 
