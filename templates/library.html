@@ -39,6 +39,7 @@
                   <input type="hidden" name="tab" value="Everything">
                   <input type="hidden" name="search_scope" value="MyInst_and_CI">
                   <input type="hidden" name="mode" value="basic">
+                  <input type="hidden" name="lang" value="{% if lang == 'fr-CA' %}fr{% else %}en{% endif %}">
                   <!-- Fixed parameters -->
                   <input type="hidden" name="displayMode" value="full">
                   <input type="hidden" name="bulkSize" value="10">
@@ -54,7 +55,7 @@
                 </form>
                 <div class="search-links">
                   <a id="search-omni">{{ _('What is Omni?') }}</a>
-                  <a id="search-advanced" href="{% autoescape false %}{{ _('https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced') }}{% endautoescape %}">{{ _('Advanced search') }}</a>
+                  <a id="search-advanced" href="https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang={% if lang == 'fr-CA' %}fr{% else %}en{% endif %}&amp;mode=advanced">{{ _('Advanced search') }}</a>
                 </div>
                 <div id="what-is-omni" data-collapsed="false">
                   <p>
