@@ -52,10 +52,6 @@ def get_hours(lang="en-CA"):
             "name": "J.N. Desmarais",
             "url": "",
         },
-        "JWT": {
-            "name": "J.W. Tate, Huntington",
-            "url": "https://www.huntingtonu.ca/students/library",
-        },
         "MRC": {
             "name": "Music Resource Centre",
             "url": "",
@@ -85,10 +81,6 @@ def get_hours(lang="en-CA"):
             "JND": {
                 "name": "J.N. Desmarais",
                 "url": "",
-            },
-            "JWT": {
-                "name": "J.W. Tate, Huntington",
-                "url": "https://www.huntingtonu.ca/students/library",
             },
             "MRC": {
                 "name": "Centre de Ressources en Musique",
