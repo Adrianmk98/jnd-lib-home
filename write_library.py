@@ -37,7 +37,7 @@ def get_hours(lang="en-CA"):
     "Retrieve hours from library hours service"
 
     l10n = lang.replace("-", "_")
-    locale.setlocale(locale.LC_ALL, l10n)
+    locale.setlocale(locale.LC_ALL, f"{l10n}.UTF-8")
 
     libraries = {
         "Archives": {
