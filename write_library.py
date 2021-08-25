@@ -60,10 +60,6 @@ def get_hours(lang="en-CA"):
             "name": "Architecture",
             "url": "https://biblio.laurentian.ca/research/guides/architecture",
         },
-        "UoS": {
-            "name": "University of Sudbury",
-            "url": "https://usudbury.ca/en/services/library",
-        },
     }
     closed = "Closed"
     hour_format = "{} - {}"
@@ -89,10 +85,6 @@ def get_hours(lang="en-CA"):
             "SoA": {
                 "name": "Architecture",
                 "url": "https://biblio.laurentian.ca/research/fr/guides/architecture",
-            },
-            "UoS": {
-                "name": "Université de Sudbury",
-                "url": "https://usudbury.ca/fr/services/bibliotheque",
             },
         }
         closed = "Fermée"
