@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-15 01:36-0500\n"
+"POT-Creation-Date: 2021-08-25 13:00-0400\n"
 "PO-Revision-Date: 2021-01-04 22:06-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -106,31 +106,27 @@ msgstr ""
 msgid "COVID-19: Library and Archives FAQ"
 msgstr "COVID-19: Foire aux questions, Bibliothèque et Archives"
 
-#: templates/library.html:52
+#: templates/library.html:53
 msgid "Search"
 msgstr "Recherche"
 
-#: templates/library.html:52
+#: templates/library.html:53
 msgid "Search query"
 msgstr "Requête de recherche"
 
-#: templates/library.html:52
+#: templates/library.html:53
 msgid "Search Omni for books, journals, articles, videos..."
 msgstr "Trouver des articles, livres, périodiques, vidéos et plus encore"
 
-#: templates/library.html:56
+#: templates/library.html:57
 msgid "What is Omni?"
 msgstr "Qu'est-ce qu'Omni ?"
 
-#: templates/library.html:57
-msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced"
-msgstr "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced&amp;lang=fr"
-
-#: templates/library.html:57
+#: templates/library.html:58
 msgid "Advanced search"
 msgstr "Recherche avancée"
 
-#: templates/library.html:62
+#: templates/library.html:63
 msgid ""
 "Your best place to discover millions of quality, academic resources from "
 "16 Ontario university libraries, including books, full text articles, "
@@ -146,145 +142,145 @@ msgstr ""
 "nouvel-outil-de-recherche-universitaire-foire-aux-questions\">FAQ "
 "d'Omni</a>."
 
-#: templates/library.html:71
+#: templates/library.html:72
 msgid "Find a database"
 msgstr "Trouver une base de données"
 
-#: templates/library.html:71
+#: templates/library.html:72
 msgid "Database search"
 msgstr "Recherche une base de données"
 
-#: templates/library.html:88
+#: templates/library.html:89
 msgid "Find a research guide"
 msgstr "Trouver un guide de recherche"
 
-#: templates/library.html:88
+#: templates/library.html:89
 msgid "Guides search"
 msgstr "Recherche un guide"
 
-#: templates/library.html:100
+#: templates/library.html:101
 msgid "https://biblio.laurentian.ca/research/guides/archives"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/archives"
 
-#: templates/library.html:100
+#: templates/library.html:101
 msgid "Archives"
 msgstr "Archives"
 
-#: templates/library.html:102
+#: templates/library.html:103
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab2"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/archives#tab2"
 
-#: templates/library.html:102
+#: templates/library.html:103
 msgid "Policies &amp; Procedures"
 msgstr "Politiques et procédures"
 
-#: templates/library.html:103
+#: templates/library.html:104
 msgid "https://biblio.laurentian.ca/research/guides/archival-fonds"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/fonds-darchives"
 
-#: templates/library.html:103
+#: templates/library.html:104
 msgid "Archival Fonds"
 msgstr "Fonds d'archives"
 
-#: templates/library.html:104
+#: templates/library.html:105
 msgid "https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee"
 msgstr ""
 "https://biblio.laurentian.ca/research/fr/guides/registres-de-l%C3"
 "%A9glise-anglicane"
 
-#: templates/library.html:104
+#: templates/library.html:105
 msgid "Anglican Diocese of Moosonee Fonds"
 msgstr "Fonds anglican du diocèse de Moosonee"
 
-#: templates/library.html:105
+#: templates/library.html:106
 msgid "https://biblio.laurentian.ca/research/guides/special-collections-archives"
 msgstr ""
 "https://biblio.laurentian.ca/research/fr/guides/collections-sp%C3"
 "%A9ciales-archives"
 
-#: templates/library.html:105
+#: templates/library.html:106
 msgid "Special Collections"
 msgstr "Collections spéciales"
 
-#: templates/library.html:106
+#: templates/library.html:107
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab3"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/archives#tab3"
 
-#: templates/library.html:106
+#: templates/library.html:107
 msgid "Related Sites"
 msgstr "Sites connexes"
 
-#: templates/library.html:110
+#: templates/library.html:111
 msgid "https://biblio.laurentian.ca/research/service"
 msgstr "https://biblio.laurentian.ca/research/fr/service"
 
-#: templates/library.html:110
+#: templates/library.html:111
 msgid "Services"
 msgstr "Services"
 
-#: templates/library.html:112
+#: templates/library.html:113
 msgid "https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview"
 msgstr "https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview&amp;lang=fr"
 
-#: templates/library.html:112
+#: templates/library.html:113
 msgid "My Account"
 msgstr "Mon compte"
 
-#: templates/library.html:113 templates/library.html:130
-msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI"
-msgstr "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=fr"
+#: templates/library.html:114
+msgid "https://omni.laurentian.ca/discovery/search?tab=CourseReserves&amp;search_scope=CourseReserves&amp;vid=01OCUL_LU:OMNI&amp;lang=en"
+msgstr "https://omni.laurentian.ca/discovery/search?tab=CourseReserves&amp;search_scope=CourseReserves&amp;vid=01OCUL_LU:OMNI&amp;lang=fr"
 
-#: templates/library.html:113
+#: templates/library.html:114
 msgid "Course Reserves"
 msgstr "Réserves pour les cours"
 
-#: templates/library.html:114
+#: templates/library.html:115
 msgid "https://biblio.laurentian.ca/research/guides/managing-citations"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/gestion-citations"
 
-#: templates/library.html:114
+#: templates/library.html:115
 msgid "Managing citations"
 msgstr "Logiciels bibliographiques"
 
-#: templates/library.html:115
+#: templates/library.html:116
 msgid "https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer"
 msgstr ""
 "https://biblio.laurentian.ca/research/fr/guides/pr%C3%AAt-entre-"
 "biblioth%C3%A8ques-racer"
 
-#: templates/library.html:115
+#: templates/library.html:116
 msgid "Interlibrary Loan"
 msgstr "Prêt entre bibliothèques"
 
-#: templates/library.html:119 templates/library.html:122
+#: templates/library.html:120 templates/library.html:123
 msgid "https://biblio.laurentian.ca/research/guides"
 msgstr "https://biblio.laurentian.ca/research/fr/guides"
 
-#: templates/library.html:119
+#: templates/library.html:120
 msgid "Research"
 msgstr "Recherche"
 
-#: templates/library.html:121
+#: templates/library.html:122
 msgid "https://biblio.laurentian.ca/research/databases-a-z"
 msgstr "https://biblio.laurentian.ca/research/fr/databases-a-z"
 
-#: templates/library.html:121
+#: templates/library.html:122
 msgid "Databases"
 msgstr "Bases de données"
 
-#: templates/library.html:122
+#: templates/library.html:123
 msgid "Research Guides"
 msgstr "Guides de recherche"
 
-#: templates/library.html:123
+#: templates/library.html:124
 msgid "https://biblio.laurentian.ca/research/services"
 msgstr "https://biblio.laurentian.ca/research/fr/services"
 
-#: templates/library.html:123
+#: templates/library.html:124
 msgid "Research Help"
 msgstr "Aide à la recherche"
 
-#: templates/library.html:124
+#: templates/library.html:125
 msgid ""
 "https://biblio.laurentian.ca/research/content/d2l-library-research-"
 "skills-tutorial"
@@ -292,81 +288,85 @@ msgstr ""
 "https://biblio.laurentian.ca/research/fr/content/formation-tutoriel-de-"
 "comp%C3%A9tences-de-recherche"
 
-#: templates/library.html:124
+#: templates/library.html:125
 msgid "Research Skills Tutorial"
 msgstr "Tutoriel de compétences de recherche"
 
-#: templates/library.html:128
+#: templates/library.html:129
 msgid "https://biblio.laurentian.ca/research/resources"
 msgstr "https://biblio.laurentian.ca/research/fr/content/resources"
 
-#: templates/library.html:128
+#: templates/library.html:129
 msgid "Resources"
 msgstr "Ressources"
 
-#: templates/library.html:130
+#: templates/library.html:131
+msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI"
+msgstr "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=fr"
+
+#: templates/library.html:131
 msgid "Catalogue"
 msgstr "Catalogue"
 
-#: templates/library.html:131
+#: templates/library.html:132
 msgid "https://biblio.laurentian.ca/research/guides/copyright-lu"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/droit-d%E2%80%99auteur-ul"
 
-#: templates/library.html:131
+#: templates/library.html:132
 msgid "Copyright @ LU"
 msgstr "Droit d’auteur @ UL"
 
-#: templates/library.html:132
+#: templates/library.html:133
 msgid "https://biblio.laurentian.ca/research/guides/data-and-statistics"
 msgstr ""
 "https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-et-"
 "statistiques"
 
-#: templates/library.html:132
+#: templates/library.html:133
 msgid "Data"
 msgstr "Données"
 
-#: templates/library.html:133
+#: templates/library.html:134
 msgid "https://biblio.laurentian.ca/research/guides/geospatial-data-lu"
 msgstr "https://biblio.laurentian.ca/research/fr/guides/donn%C3%A9es-g%C3%A9ospatiales"
 
-#: templates/library.html:133
+#: templates/library.html:134
 msgid "Geographic Information Systems"
 msgstr "Système d'information géographique"
 
-#: templates/library.html:133
+#: templates/library.html:134
 msgid "GIS"
 msgstr "SIG"
 
-#: templates/library.html:134
+#: templates/library.html:135
 msgid "https://zone.biblio.laurentian.ca/dspace/?locale=en"
 msgstr "https://zone.biblio.laurentian.ca/dspace/?locale=fr"
 
-#: templates/library.html:134
+#: templates/library.html:135
 msgid "LU|Zone|UL: research repository"
 msgstr "LU|Zone|UL : dépôt de recherche"
 
-#: templates/library.html:139
+#: templates/library.html:140
 msgid "https://biblio.laurentian.ca/research/contact-us"
 msgstr ""
 "https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-"
 "renseignements"
 
-#: templates/library.html:139
+#: templates/library.html:140
 msgid "Contact us"
 msgstr "Coordonnées et renseignements"
 
-#: templates/library.html:140
+#: templates/library.html:141
 msgid "https://biblio.laurentian.ca/research/contact-us#tab3"
 msgstr ""
 "https://biblio.laurentian.ca/research/fr/coordonn%C3%A9es-et-"
 "renseignements#tab3"
 
-#: templates/library.html:140
+#: templates/library.html:141
 msgid "Giving to the Library"
 msgstr "Dons à la Bibliothèque"
 
-#: templates/library.html:141
+#: templates/library.html:142
 msgid ""
 "https://biblio.laurentian.ca/research/content/library-accessibility-"
 "services"
@@ -374,35 +374,35 @@ msgstr ""
 "https://biblio.laurentian.ca/research/fr/content/services-"
 "daccessibilit%C3%A9"
 
-#: templates/library.html:141 templates/library.html:187
+#: templates/library.html:142 templates/library.html:188
 msgid "Accessibility"
 msgstr "Accessibilité"
 
-#: templates/library.html:148
+#: templates/library.html:149
 msgid "Today's hours"
 msgstr "Heures d'aujourd'hui"
 
-#: templates/library.html:148
+#: templates/library.html:149
 msgid "https://laurentian.ca/library-hours"
 msgstr "https://laurentienne.ca/biblio-horaire"
 
-#: templates/library.html:148
+#: templates/library.html:149
 msgid "All hours"
 msgstr "Tous les horaires"
 
-#: templates/library.html:162
+#: templates/library.html:163
 msgid "Chat loading..."
 msgstr "Chargement du chat..."
 
-#: templates/library.html:165
+#: templates/library.html:166
 msgid "https://biblio.laurentian.ca/research/news"
 msgstr "https://biblio.laurentian.ca/research/fr/nouvelles"
 
-#: templates/library.html:165
+#: templates/library.html:166
 msgid "News"
 msgstr "Nouvelles"
 
-#: templates/library.html:176
+#: templates/library.html:177
 msgid ""
 "We would like to acknowledge that the J.N. Desmarais Library &amp;\n"
 "        Archives are located on the traditional territory of the "
@@ -415,29 +415,32 @@ msgstr ""
 "Atikameksheng Anishnawbek, qui fait partie du territoire désigné dans le "
 "traité Robinson-Huron."
 
-#: templates/library.html:183
+#: templates/library.html:184
 msgid "Laurentian University, Sudbury, Ontario, Canada."
 msgstr "Université Laurentienne. Sudbury, Ontario, Canada."
 
-#: templates/library.html:186
+#: templates/library.html:187
 msgid "https://laurentian.ca/policies-accountability"
 msgstr "https://laurentienne.ca/politiques"
 
-#: templates/library.html:186
+#: templates/library.html:187
 msgid "Policies"
 msgstr "Politiques"
 
-#: templates/library.html:187
+#: templates/library.html:188
 msgid "https://laurentian.ca/accessibility-services"
 msgstr "https://laurentienne.ca/services-daccessibilite"
 
-#: templates/library.html:188
+#: templates/library.html:189
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
 msgstr ""
 "https://docs.google.com/forms/d/e/1FAIpQLScin_KS6KK90r9qRpnqtD5tZs5brrcsd-V"
 "-GnTkkJ-reWtiQg/viewform"
 
-#: templates/library.html:188
+#: templates/library.html:189
 msgid "Feedback"
 msgstr "Commentaires"
+
+#~ msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced"
+#~ msgstr "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI&amp;lang=en&amp;mode=advanced&amp;lang=fr"
 
