@@ -124,8 +124,33 @@ def get_hours(lang="en-CA"):
                         }
                     )
                 else:
-                    o = format_time(x["libraries"][lib]["open"], lang)
-                    c = format_time(x["libraries"][lib]["close"], lang)
+                    o = x["libraries"][lib]["open"]
+                    c = x["libraries"][lib]["close"]
+
+                    # Hack for multiple sets of hours for SoA summer
+                    if libraries[lib]["name"] == "Architecture" and o == "13:00" and c == "16:00":
+                        if lang == "en-CA":
+                            h = "8:30 AM - 12:00 PM, 1:00 PM - 4:00 PM"
+                            hours.append(
+                                {
+                                    "name": libraries[lib]["name"],
+                                    "hours": h,
+                                    "url": libraries[lib]["url"],
+                                }
+                            )
+                        else:
+                            h = "8h30 à 12h00, 13h00 à 17h00"
+                            hours.append(
+                                {
+                                    "name": libraries[lib]["name"],
+                                    "hours": h,
+                                    "url": libraries[lib]["url"],
+                                }
+                            )
+                        continue
+
+                    o = format_time(o, lang)
+                    c = format_time(c, lang)
                     hours.append(
                         {
                             "name": libraries[lib]["name"],
