@@ -167,9 +167,9 @@ def format_time(hour, lang="en-CA"):
     if len(hour) == 4:
         hour = f"0{hour}"
     if lang.startswith("fr"):
-        return datetime.time.fromisoformat(hour).strftime("%Hh%M")
+        return datetime.time.fromisoformat(hour).strftime("%-Hh%M")
     else:
-        return datetime.time.fromisoformat(hour).strftime("%I:%M %p")
+        return datetime.time.fromisoformat(hour).strftime("%-I:%M %p")
 
 
 def get_news(lang="en-CA", max_items=4, max_age=30):
