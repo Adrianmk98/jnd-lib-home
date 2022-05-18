@@ -128,7 +128,11 @@ def get_hours(lang="en-CA"):
                     c = x["libraries"][lib]["close"]
 
                     # Hack for multiple sets of hours for SoA summer
-                    if libraries[lib]["name"] == "Architecture" and o == "13:00" and c == "16:00":
+                    if (
+                        libraries[lib]["name"] == "Architecture"
+                        and o == "13:00"
+                        and c == "16:00"
+                    ):
                         if lang == "en-CA":
                             h = "8:30 AM - 12:00 PM, 1:00 PM - 4:00 PM"
                             hours.append(
@@ -158,6 +162,28 @@ def get_hours(lang="en-CA"):
                             "url": libraries[lib]["url"],
                         }
                     )
+    hours = archives_hack(libraries, closed, lang, hours)
+    return hours
+
+
+def archives_hack(libraries, closed, lang, hours):
+    "Hardcode archives hours because IT calendar can't handle split hours"
+
+    h = "10:00 AM - 12:00 PM, 1:00 PM - 4:00 PM"
+    if lang == "fr-CA":
+        h = "10h00-12h00, 13h00-16h00"
+
+    # Archives are open Tuesday through Friday
+    if datetime.date.today().weekday() == 0 or datetime.date.today().weekday() > 4:
+        h = closed
+
+    hours.append(
+        {
+            "name": libraries["Archives"]["name"],
+            "hours": h,
+            "url": libraries["Archives"]["url"],
+        }
+    )
     return hours
 
 
