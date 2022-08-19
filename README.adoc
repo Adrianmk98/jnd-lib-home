@@ -1,0 +1,10 @@
+= Generate Laurentian library home page
+
+If any text or links are changed in the HTML template, you need to update the
+messages.pot and corresponding PO files to generate the French version of the
+page correctly.
+
+  pybabel extract -F babel.ini -o locale/messages.pot .
+  pybabel update -l fr_CA -i locale/messages.pot -d locale
+
+And then edit the locale/fr_CA/LC_MESSAGES/messages.po file accordingly.
