@@ -8,3 +8,9 @@ page correctly.
   pybabel update -l fr_CA -i locale/messages.pot -d locale
 
 And then edit the locale/fr_CA/LC_MESSAGES/messages.po file accordingly.
+
+If you're missing locales, then you might need to run the following:
+
+  sudo locale-gen en_CA.UTF-8
+  sudo locale-gen fr_CA.UTF-8
+  sudo update-locale
