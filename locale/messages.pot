@@ -1,21 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2021 ORGANIZATION
+# Copyright (C) 2022 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-11-24 10:45-0500\n"
+"POT-Creation-Date: 2022-08-19 15:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 #: templates/library.html:5
 msgid "Laurentian University Library &amp; Archives"
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Guides search"
 msgstr ""
 
-#: templates/library.html:102 templates/library.html:160
+#: templates/library.html:102
 msgid "https://biblio.laurentian.ca/research/guides/archives"
 msgstr ""
 
@@ -164,7 +164,7 @@ msgid "Archives"
 msgstr ""
 
 #: templates/library.html:104
-msgid "https://biblio.laurentian.ca/research/guides/archives#tab2"
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab7"
 msgstr ""
 
 #: templates/library.html:104
@@ -172,7 +172,7 @@ msgid "Policies &amp; Procedures"
 msgstr ""
 
 #: templates/library.html:105
-msgid "https://biblio.laurentian.ca/research/guides/archival-fonds"
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab2"
 msgstr ""
 
 #: templates/library.html:105
@@ -180,7 +180,7 @@ msgid "Archival Fonds"
 msgstr ""
 
 #: templates/library.html:106
-msgid "https://biblio.laurentian.ca/research/guides/anglican-diocese-moosonee"
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab4"
 msgstr ""
 
 #: templates/library.html:106
@@ -188,7 +188,7 @@ msgid "Anglican Diocese of Moosonee Fonds"
 msgstr ""
 
 #: templates/library.html:107
-msgid "https://biblio.laurentian.ca/research/guides/special-collections-archives"
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab6"
 msgstr ""
 
 #: templates/library.html:107
@@ -196,7 +196,7 @@ msgid "Special Collections"
 msgstr ""
 
 #: templates/library.html:108
-msgid "https://biblio.laurentian.ca/research/guides/archives#tab3"
+msgid "https://biblio.laurentian.ca/research/guides/archives#tab8"
 msgstr ""
 
 #: templates/library.html:108
@@ -355,7 +355,7 @@ msgid ""
 "services"
 msgstr ""
 
-#: templates/library.html:143 templates/library.html:190
+#: templates/library.html:143 templates/library.html:189
 msgid "Accessibility"
 msgstr ""
 
@@ -371,19 +371,19 @@ msgstr ""
 msgid "All hours"
 msgstr ""
 
-#: templates/library.html:165
+#: templates/library.html:164
 msgid "Chat loading..."
 msgstr ""
 
-#: templates/library.html:168
+#: templates/library.html:167
 msgid "https://biblio.laurentian.ca/research/news"
 msgstr ""
 
-#: templates/library.html:168
+#: templates/library.html:167
 msgid "News"
 msgstr ""
 
-#: templates/library.html:179
+#: templates/library.html:178
 msgid ""
 "We would like to acknowledge that the J.N. Desmarais Library &amp;\n"
 "        Archives are located on the traditional territory of the "
@@ -392,27 +392,27 @@ msgid ""
 "        Robinson-Huron Treaty territory."
 msgstr ""
 
-#: templates/library.html:186
+#: templates/library.html:185
 msgid "Laurentian University, Sudbury, Ontario, Canada."
 msgstr ""
 
-#: templates/library.html:189
+#: templates/library.html:188
 msgid "https://laurentian.ca/policies-accountability"
 msgstr ""
 
-#: templates/library.html:189
+#: templates/library.html:188
 msgid "Policies"
 msgstr ""
 
-#: templates/library.html:190
+#: templates/library.html:189
 msgid "https://laurentian.ca/accessibility-services"
 msgstr ""
 
-#: templates/library.html:191
+#: templates/library.html:190
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
 msgstr ""
 
-#: templates/library.html:191
+#: templates/library.html:190
 msgid "Feedback"
 msgstr ""
 
