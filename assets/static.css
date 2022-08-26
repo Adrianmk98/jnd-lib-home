@@ -52,13 +52,16 @@ h1, h2, h3, h4 {
 	align-content: center;
 	border: 1px solid #CCC;
 }
+
 .searchsubmit {
   border: none;
-	/*background: url(/sites/all/themes/library/icons/search-icon.png) center/1.25em white no-repeat; */
-	height: 45px;
-	box-sizing: border-box;
-	background-color: #F5F5F5;
+  background: url(search-icon.svg) center/1.5em white no-repeat;
+  height: 100%;
+  /* box-sizing: border-box; */
+  /* background-color: #F5F5F5; */
+  width: 5%;
 }
+
 .sr-only {
   /* From https://webaim.org/techniques/css/invisiblecontent/#offscreen */
   clip: rect(1px, 1px, 1px, 1px);
