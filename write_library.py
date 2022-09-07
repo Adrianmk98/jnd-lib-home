@@ -154,6 +154,11 @@ def hack_hours(hours, libraries, lib, lang, closed, english_hours, french_hours)
     else:
         h = french_hours
 
+
+    # Closed on weekends for now
+    if datetime.date.today().weekday() > 4:
+        h = closed
+
     hours.append(
         {
             "name": libraries[lib]["name"],
