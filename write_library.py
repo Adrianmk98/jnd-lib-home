@@ -115,6 +115,14 @@ def get_hours(lang="en-CA"):
                 if lib not in x["libraries"]:
                     # CRC and MRC temporarily disabled until we have separate pages & hours
                     continue
+
+                # Hack for multiple sets of hours for SoA start of fall
+                if (libraries[lib]["name"] == "Architecture"):
+                    english_hours = "9:00 AM - 12:00 PM, 1:00 PM - 4:30 PM"
+                    french_hours = "9h00 à 12h00, 13h00 à 16h30"
+                    hack_hours(hours, libraries, lib, lang, closed, english_hours, french_hours)
+                    continue
+
                 if x["libraries"][lib]["closed"] == 1:
                     hours.append(
                         {
@@ -127,32 +135,6 @@ def get_hours(lang="en-CA"):
                     o = x["libraries"][lib]["open"]
                     c = x["libraries"][lib]["close"]
 
-                    # Hack for multiple sets of hours for SoA summer
-                    if (
-                        libraries[lib]["name"] == "Architecture"
-                        and o == "13:00"
-                        and c == "16:00"
-                    ):
-                        if lang == "en-CA":
-                            h = "8:30 AM - 12:00 PM, 1:00 PM - 4:00 PM"
-                            hours.append(
-                                {
-                                    "name": libraries[lib]["name"],
-                                    "hours": h,
-                                    "url": libraries[lib]["url"],
-                                }
-                            )
-                        else:
-                            h = "8h30 à 12h00, 13h00 à 17h00"
-                            hours.append(
-                                {
-                                    "name": libraries[lib]["name"],
-                                    "hours": h,
-                                    "url": libraries[lib]["url"],
-                                }
-                            )
-                        continue
-
                     o = format_time(o, lang)
                     c = format_time(c, lang)
                     hours.append(
@@ -164,6 +146,21 @@ def get_hours(lang="en-CA"):
                     )
     hours = archives_hack(libraries, closed, lang, hours)
     return hours
+
+
+def hack_hours(hours, libraries, lib, lang, closed, english_hours, french_hours):
+    if lang == "en-CA":
+        h = english_hours
+    else:
+        h = french_hours
+
+    hours.append(
+        {
+            "name": libraries[lib]["name"],
+            "hours": h,
+            "url": libraries[lib]["url"],
+        }
+    )
 
 
 def archives_hack(libraries, closed, lang, hours):
