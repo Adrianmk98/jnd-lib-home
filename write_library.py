@@ -117,12 +117,12 @@ def get_hours(lang="en-CA"):
                     continue
 
                 # Hack for multiple sets of hours for SoA start of fall
-                if (libraries[lib]["name"] == "Architecture"):
-                    english_hours = "9:00 AM - 12:00 PM, 1:00 PM - 4:30 PM"
-                    french_hours = "9h00 à 12h00, 13h00 à 16h30"
-                    hack_hours(hours, libraries, lib, lang, closed, english_hours, french_hours)
-                    continue
-
+#                if (libraries[lib]["name"] == "Architecture"):
+#                    english_hours = "9:00 AM - 12:00 PM, 1:00 PM - 4:30 PM"
+#                    french_hours = "9h00 à 12h00, 13h00 à 16h30"
+#                    hack_hours(hours, libraries, lib, lang, closed, english_hours, french_hours)
+#                    continue
+#
                 if x["libraries"][lib]["closed"] == 1:
                     hours.append(
                         {
