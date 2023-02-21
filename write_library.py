@@ -44,16 +44,12 @@ def get_hours(lang="en-CA"):
             "name": "Archives",
             "url": "https://biblio.laurentian.ca/research/guides/archives",
         },
-        "CRC": {
+        "ERC": {
             "name": "Education Resource Centre",
             "url": "",
         },
         "JND": {
             "name": "J.N. Desmarais",
-            "url": "",
-        },
-        "MRC": {
-            "name": "Music Resource Centre",
             "url": "",
         },
         "SoA": {
@@ -70,16 +66,12 @@ def get_hours(lang="en-CA"):
                 "name": "Archives",
                 "url": "https://biblio.laurentian.ca/research/fr/guides/archives",
             },
-            "CRC": {
+            "ERC": {
                 "name": "Centre de Ressources en Éducation",
                 "url": "",
             },
             "JND": {
                 "name": "J.N. Desmarais",
-                "url": "",
-            },
-            "MRC": {
-                "name": "Centre de Ressources en Musique",
                 "url": "",
             },
             "SoA": {
@@ -112,25 +104,7 @@ def get_hours(lang="en-CA"):
             for lib in sorted(
                 libraries, key=lambda lib: locale.strxfrm(libraries[lib]["name"])
             ):
-                if lib not in x["libraries"] and lib not in ("Archives", "CRC"):
-                    # CRC and MRC temporarily disabled until we have separate pages & hours
-                    continue
-
-                # Hack for multiple sets of hours for SoA start of fall
-                #                if (libraries[lib]["name"] == "Architecture"):
-                #                    english_hours = "9:00 AM - 12:00 PM, 1:00 PM - 4:30 PM"
-                #                    french_hours = "9h00 à 12h00, 13h00 à 16h30"
-                #                    hack_hours_architecture(hours, libraries, lib, lang, closed, english_hours, french_hours)
-                #                    continue
-                #
-                # Hack for Archives
-                if lib == "Archives":
-                    hack_hours_archives(hours, libraries, lib, lang, closed)
-                    continue
-
-                # Hack for Education Resource Centre
-                if lib == "CRC":
-                    hack_hours_education(hours, libraries, lib, lang, closed)
+                if lib not in x["libraries"]:
                     continue
 
                 if x["libraries"][lib]["closed"] == 1:
@@ -142,103 +116,43 @@ def get_hours(lang="en-CA"):
                         }
                     )
                 else:
-                    o = x["libraries"][lib]["open"]
-                    c = x["libraries"][lib]["close"]
-
-                    o = format_time(o, lang)
-                    c = format_time(c, lang)
-                    hours.append(
-                        {
-                            "name": libraries[lib]["name"],
-                            "hours": hour_format.format(o, c),
-                            "url": libraries[lib]["url"],
-                        }
-                    )
+                    format_hours(x, hours, libraries, lib, lang, closed, hour_format)
     return hours
 
 
-def hack_hours_architecture(
-    hours, libraries, lib, lang, closed, english_hours, french_hours
-):
-    "Used when we need split hours because IT calendar can't handle them"
+def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
+    "Check for an _aft variant to accomodate split hours"
 
-    if lang == "en-CA":
-        h = english_hours
+    o = x["libraries"][lib]["open"]
+    c = x["libraries"][lib]["close"]
+
+    o = format_time(o, lang)
+    c = format_time(c, lang)
+
+    # Check for afternoon hours for each library
+    aft_hours = lib + "_aft"
+    if aft_hours in x["libraries"] and x["libraries"][aft_hours]["closed"] != 1:
+        oa = x["libraries"][aft_hours]["open"]
+        ca = x["libraries"][aft_hours]["close"]
+
+        oa = format_time(oa, lang)
+        ca = format_time(ca, lang)
+
+        hours.append(
+            {
+                "name": libraries[lib]["name"],
+                "hours": (hour_format.format(o, c) + ", " + hour_format.format(oa, ca)),
+                "url": libraries[lib]["url"],
+            }
+        )
     else:
-        h = french_hours
-
-    # Closed on weekends for now
-    if datetime.date.today().weekday() > 4:
-        h = closed
-
-    hours.append(
-        {
-            "name": libraries[lib]["name"],
-            "hours": h,
-            "url": libraries[lib]["url"],
-        }
-    )
-
-
-def hack_hours_education(hours, libraries, lib, lang, closed):
-    "Add Education hours until we can pull from IT calendar"
-
-    english_hours = "9:00 AM - 12:00 PM, 1:00 PM - 4:30 PM"
-    french_hours = "9h00 à 12h00, 13h00 à 16h30"
-    if lang == "en-CA":
-        if datetime.date.today().weekday() == 0:
-            h = "9:00 AM - 4:30 PM"
-        elif datetime.date.today().weekday() == 1:
-            h = "10:00 AM - 4:30 PM"
-        elif datetime.date.today().weekday() == 2:
-            h = "10:00 AM - 3:30 PM"
-        elif datetime.date.today().weekday() == 3:
-            h = "9:00 AM - 4:30 PM"
-        elif datetime.date.today().weekday() == 4:
-            h = "9:00 AM - 3:30 PM"
-        elif datetime.date.today().weekday() > 4:
-            h = closed
-    else:
-        if datetime.date.today().weekday() == 0:
-            h = "9h00 à 16h30"
-        elif datetime.date.today().weekday() == 1:
-            h = "10h00 à 16h30"
-        elif datetime.date.today().weekday() == 2:
-            h = "10h00 à 15h30"
-        elif datetime.date.today().weekday() == 3:
-            h = "9h00 à 16h30"
-        elif datetime.date.today().weekday() == 4:
-            h = "9h00 à 15h30"
-        elif datetime.date.today().weekday() > 4:
-            h = closed
-
-    hours.append(
-        {
-            "name": libraries["CRC"]["name"],
-            "hours": h,
-            "url": libraries["CRC"]["url"],
-        }
-    )
-
-
-def hack_hours_archives(hours, libraries, lib, lang, closed):
-    "Hardcode archives hours because IT calendar can't handle split hours"
-
-    h = "10:00 AM - 12:00 PM, 1:00 PM - 4:00 PM"
-    if lang == "fr-CA":
-        h = "10h00 à 12h00, 13h00 à 16h00"
-
-    # Archives are open Tuesday through Friday
-    if datetime.date.today().weekday() == 0 or datetime.date.today().weekday() > 4:
-        h = closed
-
-    hours.append(
-        {
-            "name": libraries["Archives"]["name"],
-            "hours": h,
-            "url": libraries["Archives"]["url"],
-        }
-    )
+        hours.append(
+            {
+                "name": libraries[lib]["name"],
+                "hours": hour_format.format(o, c),
+                "url": libraries[lib]["url"],
+            }
+        )
 
 
 def format_time(hour, lang="en-CA"):
