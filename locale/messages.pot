@@ -1,14 +1,14 @@
 # Translations template for PROJECT.
-# Copyright (C) 2022 ORGANIZATION
+# Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-08-19 15:47-0400\n"
+"POT-Creation-Date: 2023-05-04 10:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,16 +97,6 @@ msgstr ""
 
 #: templates/library.html:33
 msgid "Library and Archives"
-msgstr ""
-
-#: templates/library.html:33
-msgid ""
-"https://biblio.laurentian.ca/research/content/covid-19-library-and-"
-"archives-faq"
-msgstr ""
-
-#: templates/library.html:33
-msgid "COVID-19: Library and Archives FAQ"
 msgstr ""
 
 #: templates/library.html:54

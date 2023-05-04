@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-08-19 15:47-0400\n"
+"POT-Creation-Date: 2023-05-04 10:48-0400\n"
 "PO-Revision-Date: 2021-01-04 22:06-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -102,18 +102,6 @@ msgstr "Université Laurentienne"
 #: templates/library.html:33
 msgid "Library and Archives"
 msgstr "Bibliothèque et archives"
-
-#: templates/library.html:33
-msgid ""
-"https://biblio.laurentian.ca/research/content/covid-19-library-and-"
-"archives-faq"
-msgstr ""
-"https://biblio.laurentian.ca/research/fr/content/covid-19-foire-aux-"
-"questions-biblioth%C3%A8que-et-archives"
-
-#: templates/library.html:33
-msgid "COVID-19: Library and Archives FAQ"
-msgstr "COVID-19: Foire aux questions, Bibliothèque et Archives"
 
 #: templates/library.html:54
 msgid "Search"
@@ -445,4 +433,14 @@ msgstr ""
 #: templates/library.html:190
 msgid "Feedback"
 msgstr "Commentaires"
+
+#~ msgid ""
+#~ "https://biblio.laurentian.ca/research/content/covid-19-library-"
+#~ "and-archives-faq"
+#~ msgstr ""
+#~ "https://biblio.laurentian.ca/research/fr/content/covid-19-foire-"
+#~ "aux-questions-biblioth%C3%A8que-et-archives"
+
+#~ msgid "COVID-19: Library and Archives FAQ"
+#~ msgstr "COVID-19: Foire aux questions, Bibliothèque et Archives"
 
