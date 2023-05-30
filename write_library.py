@@ -146,6 +146,28 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
             }
         )
     else:
+        # Architecture summer hours hack
+        if lib == "SoA":
+            o = "8:30"
+            c = "12:00"
+            oa = "1:00"
+            ca = "4:00"
+            o = format_time(o, lang)
+            c = format_time(c, lang)
+            oa = format_time(oa, lang)
+            ca = format_time(ca, lang)
+
+            hours.append(
+                {
+                    "name": libraries[lib]["name"],
+                    "hours": (
+                        hour_format.format(o, c) + ", " + hour_format.format(oa, ca)
+                    ),
+                    "url": libraries[lib]["url"],
+                }
+            )
+            return
+
         hours.append(
             {
                 "name": libraries[lib]["name"],
