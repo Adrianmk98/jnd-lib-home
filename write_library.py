@@ -150,8 +150,8 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
         if lib == "SoA":
             o = "8:30"
             c = "12:00"
-            oa = "1:00"
-            ca = "4:00"
+            oa = "13:00"
+            ca = "16:00"
             o = format_time(o, lang)
             c = format_time(c, lang)
             oa = format_time(oa, lang)
