@@ -173,14 +173,22 @@
           </div>
         </div>
       </div>
-      <p id="acknowledgement">
+      <div id="acknowledgement">
+      <h2>{{ _('Land Acknowledgment - Aki Gaabijidebendaagwak') }}</h3>
+      <p>
       {% autoescape false %}
-	{{ _('We acknowledge the Robinson-Huron Treaty of 1850 and recognize
-	that Laurentian University is located on the traditional lands of the
-	Atikameksheng Anishnawbek. The City of Greater Sudbury also includes
-	the traditional lands of Wahnapitae First Nations.') }}
-      {% endautoescape %}
+	{{ _('We would like to acknowledge the Robinson-Huron Treaty of 1850.
+	We also further recognize that Laurentian University is located on the
+	traditional lands of the Atikameksheng Anishnawbek and that the City of
+	Greater Sudbury, also includes the traditional lands of the Wahnapitae
+	First Nation. We extend our deepest respect to Indigenous peoples - as
+	a sign of our continued relationship we will support Laurentian
+	University’s Truth and Reconciliation Task Force Recommendations.
+	Miigwech.') }} {% endautoescape %}
       </p>
+      <p>
+      </p><a href="{{ _('https://www.youtube.com/watch?v=wgfmXtRHFS0') }}">{{ _('Listen to it in Anishinaabemowin') }}</a>
+      </div>
       <div id="footer">
         <span id="copyright">{{ _('Laurentian University, Sudbury, Ontario, Canada.') }}</span>
         <nav>

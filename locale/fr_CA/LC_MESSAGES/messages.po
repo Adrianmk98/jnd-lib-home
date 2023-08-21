@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-04 10:57-0400\n"
+"POT-Creation-Date: 2023-08-21 19:33-0400\n"
 "PO-Revision-Date: 2021-01-04 22:06-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
 "Language-Team: fr_CA <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: templates/library.html:5
 msgid "Laurentian University Library &amp; Archives"
@@ -367,7 +367,7 @@ msgstr ""
 "https://biblio.laurentian.ca/research/fr/content/services-"
 "daccessibilit%C3%A9"
 
-#: templates/library.html:143 templates/library.html:189
+#: templates/library.html:143 templates/library.html:197
 msgid "Accessibility"
 msgstr "Accessibilité"
 
@@ -395,40 +395,67 @@ msgstr "https://biblio.laurentian.ca/research/fr/nouvelles"
 msgid "News"
 msgstr "Nouvelles"
 
-#: templates/library.html:178
-msgid ""
-"We acknowledge the Robinson-Huron Treaty of 1850 and recognize\n"
-"\tthat Laurentian University is located on the traditional lands of the\n"
-"\tAtikameksheng Anishnawbek. The City of Greater Sudbury also includes\n"
-"\tthe traditional lands of Wahnapitae First Nations."
-msgstr ""
-"Nous sommes situés sur le territoire couvert par le Traité Robinson-Huron de\n"
-"1850 et reconnaissons qu’il s’agit des terres traditionnelles des Premières\n"
-"Nations d’Atikameksheng Anishnawbek et de Wahnapitae."
+#: templates/library.html:177
+msgid "Land Acknowledgment - Aki Gaabijidebendaagwak"
+msgstr "Reconnaissance du territoire - Aki Gaabijidebendaagwak"
 
-#: templates/library.html:185
+#: templates/library.html:180
+msgid ""
+"We would like to acknowledge the Robinson-Huron Treaty of 1850.\n"
+"\tWe also further recognize that Laurentian University is located on the\n"
+"\ttraditional lands of the Atikameksheng Anishnawbek and that the City of"
+"\n"
+"\tGreater Sudbury, also includes the traditional lands of the Wahnapitae\n"
+"\tFirst Nation. We extend our deepest respect to Indigenous peoples - as\n"
+"\ta sign of our continued relationship we will support Laurentian\n"
+"\tUniversity’s Truth and Reconciliation Task Force Recommendations.\n"
+"\tMiigwech."
+msgstr ""
+"Nous désirons reconnaitre le Traité Robinson-Huron de 1850. Il importe\n"
+"aussi de souligner que l’Université Laurentienne se trouve sur les terres"
+"\n"
+"traditionnelles des Atikameksheng Anishnawbek et que la Ville du Grand "
+"Sudbury\n"
+"comprend également celles de la Première Nation de Wahnapitae. Nous "
+"tenons à\n"
+"exprimer notre profond respect à tous les peuples autochtones et, comme "
+"signe\n"
+"de notre relation suivie avec eux, appuierons les recommandations émises "
+"par le\n"
+"Groupe de travail sur la vérité et la réconciliation de l’Université\n"
+"Laurentienne. Miigwech.\""
+
+#: templates/library.html:190
+msgid "https://www.youtube.com/watch?v=wgfmXtRHFS0"
+msgstr ""
+
+#: templates/library.html:190
+msgid "Listen to it in Anishinaabemowin"
+msgstr "Écoutez-le en anishinaabemowin."
+
+#: templates/library.html:193
 msgid "Laurentian University, Sudbury, Ontario, Canada."
 msgstr "Université Laurentienne. Sudbury, Ontario, Canada."
 
-#: templates/library.html:188
+#: templates/library.html:196
 msgid "https://laurentian.ca/policies-accountability"
 msgstr "https://laurentienne.ca/politiques"
 
-#: templates/library.html:188
+#: templates/library.html:196
 msgid "Policies"
 msgstr "Politiques"
 
-#: templates/library.html:189
+#: templates/library.html:197
 msgid "https://laurentian.ca/accessibility-services"
 msgstr "https://laurentienne.ca/services-daccessibilite"
 
-#: templates/library.html:190
+#: templates/library.html:198
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
 msgstr ""
 "https://docs.google.com/forms/d/e/1FAIpQLScin_KS6KK90r9qRpnqtD5tZs5brrcsd-V"
 "-GnTkkJ-reWtiQg/viewform"
 
-#: templates/library.html:190
+#: templates/library.html:198
 msgid "Feedback"
 msgstr "Commentaires"
 
@@ -457,4 +484,20 @@ msgstr "Commentaires"
 #~ " Anishnawbek, qui fait partie du "
 #~ "territoire désigné dans le traité "
 #~ "Robinson-Huron."
+
+#~ msgid ""
+#~ "We acknowledge the Robinson-Huron Treaty of 1850 and recognize\n"
+#~ "\tthat Laurentian University is located"
+#~ " on the traditional lands of the\n"
+#~ ""
+#~ "\tAtikameksheng Anishnawbek. The City of"
+#~ " Greater Sudbury also includes\n"
+#~ "\tthe traditional lands of Wahnapitae First Nations."
+#~ msgstr ""
+#~ "Nous sommes situés sur le territoire "
+#~ "couvert par le Traité Robinson-Huron "
+#~ "de\n"
+#~ "1850 et reconnaissons qu’il s’agit des"
+#~ " terres traditionnelles des Premières\n"
+#~ "Nations d’Atikameksheng Anishnawbek et de Wahnapitae."
 
