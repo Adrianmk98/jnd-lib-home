@@ -272,7 +272,7 @@ nav.navbar {
     grid-template-columns: 1fr 1fr;
   }
   .search_field {
-    width: 70%;
+    width: 90%;
   }
   #sidebar {
     display: grid;
