@@ -1,15 +1,16 @@
 body {
   margin: 0;
+  background: #003e7e;
 }
 #container {
   font-family: "Open Sans", sans-serif;
+  background: white;
 }
 #header, .search-links, #footer {
   display: flex;
   justify-content: space-between;
   margin-top: 1em;
 }
-
 h1, h2, h3, h4 {
   color: #003e7e;
   margin: 0;
@@ -24,12 +25,13 @@ h1, h2, h3, h4 {
   border: solid thin;
   padding: 1em;
 }
-#search-wrapper {
+.search-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+  clear: both;
 }
-#search-wrapper {
+.search-wrapper {
 	border: 1px solid #CCC;
 	border-radius: 3px;
 	background-color: white;
@@ -37,29 +39,41 @@ h1, h2, h3, h4 {
 	padding: 1.5em 0em 1em 0em;
 	margin: 0 auto;
 }
-#search-inner {
+.search-inner {
 	width: 100%;
 	display: block;
 	position: relative;
 }
-#simple {
+.search-simple {
 	width: 100%;
 	float: left;
 }
-#search-wrapper, #searchForm {
+.search-wrapper, .searchForm {
 	display: flex;
 	align-content: center;
 	border: 1px solid #CCC;
 }
 .searchsubmit {
   border: none;
-	/*background: url(/sites/all/themes/library/icons/search-icon.png) center/1.25em white no-repeat; */
-	height: 45px;
-	box-sizing: border-box;
-	background-color: #F5F5F5;
+  background: url(search-icon.svg) center/1.5em white no-repeat;
+  height: 100%;
+  /* box-sizing: border-box; */
+  /* background-color: #F5F5F5; */
+  width: 5%;
 }
 .element-invisible {
   display: none;
+}
+.sr-only {
+  /* From https://webaim.org/techniques/css/invisiblecontent/#offscreen */
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 .search_field {
   border: none;
@@ -104,7 +118,7 @@ a {
 #footer {
   background-color: rgb(1, 43, 87);
   color: rgb(255, 196, 35);
-  font-size: 80%;
+  font-size: 90%;
   padding: 0 1em 0 1em;
 }
 #footer a {
@@ -126,8 +140,9 @@ a {
   width: 200px;
 }
 #sidebar {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 #hours table {
   border: thin black solid;
@@ -160,10 +175,11 @@ a {
   float: right;
 }
 #ask {
-  margin: auto;
+  margin: 0 auto;
 }
 #news ul {
   margin-top: 0;
+  margin-left: 0;
 }
 div.libraryh3lp {
   height: 150px;
@@ -186,6 +202,7 @@ ul.menu, ul.nav {
   color: white;
   padding-left: 0;
   margin: 0;
+  font-size: 90%;
 }
 ul.menu li, ul.nav li {
   float: left;
@@ -210,10 +227,45 @@ nav.navbar {
   display: flex;
   justify-content: space-between;
 }
+#database-search, #guides-search {
+  box-shadow: 3px 3px 10px #626262;
+  margin-right: 1em;
+}
+#databases {
+  z-index: 10;
+  opacity: 100%;
+  background-color: white;
+}
+#databases .notes {
+  font-weight: bold;
+}
+.hide {
+  display: none;
+}
+.infolink {
+	display: inline-block;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	width: 1.8ex;
+	height: 1.8ex;
+	line-height: 1.8ex;
+	border-radius: 1.2ex;
+	margin-right: 4px;
+	padding: 1px;
+	color: blue;
+	background: white;
+	border: 1px solid blue;
+	text-decoration: none;
+}
+
 @media screen and (min-width: 640px) {
   #container {
     max-width: 100em;
     margin: auto;
+  }
+  #content, #acknowledgement {
+    padding: 0 1em;
   }
   #mainmenu {
     display: grid;
@@ -224,10 +276,18 @@ nav.navbar {
   }
   #sidebar {
     display: grid;
-    grid-template-columns: 3fr 2fr 3fr;
+    margin-left: 2em;
   }
-  #hours th, #hours td {
-    padding: 0 1em 0 1em;
+  nav#mainmenu li {
+    padding: 0.5em 0 0.5em 1em;
+  }
+  #news li, #hours th, #hours td {
+    padding: 0.5em 0 0.5em 0.5em;
+  }
+  #news ul {
+    list-style: none;
+    text-indent: -1em;
+    padding-left: 0.5em;
   }
 }
 @media screen and (min-width: 800px) {
@@ -249,14 +309,36 @@ nav.navbar {
   #header, #libheader, .search-links, #footer {
     display: flex;
     justify-content: space-between;
+    padding: 0.5em 0em 0;
   }
   #search-wrapper {
     padding: 1.5em 3em 1em 3em;
   }
-  #sidebar {
-    display: grid;
-    grid-direction: row;
-    grid-template-columns: 1fr;
-    margin-left: 2em;
+  #other-searches {
+    display: flex;
+    justify-content: left;
   }
+}
+.tablist {
+  padding-left: 0em;
+}
+.blocktab {
+  list-style: none;
+  float: left;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+.selected {
+  background-color: #003e7e;
+}
+.selected a {
+  color: white;
+}
+#archeion-search {
+  border-bottom: 2px solid #003e7e;
+}
+.hide {
+  display: none;
 }

@@ -31,10 +31,19 @@
       <div id="content">
         <div id="main">
           <div id="libheader"><h1>{{ _('Library and Archives') }}</h1></div>
-          <div id="searchbox">
-            <div id="search-wrapper">
-              <div id="search-inner">
-                <form id="simple" name="omniForm" method="get" target="_self" action="https://omni.laurentian.ca/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8">
+          <div class="searchbox">
+            <h2>{{ _('Search') }}</h2>
+            <ul class="tablist" role="tablist">
+              <li id="omni-tab" class="blocktab selected" role="tab" aria-selected="true" aria-controls="blocktabs-search-omni" aria-labelled-by="blocktabs-search-omni-label" aria-expanded="true">
+                <a id="blocktabs-search-omni-label" class="search-tab" role="presentation">Omni</a>
+              </li>
+              <li id="archeion-tab" class="blocktab" role="tab" aria-selected="false" aria-controls="blocktabs-search-archeion" aria-labelled-by="blocktabs-search-archeion-label" aria-expanded="false">
+                <a id="blocktabs-search-archeion-label" class="search-tab" role="presentation">Archives</a>
+              </li>
+            </ul>
+            <div class="search-wrapper" id="omni-search-box">
+              <div class="search-inner">
+                <form class="search-simple" id="omni-search" name="omniForm" method="get" target="_self" action="https://omni.laurentian.ca/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8">
                   <!-- Customizable Parameters -->
                   <input type="hidden" name="vid" value="01OCUL_LU:OMNI">
                   <input type="hidden" name="tab" value="NZPhysical">
@@ -65,6 +74,15 @@
                   {% endautoescape %}
                   </p>
                 </div>
+              </div>
+            </div>
+            <div class="search-wrapper hide" id="archeion-search-box">
+              <div class="search-inner">
+                <form class="search-simple" id="archeion-search" name="archeionForm" method="get" target="_self" action="https://archeion.ca/informationobject/browse" enctype="application/x-www-form-urlencoded; charset=utf-8">
+                  <input type="hidden" name="repos" value="3199">
+                  <input type="hidden" name="sf_culture" value="{% if lang == 'fr-CA' %}fr{% else %}en{% endif %}">
+                  <input class="searchsubmit" id="archeionGo" aria-label="{{ _('Search Archives') }}" type="submit" value="" alt="{{ _('Search Archives') }}"><label for="archeionQueryTemp" class="sr-only">{{ _('Search Archives') }}</label><input type="text" class="search_field" id="archeionQueryTemp" value="" placeholder="{{ _('Search Archeion for archival fonds') }}">
+                </form>
               </div>
             </div>
           </div>
@@ -204,6 +222,38 @@
     (function(){
       const what = document.getElementById('search-omni');
       const whatis = document.getElementById('what-is-omni');
+      const archivesSearch = document.getElementById('blocktabs-search-archeion-label');
+      const archivesSearchBox = document.getElementById('archeion-search-box');
+      const archivesTab = document.getElementById('archeion-tab');
+      const omniSearch = document.getElementById('blocktabs-search-omni-label');
+      const omniSearchBox = document.getElementById('omni-search-box');
+      const omniTab = document.getElementById('omni-tab');
+
+      archivesSearch.addEventListener('click', function(event) {
+        archivesSearch.parentElement.classList.add('selected');
+        archivesSearchBox.classList.remove('hide');
+        archivesTab.ariaExpanded = 'true';
+        archivesTab.setAttribute('aria-expanded', 'true');
+        archivesTab.ariaSelected = 'true';
+        archivesTab.setAttribute('aria-selected', 'true');
+        omniSearchBox.classList.add('hide');
+        omniSearch.parentElement.classList.remove('selected');
+        omniTab.ariaExpanded = 'false';
+        omniTab.setAttribute('aria-expanded', 'false');
+        omniTab.ariaSelected = 'false';
+        omniTab.setAttribute('aria-selected', 'false');
+      });
+
+      omniSearch.addEventListener('click', function(event) {
+        archivesSearchBox.classList.add('hide');
+        archivesSearch.parentElement.classList.remove('selected');
+        archivesTab.ariaExpanded = 'false';
+        archivesTab.ariaSelected = 'false';
+        omniSearchBox.classList.remove('hide');
+        omniSearch.parentElement.classList.add('selected');
+        omniTab.ariaExpanded = 'true';
+        omniTab.ariaSelected = 'true';
+      });
 
       what.addEventListener('click', function(event) {
         var state = whatis.getAttribute('data-collapsed');
@@ -215,7 +265,7 @@
         }
       });
 
-      let form = document.getElementById("simple");
+      let form = document.getElementById("omni-search");
       form.addEventListener("submit", (event) => {
             document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
             form.submit();
