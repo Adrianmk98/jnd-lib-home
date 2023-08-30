@@ -9,6 +9,10 @@ page correctly.
 
 And then edit the locale/fr_CA/LC_MESSAGES/messages.po file accordingly.
 
+After editing the fr_CA messages.po file, compile the locales:
+
+  pybabel compile -d locale
+
 If you're missing locales, then you might need to run the following:
 
   sudo locale-gen en_CA.UTF-8
