@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-21 19:33-0400\n"
+"POT-Creation-Date: 2023-08-29 20:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.12.1\n"
 
 #: templates/library.html:5
 msgid "Laurentian University Library &amp; Archives"
@@ -99,27 +99,27 @@ msgstr ""
 msgid "Library and Archives"
 msgstr ""
 
-#: templates/library.html:54
+#: templates/library.html:35 templates/library.html:63
 msgid "Search"
 msgstr ""
 
-#: templates/library.html:54
+#: templates/library.html:63
 msgid "Search query"
 msgstr ""
 
-#: templates/library.html:54
+#: templates/library.html:63
 msgid "Search Omni for books, journals, articles, videos..."
 msgstr ""
 
-#: templates/library.html:58
+#: templates/library.html:67
 msgid "What is Omni?"
 msgstr ""
 
-#: templates/library.html:59
+#: templates/library.html:68
 msgid "Advanced search"
 msgstr ""
 
-#: templates/library.html:64
+#: templates/library.html:73
 msgid ""
 "Your best place to discover millions of quality, academic resources from "
 "16 Ontario university libraries, including books, full text articles, "
@@ -129,255 +129,255 @@ msgid ""
 "questions-about-omni-laurentians-new-library-system\">Omni FAQ</a>."
 msgstr ""
 
-#: templates/library.html:73
+#: templates/library.html:84
+msgid "Search Archives"
+msgstr ""
+
+#: templates/library.html:84
+msgid "Search Archeion for archival fonds"
+msgstr ""
+
+#: templates/library.html:91
 msgid "Find a database"
 msgstr ""
 
-#: templates/library.html:73
+#: templates/library.html:91
 msgid "Database search"
 msgstr ""
 
-#: templates/library.html:90
+#: templates/library.html:108
 msgid "Find a research guide"
 msgstr ""
 
-#: templates/library.html:90
+#: templates/library.html:108
 msgid "Guides search"
 msgstr ""
 
-#: templates/library.html:102
+#: templates/library.html:120
 msgid "https://biblio.laurentian.ca/research/guides/archives"
 msgstr ""
 
-#: templates/library.html:102
+#: templates/library.html:120
 msgid "Archives"
 msgstr ""
 
-#: templates/library.html:104
+#: templates/library.html:122
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab7"
 msgstr ""
 
-#: templates/library.html:104
+#: templates/library.html:122
 msgid "Policies &amp; Procedures"
 msgstr ""
 
-#: templates/library.html:105
+#: templates/library.html:123
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab2"
 msgstr ""
 
-#: templates/library.html:105
+#: templates/library.html:123
 msgid "Archival Fonds"
 msgstr ""
 
-#: templates/library.html:106
+#: templates/library.html:124
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab4"
 msgstr ""
 
-#: templates/library.html:106
+#: templates/library.html:124
 msgid "Anglican Diocese of Moosonee Fonds"
 msgstr ""
 
-#: templates/library.html:107
+#: templates/library.html:125
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab6"
 msgstr ""
 
-#: templates/library.html:107
+#: templates/library.html:125
 msgid "Special Collections"
 msgstr ""
 
-#: templates/library.html:108
+#: templates/library.html:126
 msgid "https://biblio.laurentian.ca/research/guides/archives#tab8"
 msgstr ""
 
-#: templates/library.html:108
+#: templates/library.html:126
 msgid "Related Sites"
 msgstr ""
 
-#: templates/library.html:112
+#: templates/library.html:130
 msgid "https://biblio.laurentian.ca/research/service"
 msgstr ""
 
-#: templates/library.html:112
+#: templates/library.html:130
 msgid "Services"
 msgstr ""
 
-#: templates/library.html:114
+#: templates/library.html:132
 msgid "https://omni.laurentian.ca/discovery/account?vid=01OCUL_LU:OMNI&amp;section=overview"
 msgstr ""
 
-#: templates/library.html:114
+#: templates/library.html:132
 msgid "My Account"
 msgstr ""
 
-#: templates/library.html:115
+#: templates/library.html:133
 msgid "https://omni.laurentian.ca/discovery/search?tab=CourseReserves&amp;search_scope=CourseReserves&amp;vid=01OCUL_LU:OMNI&amp;lang=en"
 msgstr ""
 
-#: templates/library.html:115
+#: templates/library.html:133
 msgid "Course Reserves"
 msgstr ""
 
-#: templates/library.html:116
+#: templates/library.html:134
 msgid "https://biblio.laurentian.ca/research/guides/managing-citations"
 msgstr ""
 
-#: templates/library.html:116
+#: templates/library.html:134
 msgid "Managing citations"
 msgstr ""
 
-#: templates/library.html:117
+#: templates/library.html:135
 msgid "https://biblio.laurentian.ca/research/guides/interlibrary-loans-racer"
 msgstr ""
 
-#: templates/library.html:117
+#: templates/library.html:135
 msgid "Interlibrary Loan"
 msgstr ""
 
-#: templates/library.html:121 templates/library.html:124
+#: templates/library.html:139 templates/library.html:142
 msgid "https://biblio.laurentian.ca/research/guides"
 msgstr ""
 
-#: templates/library.html:121
+#: templates/library.html:139
 msgid "Research"
 msgstr ""
 
-#: templates/library.html:123
+#: templates/library.html:141
 msgid "https://biblio.laurentian.ca/research/databases-a-z"
 msgstr ""
 
-#: templates/library.html:123
+#: templates/library.html:141
 msgid "Databases"
 msgstr ""
 
-#: templates/library.html:124
+#: templates/library.html:142
 msgid "Research Guides"
 msgstr ""
 
-#: templates/library.html:125
+#: templates/library.html:143
 msgid "https://biblio.laurentian.ca/research/services"
 msgstr ""
 
-#: templates/library.html:125
+#: templates/library.html:143
 msgid "Research Help"
 msgstr ""
 
-#: templates/library.html:126
+#: templates/library.html:144
 msgid ""
 "https://biblio.laurentian.ca/research/content/d2l-library-research-"
 "skills-tutorial"
 msgstr ""
 
-#: templates/library.html:126
+#: templates/library.html:144
 msgid "Research Skills Tutorial"
 msgstr ""
 
-#: templates/library.html:130
+#: templates/library.html:148
 msgid "https://biblio.laurentian.ca/research/resources"
 msgstr ""
 
-#: templates/library.html:130
+#: templates/library.html:148
 msgid "Resources"
 msgstr ""
 
-#: templates/library.html:132
+#: templates/library.html:150
 msgid "https://omni.laurentian.ca/discovery/search?vid=01OCUL_LU:OMNI"
 msgstr ""
 
-#: templates/library.html:132
+#: templates/library.html:150
 msgid "Catalogue"
 msgstr ""
 
-#: templates/library.html:133
-msgid "https://biblio.laurentian.ca/research/guides/copyright-lu"
-msgstr ""
-
-#: templates/library.html:133
-msgid "Copyright @ LU"
-msgstr ""
-
-#: templates/library.html:134
+#: templates/library.html:151
 msgid "https://biblio.laurentian.ca/research/guides/data-and-statistics"
 msgstr ""
 
-#: templates/library.html:134
+#: templates/library.html:151
 msgid "Data"
 msgstr ""
 
-#: templates/library.html:135
+#: templates/library.html:152
 msgid "https://biblio.laurentian.ca/research/guides/geospatial-data-lu"
 msgstr ""
 
-#: templates/library.html:135
+#: templates/library.html:152
 msgid "Geographic Information Systems"
 msgstr ""
 
-#: templates/library.html:135
+#: templates/library.html:152
 msgid "GIS"
 msgstr ""
 
-#: templates/library.html:136
+#: templates/library.html:153
 msgid "https://zone.biblio.laurentian.ca/dspace/?locale=en"
 msgstr ""
 
-#: templates/library.html:136
+#: templates/library.html:153
 msgid "LU|Zone|UL: research repository"
 msgstr ""
 
-#: templates/library.html:141
+#: templates/library.html:158
 msgid "https://biblio.laurentian.ca/research/contact-us"
 msgstr ""
 
-#: templates/library.html:141
+#: templates/library.html:158
 msgid "Contact us"
 msgstr ""
 
-#: templates/library.html:142
+#: templates/library.html:159
 msgid "https://biblio.laurentian.ca/research/contact-us#tab3"
 msgstr ""
 
-#: templates/library.html:142
+#: templates/library.html:159
 msgid "Giving to the Library"
 msgstr ""
 
-#: templates/library.html:143
+#: templates/library.html:160
 msgid ""
 "https://biblio.laurentian.ca/research/content/library-accessibility-"
 "services"
 msgstr ""
 
-#: templates/library.html:143 templates/library.html:197
+#: templates/library.html:160 templates/library.html:214
 msgid "Accessibility"
 msgstr ""
 
-#: templates/library.html:150
+#: templates/library.html:167
 msgid "Today's hours"
 msgstr ""
 
-#: templates/library.html:150
+#: templates/library.html:167
 msgid "https://laurentian.ca/library-hours"
 msgstr ""
 
-#: templates/library.html:150
+#: templates/library.html:167
 msgid "All hours"
 msgstr ""
 
-#: templates/library.html:164
+#: templates/library.html:181
 msgid "Chat loading..."
 msgstr ""
 
-#: templates/library.html:167
+#: templates/library.html:184
 msgid "https://biblio.laurentian.ca/research/news"
 msgstr ""
 
-#: templates/library.html:167
+#: templates/library.html:184
 msgid "News"
 msgstr ""
 
-#: templates/library.html:177
+#: templates/library.html:194
 msgid "Land Acknowledgment - Aki Gaabijidebendaagwak"
 msgstr ""
 
-#: templates/library.html:180
+#: templates/library.html:197
 msgid ""
 "We would like to acknowledge the Robinson-Huron Treaty of 1850.\n"
 "\tWe also further recognize that Laurentian University is located on the\n"
@@ -390,35 +390,35 @@ msgid ""
 "\tMiigwech."
 msgstr ""
 
-#: templates/library.html:190
+#: templates/library.html:207
 msgid "https://www.youtube.com/watch?v=wgfmXtRHFS0"
 msgstr ""
 
-#: templates/library.html:190
+#: templates/library.html:207
 msgid "Listen to it in Anishinaabemowin"
 msgstr ""
 
-#: templates/library.html:193
+#: templates/library.html:210
 msgid "Laurentian University, Sudbury, Ontario, Canada."
 msgstr ""
 
-#: templates/library.html:196
+#: templates/library.html:213
 msgid "https://laurentian.ca/policies-accountability"
 msgstr ""
 
-#: templates/library.html:196
+#: templates/library.html:213
 msgid "Policies"
 msgstr ""
 
-#: templates/library.html:197
+#: templates/library.html:214
 msgid "https://laurentian.ca/accessibility-services"
 msgstr ""
 
-#: templates/library.html:198
+#: templates/library.html:215
 msgid "https://goo.gl/forms/PQg98HDZnU5PYbu42"
 msgstr ""
 
-#: templates/library.html:198
+#: templates/library.html:215
 msgid "Feedback"
 msgstr ""
 
