@@ -35,10 +35,10 @@
             <h2>{{ _('Search') }}</h2>
             <ul class="tablist" role="tablist">
               <li id="omni-tab" class="blocktab selected" role="tab" aria-selected="true" aria-controls="blocktabs-search-omni" aria-labelled-by="blocktabs-search-omni-label" aria-expanded="true">
-                <a id="blocktabs-search-omni-label" class="search-tab" role="presentation">Omni</a>
+                <a id="blocktabs-search-omni-label" class="search-tab" role="presentation" href="#omnisearch">Omni</a>
               </li>
               <li id="archeion-tab" class="blocktab" role="tab" aria-selected="false" aria-controls="blocktabs-search-archeion" aria-labelled-by="blocktabs-search-archeion-label" aria-expanded="false">
-                <a id="blocktabs-search-archeion-label" class="search-tab" role="presentation">Archives</a>
+                <a id="blocktabs-search-archeion-label" class="search-tab" role="presentation" href="#archeionsearch" >Archives</a>
               </li>
             </ul>
             <div class="search-wrapper" id="omni-search-box">
@@ -242,6 +242,7 @@
         omniTab.setAttribute('aria-expanded', 'false');
         omniTab.ariaSelected = 'false';
         omniTab.setAttribute('aria-selected', 'false');
+        document.getElementById("archeionQueryTemp").focus();
       });
 
       omniTab.addEventListener('click', function(event) {
@@ -253,6 +254,7 @@
         omniSearch.parentElement.classList.add('selected');
         omniTab.ariaExpanded = 'true';
         omniTab.ariaSelected = 'true';
+        document.getElementById("primoQueryTemp").focus();
       });
 
       what.addEventListener('click', function(event) {
