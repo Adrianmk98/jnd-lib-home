@@ -229,7 +229,7 @@
       const omniSearchBox = document.getElementById('omni-search-box');
       const omniTab = document.getElementById('omni-tab');
 
-      archivesSearch.addEventListener('click', function(event) {
+      archivesTab.addEventListener('click', function(event) {
         archivesSearch.parentElement.classList.add('selected');
         archivesSearchBox.classList.remove('hide');
         archivesTab.ariaExpanded = 'true';
@@ -244,7 +244,7 @@
         omniTab.setAttribute('aria-selected', 'false');
       });
 
-      omniSearch.addEventListener('click', function(event) {
+      omniTab.addEventListener('click', function(event) {
         archivesSearchBox.classList.add('hide');
         archivesSearch.parentElement.classList.remove('selected');
         archivesTab.ariaExpanded = 'false';
