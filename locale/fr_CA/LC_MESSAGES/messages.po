@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-08-29 20:05-0400\n"
+"POT-Creation-Date: 2023-08-30 14:33-0400\n"
 "PO-Revision-Date: 2021-01-04 22:06-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -144,8 +144,8 @@ msgid "Search Archives"
 msgstr "Recherche des Archives"
 
 #: templates/library.html:84
-msgid "Search Archeion for archival fonds"
-msgstr "Recherche de fonds d'archives dans Archeion"
+msgid "Search Archeion for archival fonds and collections"
+msgstr "Effectuez une recherche pour accéder aux fonds et collections conservés aux Archives"
 
 #: templates/library.html:91
 msgid "Find a database"
