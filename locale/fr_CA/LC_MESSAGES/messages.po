@@ -423,7 +423,7 @@ msgstr ""
 "de notre relation suivie avec eux, appuierons les recommandations émises "
 "par le\n"
 "Groupe de travail sur la vérité et la réconciliation de l’Université\n"
-"Laurentienne. Miigwech.\""
+"Laurentienne. Miigwech."
 
 #: templates/library.html:207
 msgid "https://www.youtube.com/watch?v=wgfmXtRHFS0"
