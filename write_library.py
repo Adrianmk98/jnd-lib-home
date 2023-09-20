@@ -147,7 +147,7 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
         )
     else:
         # Architecture summer hours hack
-        if lib == "SoA":
+        if lib == "SoA" and 1 == 0:
             o = "8:30"
             c = "12:00"
             oa = "13:00"
