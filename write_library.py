@@ -145,9 +145,12 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
                 "url": libraries[lib]["url"],
             }
         )
-    else:
+            else:
+        today = datetime.date.today()
+        is_summer = (today.month == 5 and today.day >= 15) or (6 <= today.month <= 7) or (
+                    today.month == 8 and today.day <= 15)
         # Architecture summer hours hack
-        if lib == "SoA" and 1 == 0:
+        if lib == "SoA":
             o = "8:30"
             c = "12:00"
             oa = "13:00"
@@ -156,8 +159,8 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
             c = format_time(c, lang)
             oa = format_time(oa, lang)
             ca = format_time(ca, lang)
-
-            hours.append(
+            if is_summer:
+                hours.append(
                 {
                     "name": libraries[lib]["name"],
                     "hours": (
@@ -166,6 +169,26 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
                     "url": libraries[lib]["url"],
                 }
             )
+                #0 during school year hours, 1 during summer
+            if 1==0:
+                hours.append(
+                    {
+                        "name": libraries[lib]["name"],
+                        "hours": (
+                                hour_format.format(o, c) + ", " + hour_format.format(oa, ca)
+                        ),
+                        "url": libraries[lib]["url"],
+                    }
+                )
+            else:
+                hours.append(
+                    {
+                        "name": libraries[lib]["name"],
+                        "hours": hour_format.format(o, c),
+                        "url": libraries[lib]["url"],
+                    }
+                )
+
             return
 
         hours.append(
