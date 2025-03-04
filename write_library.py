@@ -1,11 +1,9 @@
 #!/usr/bin/env python
-
 from babel.support import Translations
 import datetime
 import jinja2
 import locale
 import requests
-
 
 def get_guides(lang="en-CA"):
     "Retrieve guides from research guides database"
@@ -145,13 +143,10 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
                 "url": libraries[lib]["url"],
             }
         )
-            else:
-        today = datetime.date.today()
-        is_summer = (today.month == 5 and today.day >= 15) or (6 <= today.month <= 7) or (
-                    today.month == 8 and today.day <= 15)
+    else:
         # Architecture summer hours hack
         if lib == "SoA":
-            if is_summer:
+            if IS_SUMMER:
                 o = "8:30"
                 c = "12:00"
                 oa = "13:00"
@@ -169,25 +164,6 @@ def format_hours(x, hours, libraries, lib, lang, closed, hour_format):
                     "url": libraries[lib]["url"],
                 }
             )
-                #0 during school year hours, 1 during summer
-            if 1==0:
-                o = "8:30"
-                c = "12:00"
-                oa = "13:00"
-                ca = "16:00"
-                o = format_time(o, lang)
-                c = format_time(c, lang)
-                oa = format_time(oa, lang)
-                ca = format_time(ca, lang)
-                hours.append(
-                    {
-                        "name": libraries[lib]["name"],
-                        "hours": (
-                                hour_format.format(o, c) + ", " + hour_format.format(oa, ca)
-                        ),
-                        "url": libraries[lib]["url"],
-                    }
-                )
             else:
                 hours.append(
                     {
@@ -214,9 +190,9 @@ def format_time(hour, lang="en-CA"):
     if len(hour) == 4:
         hour = f"0{hour}"
     if lang.startswith("fr"):
-        return datetime.time.fromisoformat(hour).strftime("%-Hh%M")
+        return datetime.time.fromisoformat(hour).strftime("%Hh%M")
     else:
-        return datetime.time.fromisoformat(hour).strftime("%-I:%M %p")
+        return datetime.time.fromisoformat(hour).strftime("%I:%M %p")
 
 
 def get_news(lang="en-CA", max_items=4, max_age=30):
@@ -287,8 +263,28 @@ def generate_page(lang="en-CA", filename="prod/index.html"):
     }
     with open(filename, mode="w", encoding="utf-8") as outf:
         outf.write(template.render(ctx))
+def debug():
+    lang="en-CA"
+    hours = get_hours(lang)
+    news = get_news(lang)
+    databases = get_databases(lang)
+    guides = get_guides(lang)
+    return hours, news, databases, guides
 
-
-if __name__ == "__main__":
+def GUILOAD(is_summer):
+    global IS_SUMMER
+    IS_SUMMER = is_summer
     generate_page()
     generate_page("fr-CA", "prod/index_fr.html")
+
+def main():
+    generate_page()
+    generate_page("fr-CA", "prod/index_fr.html")
+
+if __name__ == "__main__":
+    global IS_SUMMER
+    #this is where the hack is now currently located
+    IS_SUMMER = 0 #1 for summer hours 0 for normal
+    main()
+
+
