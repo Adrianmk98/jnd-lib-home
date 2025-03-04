@@ -1,0 +1,69 @@
+import datetime
+import tkinter as tk
+import write_library
+is_summer = None
+
+def switch(my_label, on_button, on, off):
+    global is_summer
+
+    is_summer = not is_summer
+
+    if is_summer:
+        on_button.config(image=on)
+        my_label.config(text="Summer Hours", fg="green")
+    else:
+        on_button.config(image=off)
+        my_label.config(text="Not Summer Hours", fg="red")
+
+
+def run_debug(output_textbox):
+    hours, news, databases, guides = write_library.debug()  # Get return values
+    #Debug Values. Databases was removed for performance
+    output_textbox.delete("1.0", tk.END)
+    output_textbox.insert(tk.END, f"Debug Hours: {hours}\n")
+    for hour in hours:
+        output_textbox.insert(tk.END, f"- {hour}\n")
+    output_textbox.insert(tk.END, f"News: {news}\n")
+    for post in news:
+        output_textbox.insert(tk.END, f"- {post}\n")
+
+    output_textbox.insert(tk.END, "Guides:\n")
+    for guide in guides:
+        output_textbox.insert(tk.END, f"- {guide}\n")
+
+def main():
+    global is_summer
+
+    root = tk.Tk()
+    root.title('Lib and Arch Site Generator')
+    root.geometry("500x300")
+
+    # Determine initial summer state
+    today = datetime.date.today()
+    is_summer = (today.month == 5 and today.day >= 15) or (6 <= today.month <= 7) or (today.month == 8 and today.day <= 15)
+
+    my_label = tk.Label(root, text="Summer Hours" if is_summer else "Not Summer Hours",fg="green" if is_summer else "red",font=("Helvetica", 24))
+    my_label.pack(pady=20)
+
+    on = tk.PhotoImage(file="assets/on.png")
+    off = tk.PhotoImage(file="assets/off.png")
+
+    on_button = tk.Button(root, image=on if is_summer else off, bd=0,command=lambda: switch(my_label, on_button, on, off))
+    on_button.pack(pady=20)
+
+    button_frame = tk.Frame(root)
+    button_frame.pack(pady=10)
+
+    gen_button = tk.Button(button_frame, text="Generate",command=lambda:write_library.GUILOAD(is_summer))
+    gen_button.pack(side=tk.LEFT, padx=10)
+    
+    output_textbox = tk.Text(root, height=6, width=50, font=("Helvetica", 12))
+    output_textbox.pack(pady=10, expand=True, fill="both") 
+
+    debug_button = tk.Button(button_frame, text="Debug",command=lambda: run_debug(output_textbox))
+    debug_button.pack(side=tk.LEFT, padx=10)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()
